@@ -16,7 +16,7 @@ const devFestConfig = {
     showAgenda: true,           // Toggle agenda schedule / tracks
     showSpeakers: true,         // Toggle speakers grid
     showSponsors: false,        // Toggle sponsors grid
-    showBadgeGenerator: false,  // Toggle badge generator
+    showBadgeGenerator: true,   // Toggle badge generator
 };
 
 const devFestData = {
