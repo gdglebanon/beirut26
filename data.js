@@ -104,7 +104,7 @@ const devFestData = {
             "speakers": [
                 {
                     "id": "b84432ec-f9df-4313-96ab-dbb6e0a97b37",
-                    "name": "Dr. Mariam Saleh"
+                    "name": "Dr. Mariam El Saleh"
                 }
             ]
         },
@@ -350,9 +350,9 @@ const devFestData = {
         {
             "id": "b84432ec-f9df-4313-96ab-dbb6e0a97b37",
             "firstName": "Dr. Mariam",
-            "lastName": "Saleh",
-            "fullName": "Dr. Mariam Saleh",
-            "tagLine": "EIU - Lecturer",
+            "lastName": "El Saleh",
+            "fullName": "Dr. Mariam El Saleh",
+            "tagLine": "Lecturer | Management and HR Consultant",
             "company": "-",
             "bio": "Dr. Mariam El Saleh is an HR and Organizational Development expert, consultant, trainer and university lecturer with more than 15 years of experience in Management and HR.\n\nShe holds a Doctorate in Business Administration (DBA), from (Magellan, IAE Lyon, University Jean Moulin Lyon 3). Her doctoral research examined how human resources strategies shape the quality of administrative services in higher education institutions.\n\nAs founder of Mariam El Saleh Consultancy, based in Tripoli, Lebanon, she advises organizations across diverse sectors, including education, higher and vocational education, healthcare, architecture, and security services. Her work bridges research and practice, turning evidence-based HR strategy into practical organizational change.",
             "profilePicture": "https://cdn.sessionize.com/image/f1a3-400o400o1-MkPLUraRAHxsCKAHKdmyiy.jpg",
