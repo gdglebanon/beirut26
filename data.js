@@ -13,1192 +13,537 @@ const devFestConfig = {
     contactEmail: "info@gdglebanon.com",
 
     // Visibility toggles: Set to true when you want to reveal the full content!
-    showAgenda: false,          // Toggle agenda schedule / tracks
-    showSpeakers: false,        // Toggle speakers grid
+    showAgenda: true,           // Toggle agenda schedule / tracks
+    showSpeakers: true,         // Toggle speakers grid
     showSponsors: false,        // Toggle sponsors grid
     showBadgeGenerator: false,  // Toggle badge generator
 };
 
 const devFestData = {
     sessions: [
-    {
-        "id": "reg-coffee-001",
-        "title": "Registration & Welcome Coffee",
-        "description": "Get your badge and enjoy some coffee before we start.",
-        "format": "Networking",
-        "level": "",
-        "room": "Main Auditorium",
-        "time": "08:30 AM - 09:30 AM",
-        "tags": [],
-        "isCommon": true,
-        "targetAudience": "All Attendees"
-    },
-    {
-        "id": "cf3d53f8-2f9b-456a-aab4-dfeb00f9df3f",
-        "title": "Opening Keynote: Welcome to DevFest!",
-        "description": "By GDG , BAU and Minister of State for Technology and AI Kamal Chehade",
-        "format": "Keynote",
-        "level": "Beginner",
-        "room": "Main Auditorium",
-        "time": "09:30 AM - 10:30 AM",
-        "tags": [],
-        "isCommon": true,
-        "targetAudience": ""
-    },
-    {
-        "id": "26b9e746-f352-406b-80cd-ab901112e987",
-        "title": "Break",
-        "description": "Snacks and Coffee Break.",
-        "format": "Networking",
-        "level": "Beginner",
-        "room": "Main Auditorium",
-        "time": "12:30 PM - 12:50 PM",
-        "tags": [],
-        "isCommon": true,
-        "targetAudience": ""
-    },
-    {
-        "id": "0a9293da-449f-47cd-bad8-ba48df440535",
-        "title": "Lunch",
-        "description": "End your day with a delicious lunch and a chance to network with other attendees.",
-        "format": "Networking",
-        "level": "Beginner",
-        "room": "Main Auditorium",
-        "time": "03:10 PM - 03:50 PM",
-        "tags": [],
-        "isCommon": true,
-        "targetAudience": ""
-    },
-    {
-        "id": "1074784",
-        "title": "How ChatGPT Was Made: Behind the Scenes of a Large Language Model",
-        "description": "In this talk, we\u2019ll go behind the scenes of how large language models like ChatGPT are built, from massive training datasets and transformer architectures to fine-tuning and real-world deployment. You\u2019ll get a high-level tour of the model\u2019s lifecycle, including the key breakthroughs that made systems like ChatGPT possible. Whether you\u2019re curious about the tech, the training process, or what it takes to align AI with human intent, this session will unpack the magic, without getting lost in the math",
-        "format": "Talk",
-        "level": "Intermediate Level",
-        "room": "B105",
-        "time": "11:10 AM - 11:50 AM",
-        "tags": [],
-        "isCommon": false,
-        "targetAudience": "Everyone",
-        "speakerId": "4aa857c8-3ad6-46b5-a0a3-ef92db483a43",
-        "speakers": [
-            {
-                "id": "4aa857c8-3ad6-46b5-a0a3-ef92db483a43",
-                "name": "Mhamad El Itawi"
-            }
-        ]
-    },
-    {
-        "id": "1074905",
-        "title": "Opportunities Beyond the Local Market",
-        "description": "I will talk about how I prepared for a global job in tech. I will also discuss how to prepare differently for big tech and startups. ",
-        "format": "Talk",
-        "level": "Beginner",
-        "room": "B1008",
-        "time": "01:25 PM - 02:00 PM",
-        "tags": [],
-        "isCommon": false,
-        "targetAudience": "Junior emgineers",
-        "speakerId": "e4072f71-75fe-45a0-8690-1450fe2e48ac",
-        "speakers": [
-            {
-                "id": "e4072f71-75fe-45a0-8690-1450fe2e48ac",
-                "name": "Judy Abi Nehme"
-            }
-        ]
-    },
-    {
-        "id": "1076607",
-        "title": "Deploy Like a Boss: Cloud and Containers",
-        "description": "This hands-on workshop introduces beginner to intermediate developers to practical DevOps by guiding them and demonstrating the differences in deployments for the same application for the following environments. Locally on their laptops as a manual deployment. Locally on their laptops as a container deployment, on GCP as a manual deployment, on GCP as a container deployment\n\nParticipants will gain real-world experience with Docker, linux, and Google Cloud Platform. The workshop emphasizes on the deployment controlled changes, so that the learner clearly understands and removes the fear of containerized or cloud workloads. All tasks will be performed live, with guided instruction, collaborative debugging, and interactive exercises to ensure engagement and understanding. With some simple explanations to some topics such as containerization",
-        "format": "Workshop",
-        "level": "Intermediate Level",
-        "room": "B110",
-        "time": "11:30 AM - 12:30 PM",
-        "tags": [],
-        "isCommon": false,
-        "targetAudience": "Senior students and above",
-        "speakerId": "d5c60999-eb9c-4245-9d0d-6409c5a27a0d",
-        "speakers": [
-            {
-                "id": "d5c60999-eb9c-4245-9d0d-6409c5a27a0d",
-                "name": "Jaafar Nasrallah"
-            }
-        ]
-    },
-    {
-        "id": "1078513",
-        "title": "The Future of Tech: High-Impact Roles With Zero Coding",
-        "description": "Coding is becoming the easiest and often lowest-paid\u2014skill, while real demand is shifting toward non-coding roles that drive strategy, communication, and product impact. This session highlights the rising careers in tech, including UX/UI, Business Analysis, Scrum Mastery, Technical Project Management, and the increasingly important Product Manager role. It provides a clear overview of the skills that matter today and how to build a successful career in tech with zero coding skills.",
-        "format": "Talk",
-        "level": "Intermediate Level",
-        "room": "B105",
-        "time": "11:50 AM - 12:30 PM",
-        "tags": [],
-        "isCommon": false,
-        "targetAudience": "Computer science and engineering students, developers, business people in tech sector ",
-        "speakerId": "d8b7c739-047a-463f-afa0-270fcdab38ce",
-        "speakers": [
-            {
-                "id": "d8b7c739-047a-463f-afa0-270fcdab38ce",
-                "name": "Gardenia Homsi"
-            }
-        ]
-    },
-    {
-        "id": "1081297",
-        "title": "AI Maturity Unlocked: Roadmap for Business Growth",
-        "description": "Unlock the steps every business should take to move from AI experimentation to real, scalable value. This talk simplifies the \u201cAI maturity journey\u201d and equips attendees with a practical framework to assess where they stand\u2014and how to level up. Whether you\u2019re a developer, founder, or tech lead, you\u2019ll leave knowing how to drive sustainable AI adoption and avoid common pitfalls in building data-driven, competitive organizations.",
-        "format": "Talk",
-        "level": "Intermediate Level",
-        "room": "B105",
-        "time": "12:50 PM - 01:25 PM",
-        "tags": [],
-        "isCommon": false,
-        "targetAudience": "Developers and technical leads curious about AI strategy.  Founders and product managers in SaaS, consulting, or service companies.  Anyone moving from AI experiments to delivering outcomes.",
-        "speakerId": "ce57780b-b2fd-4f06-8bd1-cdcf2c471e2b",
-        "speakers": [
-            {
-                "id": "ce57780b-b2fd-4f06-8bd1-cdcf2c471e2b",
-                "name": "Abed-R Ghaleb"
-            }
-        ]
-    },
-    {
-        "id": "1082686",
-        "title": "Vibe Coding: Build a solution for Lebanon in 35min",
-        "description": "Vibe Coding is redefining how humans create software. Instead of building apps, people now build flows of intent. In this talk, I\u2019ll show how Vibe Coding flips the entire product cycle: from ideas to prototypes, from problems to working tools, without traditional code or heavy engineering overhead.\n\nThis is more than productivity. It changes how we perceive products, creativity, and innovation. When anyone can build what they need in minutes, the role of \u201cdeveloper\u201d evolves, and so does the way we solve the problems in our own lives. I\u2019ll present real examples from my work in AI-native systems, multi-agent OS design, and everyday builders using Vibe Coding to ship projects they never thought they could create.",
-        "format": "Talk",
-        "level": "Intermediate Level",
-        "room": "Main Auditorium",
-        "time": "01:25 PM - 02:00 PM",
-        "tags": [],
-        "isCommon": false,
-        "targetAudience": "Developers, designers, founders, researchers, students, and anyone curious about AI-driven creation.",
-        "speakerId": "d0523778-7fbc-41e4-b4a5-6122650a000e",
-        "speakers": [
-            {
-                "id": "d0523778-7fbc-41e4-b4a5-6122650a000e",
-                "name": "Stephane Boghossian"
-            }
-        ]
-    },
-    {
-        "id": "1084180",
-        "title": "Ruby on Rails: The One-Man Framework",
-        "description": "Ruby on Rails is the fastest way for a single developer to build and ship full-featured applications. In this session, I\u2019ll introduce Rails to an audience that may have never worked with it before, explain how it enables rapid development through convention over configuration, and live-build a small web app with authentication, authorization, and basic CRUD. We\u2019ll end by deploying the app to production to show how quickly a solo developer can go from idea to launch.",
-        "format": "Workshop",
-        "level": "Beginner",
-        "room": "B108",
-        "time": "10:30 AM - 11:30 AM",
-        "tags": [],
-        "isCommon": false,
-        "targetAudience": "Developers",
-        "speakerId": "1eaeee06-9ccd-4481-9c96-72fa05c2576e",
-        "speakers": [
-            {
-                "id": "1eaeee06-9ccd-4481-9c96-72fa05c2576e",
-                "name": "Roc Khalil"
-            }
-        ]
-    },
-    {
-        "id": "1085657",
-        "title": "On-Device Multimodal Assistants: Can We Fit GPT-Vision on Small Hardware?",
-        "description": "This talk explores whether the next generation of multimodal assistants, capable of vision, speech, and language reasoning, can run locally on consumer hardware.\nWe\u2019ll cover lightweight visual encoders, adapter-based multimodal fusion, 4-bit and 2-bit quantization, memory optimizations, and device-level acceleration.\nIncludes a live demo of a local multimodal assistant running on small hardware.",
-        "format": "Talk",
-        "level": "Beginner",
-        "room": "B1008",
-        "time": "11:10 AM - 11:50 AM",
-        "tags": [],
-        "isCommon": false,
-        "targetAudience": "Developers, AI engineers, makers, and anyone interested in local AI or device intelligence.",
-        "speakerId": "0f0e7f44-cdab-4de7-a1e7-4f97a40b42e1",
-        "speakers": [
-            {
-                "id": "0f0e7f44-cdab-4de7-a1e7-4f97a40b42e1",
-                "name": "Rami Kronbi"
-            }
-        ]
-    },
-    {
-        "id": "1086205",
-        "title": "Business-Mindset for Tech Talent",
-        "description": "A workshop designed to help students especially those in tech, become familiar with the business side of building products. Many engineers jump straight into coding and creating solutions, but the real impact comes from understanding the purpose, business outcome, and problem behind the solution.\n\nIn this session, participants will learn to think beyond features and technology. They will explore how businesses operate, what challenges they face, and why identifying the right problem matters more than rushing into development. Through a practical scenario, students will analyze a business workflow, uncover pain points, and then propose a tech solution that aligns with real business goals.",
-        "format": "Case Study (40 minutes)",
-        "level": "Beginner",
-        "room": "B105",
-        "time": "02:35 PM - 03:10 PM",
-        "tags": [],
-        "isCommon": false,
-        "targetAudience": "Tech Professionals - University Students",
-        "speakerId": "b31b6747-781b-44d0-8189-cb4b222240be",
-        "speakers": [
-            {
-                "id": "b31b6747-781b-44d0-8189-cb4b222240be",
-                "name": "Aisha Harrash"
-            }
-        ]
-    },
-    {
-        "id": "1087288",
-        "title": "Vibe Coding with Google Antigravity",
-        "description": "Vibe Coding is a modern approach to web and mobile development where creativity, intuition, and AI-powered assistance blend to accelerate innovation. Instead of writing code the traditional way, developers now collaborate with AI tools to generate components, refactor logic, design UI flows, and even build full features with conversational prompts.\n\nIn this workshop, we will explore how AI\u2014powered by Google\u2019s latest technologies\u2014can amplify your development process, unlock faster prototyping, and help you build more expressive and fluid digital experiences.\nAttendees will learn how to \u201cvibe-code\u201d: guiding AI models to write clean code, generate UI layouts, craft animations, fix bugs, design APIs, and improve performance across both web and mobile platforms.\n\nThis session is practical, hands-on, and focused on building real features with AI as your coding partner\u2014showing you how to code smarter, ship faster, and create more polished products with less friction.",
-        "format": "Workshop",
-        "level": "Beginner",
-        "room": "B108",
-        "time": "02:10 PM - 03:10 PM",
-        "tags": [],
-        "isCommon": false,
-        "targetAudience": "Developers, designers, students, frontend engineers and mobile developers.",
-        "speakerId": "3a70a459-beb6-4c10-af2f-9958d49b2793",
-        "speakers": [
-            {
-                "id": "3a70a459-beb6-4c10-af2f-9958d49b2793",
-                "name": "Ibrahim Zakaria"
-            },
-            {
-                "id": "b17b7459-ef0f-45d1-b4c0-df52cc7cc691",
-                "name": "Ahmad Kharma"
-            }
-        ]
-    },
-    {
-        "id": "1092585",
-        "title": "Are We There Yet? Live Al Coding Challenge Workshop",
-        "description": "AI coding tools are everywhere now, but most developers still treat them like a smarter autocomplete.\n\nIn this live workshop, we\u2019ll ask the audience for a simple app/feature idea, agree on one together, and then build it live using AI tools. We\u2019ll go from idea \u2192 tiny spec \u2192 code \u2192 debug \u2192 polish, all on stage.\n\nI\u2019ll show exactly how I use AI day-to-day as a CTO: turning messy ideas into clear prompts, feeding the right context, handling hallucinations, and keeping control of architecture and quality. You\u2019ll see the full thought process, not just the perfect edited demo.",
-        "format": "Talk",
-        "level": "Intermediate Level",
-        "room": "Main Auditorium",
-        "time": "02:00 PM - 02:35 PM",
-        "tags": [],
-        "isCommon": false,
-        "targetAudience": "- Developers who want to seriously adopt AI in their workflow, not just \u201cplay with it\u201d - Tech leads and managers defining AI guidelines for their teams - Students and juniors who want healthy, future-proof habits around AI-assisted coding",
-        "speakerId": "cc489475-0a10-4c0b-8e6d-9878e83c84d8",
-        "speakers": [
-            {
-                "id": "cc489475-0a10-4c0b-8e6d-9878e83c84d8",
-                "name": "Rayan Salhab"
-            }
-        ]
-    },
-    {
-        "id": "1092659",
-        "title": "Kotlin Multiplatform + Compose Multiplatform: The Performance King of Cross-Platform.",
-        "description": "Kotlin Multiplatform (KMP) and Compose Multiplatform (CMP) are reshaping how modern apps are built with one shared codebase powering Android, iOS, desktop, and even web. In this beginner-friendly session, we\u2019ll explore what makes this approach so powerful, why the industry is moving toward shared logic, and how teams save time by reusing code across platforms.\n\nYou\u2019ll see real data on performance and productivity, and a simple live demo showing how one Kotlin project can run on multiple devices without diving into complex code. This talk is perfect for CS students curious about modern, efficient, and scalable app development.",
-        "format": "Talk",
-        "level": "Beginner",
-        "room": "B105",
-        "time": "10:30 AM - 11:10 AM",
-        "tags": [],
-        "isCommon": false,
-        "targetAudience": "Android Developers, iOS Developers, Students, Developers.",
-        "speakerId": "3da1e85c-a7a9-4869-9a37-f355307cff2d",
-        "speakers": [
-            {
-                "id": "3da1e85c-a7a9-4869-9a37-f355307cff2d",
-                "name": "Mohyddine Al-lahham"
-            }
-        ]
-    },
-    {
-        "id": "1092828",
-        "title": "Beyond Black Boxes: Building Explainable AI Systems with Knowledge Graphs",
-        "description": "AI now plays a major role in job platforms, career guidance, and talent matching  yet most systems still operate as black boxes, offering recommendations without explaining why. In this workshop, we bridge that gap by introducing participants to Explainable AI (XAI) through the power of Knowledge Graphs (KGs) and Neo4j.\n\nThe session begins with an accessible introduction to knowledge graphs, graph structures, and why KGs are becoming essential for AI transparency. Then, in a fully hands-on segment, participants will model users, skills, roles, and companies into a real knowledge graph using Neo4j\u2019s browser-based sandbox. They\u2019ll learn how to write graph queries that surface the exact skill matches, experience alignments, and interest connections that justify a job recommendation.\n\nBy the end of the workshop, attendees will have built a mini Explainable Job-Matching System capable of showing users why a particular job fits them  using clear, visual reasoning paths directly derived from the knowledge graph. Whether you're a student discovering AI or a developer exploring semantic technologies, you\u2019ll leave with practical skills in combining KGs + XAI to create transparent, trustworthy AI systems used in modern platforms like LinkedIn and Indeed.",
-        "format": "Workshop",
-        "level": "Intermediate Level",
-        "room": "B110",
-        "time": "01:20 PM - 02:10 PM",
-        "tags": [],
-        "isCommon": false,
-        "targetAudience": "University students and Professionals ",
-        "speakerId": "261c2a2a-88cf-4821-b3a9-f5003eb66216",
-        "speakers": [
-            {
-                "id": "261c2a2a-88cf-4821-b3a9-f5003eb66216",
-                "name": "Sarah Rashidi"
-            }
-        ]
-    },
-    {
-        "id": "1092832",
-        "title": "Under The Hood: How eXplainable AI (XAI) Changes Everything",
-        "description": "This session introduces participants to the rapidly growing field of explainable AI , advantages challenges and real applications.",
-        "format": "Talk",
-        "level": "Intermediate Level",
-        "room": "B1008",
-        "time": "12:50 PM - 01:25 PM",
-        "tags": [],
-        "isCommon": false,
-        "targetAudience": "Pregraduate as well as grad students ",
-        "speakerId": "cb72b3d1-cfe4-49cc-b89f-85bbbd1fc364",
-        "speakers": [
-            {
-                "id": "cb72b3d1-cfe4-49cc-b89f-85bbbd1fc364",
-                "name": "Amani Raad"
-            }
-        ]
-    },
-    {
-        "id": "1092872",
-        "title": "Modular RAG with Spring AI",
-        "description": "Learn how to bring generative AI capabilities into your java based application using spring AI without the need for python expertise",
-        "format": "Talk",
-        "level": "Beginner",
-        "room": "B1008",
-        "time": "10:30 AM - 11:10 AM",
-        "tags": [],
-        "isCommon": false,
-        "targetAudience": "Spring and java developers",
-        "speakerId": "089bb622-9b5d-436f-b531-e1a653264f51",
-        "speakers": [
-            {
-                "id": "089bb622-9b5d-436f-b531-e1a653264f51",
-                "name": "Omar Chaaban"
-            }
-        ]
-    },
-    {
-        "id": "1093711",
-        "title": "AI in the Real World - Stories & Case Studies from Leading Lebanese Companies",
-        "description": "I will be talking about real-world AI implementations in some of the leading Lebanese companies. Some stories are humorous, others are lessons we learned that helped us shape the generative AI business model in Lebanon.",
-        "format": "Talk",
-        "level": "Beginner",
-        "room": "B105",
-        "time": "02:00 PM - 02:35 PM",
-        "tags": [],
-        "isCommon": false,
-        "targetAudience": "Literally. everyone who uses a computer in their work",
-        "speakerId": "08589cfa-0867-493b-b32b-66882fb54314",
-        "speakers": [
-            {
-                "id": "08589cfa-0867-493b-b32b-66882fb54314",
-                "name": "Elias Atik"
-            }
-        ]
-    },
-    {
-        "id": "1093960",
-        "title": "Modern Cloud Strategies: From Monitoring to Resilience",
-        "description": " A practical talk on building secure, scalable cloud environments using Zabbix, Acronis, and Nextcloud. Covers monitoring, disaster recovery, vendor independence, and real-world deployment insights",
-        "format": "Talk",
-        "level": "Intermediate Level",
-        "room": "B1008",
-        "time": "02:00 PM - 02:35 PM",
-        "tags": [],
-        "isCommon": false,
-        "targetAudience": "Developers, IT Professionals, Students, University IT Teams",
-        "speakerId": "ffc51179-bbaf-4e96-8101-1a770db74061",
-        "speakers": [
-            {
-                "id": "ffc51179-bbaf-4e96-8101-1a770db74061",
-                "name": "Mohamad Tabikh"
-            }
-        ]
-    },
-    {
-        "id": "1094371",
-        "title": "Production-Ready Engineers",
-        "description": "This session discusses what it takes to become a reliable, efficient, and production-ready engineer at any level and make an impact where it counts.",
-        "format": "Talk",
-        "level": "Beginner",
-        "room": "Main Auditorium",
-        "time": "12:50 PM - 01:25 PM",
-        "tags": [],
-        "isCommon": false,
-        "targetAudience": "",
-        "speakerId": "7b455539-7556-477b-9d3b-bec814e5f8b8",
-        "speakers": [
-            {
-                "id": "7b455539-7556-477b-9d3b-bec814e5f8b8",
-                "name": "Nicolas El Khoury"
-            }
-        ]
-    },
-    {
-        "id": "1094377",
-        "title": "Open Source Competition: Key Learnings & What's Next",
-        "description": "Join us for a comprehensive review of our Open Source Competition, where we'll share winner highlights, analyze standout submissions, and discuss emerging trends that shaped the entries. We'll explore what worked, what surprised us, and how these innovations are pushing the boundaries of open source development.",
-        "format": "Talk",
-        "level": "Beginner",
-        "room": "B1008",
-        "time": "11:50 AM - 12:30 PM",
-        "tags": [],
-        "isCommon": false,
-        "targetAudience": "",
-        "speakerId": "75c1f6c6-22e4-4561-82d5-d26ef8862769",
-        "speakers": [
-            {
-                "id": "75c1f6c6-22e4-4561-82d5-d26ef8862769",
-                "name": "Omar Chouman"
-            },
-            {
-                "id": "843f8376-0c95-40cd-9b31-1e8b8939e59d",
-                "name": "Mohammad Omar"
-            }
-        ]
-    },
-    {
-        "id": "1094958",
-        "title": "Build Your Tech Path: Skills, Stacks, and Certifications for 2026",
-        "description": "This session guides students through building a personalized tech career path by choosing a stack, identifying essential skills, and selecting relevant certifications. It breaks down major tech fields: Web, Mobile, AI, Cloud, Cybersecurity, and QA into beginner-friendly roadmaps. Attendees leave with a clear, practical plan tailored to their interests.",
-        "format": "Talk",
-        "level": "Beginner",
-        "room": "B108",
-        "time": "12:50 PM - 01:20 PM",
-        "tags": [],
-        "isCommon": false,
-        "targetAudience": "University students, fresh graduates, and early-career developers exploring tech career paths and looking for practical, structured guidance.",
-        "speakerId": "ad560724-c409-406a-908a-f33583684a21",
-        "speakers": [
-            {
-                "id": "ad560724-c409-406a-908a-f33583684a21",
-                "name": "Nisrine Bou Ghannam"
-            }
-        ]
-    },
-    {
-        "id": "1095160",
-        "title": "Think Like a Data Consultant: From Raw Data to Real Impact",
-        "description": "This session aims to equip participants with the consultative mindset and structured process to translate raw data insights into actionable business strategies that deliver measurable, real-world impact.",
-        "format": "Talk",
-        "level": "Intermediate Level",
-        "room": "B105",
-        "time": "01:20 PM - 02:00 PM",
-        "tags": [],
-        "isCommon": false,
-        "targetAudience": "Students and early-career professionals with strong quantitative backgrounds in Computer Science, Engineering, and Business Analytics seeking to elevate technical data skills into strategic business consultancy",
-        "speakerId": "5c886983-8e34-423a-ae2a-a6c222657667",
-        "speakers": [
-            {
-                "id": "5c886983-8e34-423a-ae2a-a6c222657667",
-                "name": "Majd Chahine"
-            },
-            {
-                "id": "2bc79d2f-0b1d-4d69-9894-4e1deaff9482",
-                "name": "Nader Bakir"
-            }
-        ]
-    },
-    {
-        "id": "1095781",
-        "title": "Cyber Resilience: A Multi-Sector Approach",
-        "description": "",
-        "format": "",
-        "level": "",
-        "room": "Main Auditorium",
-        "time": "10:30 AM - 11:10 AM",
-        "tags": [],
-        "isCommon": false,
-        "targetAudience": "",
-        "speakerId": "6615d9d9-bed5-4446-bd21-cbe811ed9128",
-        "speakers": [
-            {
-                "id": "6615d9d9-bed5-4446-bd21-cbe811ed9128",
-                "name": "Robert Mansour"
-            },
-            {
-                "id": "fa16bb05-09ae-429b-90d1-178f20ed8e2e",
-                "name": "Bassel Al Ayoubi"
-            },
-            {
-                "id": "a0981f90-70ea-4023-a1d6-b537899b4e73",
-                "name": "Dr. Ali  El Masri"
-            },
-            {
-                "id": "2ca1f722-a92b-407a-b4a1-6a43c08ea68a",
-                "name": "Elias Dagher"
-            }
-        ]
-    },
-    {
-        "id": "1096298",
-        "title": "From classroom to career",
-        "description": "From classroom to career: a workshop designed to prepare university students to confidently enter the job market by equipping them with practical, real-world skills that universities often overlook.",
-        "format": "Workshop",
-        "level": "Beginner",
-        "room": "HUB",
-        "time": "01:20 PM - 02:10 PM",
-        "tags": [],
-        "isCommon": false,
-        "targetAudience": "Students",
-        "speakerId": "e060d7fd-6fec-426f-8978-07783bdd3896",
-        "speakers": [
-            {
-                "id": "e060d7fd-6fec-426f-8978-07783bdd3896",
-                "name": "Sally Harrouk"
-            }
-        ]
-    },
-    {
-        "id": "1096501",
-        "title": "The AI Accelerator: Supporting Investment Decisions, Empowering Managers, and Launching Startups",
-        "description": "",
-        "format": "",
-        "level": "",
-        "room": "Main Auditorium",
-        "time": "02:30 PM - 03:10 PM",
-        "tags": [],
-        "isCommon": false,
-        "targetAudience": "",
-        "speakerId": "26348375-0c9a-4c72-b32e-b6bbd455b060",
-        "speakers": [
-            {
-                "id": "26348375-0c9a-4c72-b32e-b6bbd455b060",
-                "name": "Mohammad Ahdab"
-            },
-            {
-                "id": "95f10b13-6911-4611-961c-bde0294e8654",
-                "name": "Rami Assoum"
-            },
-            {
-                "id": "86ea4325-df87-47ff-8f93-7ad5f5188201",
-                "name": "Jonah Tebaa"
-            },
-            {
-                "id": "43e481ba-cf96-4c37-8abd-f5dc87a75530",
-                "name": "Dr. Khaled Dassouki"
-            }
-        ]
-    },
-    {
-        "id": "1101026",
-        "title": "Inside the Mind of 1M$ Ethical Hackers",
-        "description": "",
-        "format": "Talk",
-        "level": "Intermediate Level",
-        "room": "Main Auditorium",
-        "time": "11:50 AM - 12:30 PM",
-        "tags": [],
-        "isCommon": false,
-        "targetAudience": "",
-        "speakerId": "5a5cc937-6540-4f05-ba7d-1bb939b06e0a",
-        "speakers": [
-            {
-                "id": "5a5cc937-6540-4f05-ba7d-1bb939b06e0a",
-                "name": "Majd Dhainy"
-            },
-            {
-                "id": "00c8cf27-41d6-4c1c-8250-81adcbc82263",
-                "name": "Kassem Bazzoun"
-            }
-        ]
-    },
-    {
-        "id": "1101043",
-        "title": "Career Skills Kahoot, Future Top 10 Skills, Activity: CS & Accounting",
-        "description": "1- Kahoot game to explore needed soft skills in job interview and CV writing.\n2- Top 10 future skills needed.\n3- When tech meets numbers:an activity to make a link between computer science students and accounting needs.",
-        "format": "Panel",
-        "level": "Beginner",
-        "room": "HUB",
-        "time": "10:30 AM - 12:00 PM",
-        "tags": [],
-        "isCommon": false,
-        "targetAudience": "",
-        "speakerId": "aaeba722-0aab-45b7-8679-7338efc49fbd",
-        "speakers": [
-            {
-                "id": "aaeba722-0aab-45b7-8679-7338efc49fbd",
-                "name": "Hassan Diab"
-            },
-            {
-                "id": "788709c5-d070-4972-969b-fe783536f6f8",
-                "name": "Karim Soueissi"
-            },
-            {
-                "id": "1f119072-1d65-4d1d-ba7d-170e66f1e05b",
-                "name": "Dania Hallab"
-            },
-            {
-                "id": "60fd3502-9d97-4218-b206-71b03694c19b",
-                "name": "Sally Harrouk"
-            }
-        ]
-    },
-    {
-        "id": "huawei-session-001",
-        "title": "Session from Huawei",
-        "description": "Session from Huawei",
-        "format": "Talk",
-        "level": "Intermediate",
-        "room": "Main Auditorium",
-        "time": "11:10 AM - 11:50 AM",
-        "tags": [],
-        "isCommon": false,
-        "targetAudience": "",
-        "speakers": []
-    },
-    {
-        "id": "career-dialogue-001",
-        "title": "Career Dialogue Panel",
-        "description": "Career Dialogue Panel",
-        "format": "Panel",
-        "level": "Beginner",
-        "room": "HUB",
-        "time": "12:00 PM - 12:30 PM",
-        "tags": [],
-        "isCommon": false,
-        "targetAudience": "",
-        "speakers": []
-    }
-],
-    speakers: [
-    {
-        "id": "4aa857c8-3ad6-46b5-a0a3-ef92db483a43",
-        "firstName": "Mhamad",
-        "lastName": "El Itawi",
-        "fullName": "Mhamad El Itawi",
-        "tagLine": "Tech lead and Senior Software Engineer",
-        "company": "Eddress",
-        "bio": "Hi, I\u2019m Mhamad El-Itawi , a Tech Lead and Senior Software Engineer with over 8 years of experience building scalable systems, leading engineering teams, and driving digital transformation.\n\nI specialize in backend architecture, cloud infrastructure, Ai systems, DevOps practices, and legacy system modernization. Over the years, I\u2019ve led major cloud migrations, optimized backend systems for performance and cost-efficiency, and delivered impactful solutions across Europe and the Middle East. I\u2019m certified in Kubernetes and AWS, and hold an MBA in International Business  which helps me bridge the gap between technology and business strategy.\n\nAs a speaker, I focus on real-world lessons from the field, including:\n\n- Designing scalable, cloud-native architectures\n- Leading technical teams through change\n- Applying AI to create smarter systems\n- Transforming legacy codebases\n- Building efficient DevOps pipelines\n\nI\u2019m passionate about sharing knowledge, building communities, and helping teams deliver software that truly makes a difference. If you're organizing an event or panel around engineering, cloud, or leadership in tech I\u2019d love to connect.",
-        "profilePicture": "https://sessionize.com/image/65f8-400o400o1-RdmRPqXwd4eSYev2puQGd1.jpg",
-        "socials": {
-            "linkedin": "https://www.linkedin.com/in/mhamadelitawi/",
-            "twitter": "https://x.com/mhamadelitawi",
-            "website": "http://eddress.co/",
-            "instagram": "https://www.instagram.com/shard.by.shard",
-            "blog": "https://mhamadelitawi.com/"
+        {
+            "id": "reg-coffee-001",
+            "title": "Registration & Welcome Coffee",
+            "description": "Get your badge and enjoy some coffee before we start.",
+            "format": "Networking",
+            "level": "",
+            "room": "Main Auditorium",
+            "time": "08:30 AM - 09:30 AM",
+            "tags": [],
+            "isCommon": true,
+            "targetAudience": "All Attendees"
+        },
+        {
+            "id": "cf3d53f8-2f9b-456a-aab4-dfeb00f9df3f",
+            "title": "Opening Keynote: Welcome to DevFest!",
+            "description": "By GDG and BAU",
+            "format": "Keynote",
+            "level": "Beginner",
+            "room": "Main Auditorium",
+            "time": "10:00 AM - 10:30 AM",
+            "tags": [],
+            "isCommon": true,
+            "targetAudience": ""
+        },
+        {
+            "id": "lunch-001",
+            "title": "Lunch & Closing",
+            "description": "End your day with a delicious lunch, closing remarks, and a chance to network with other attendees.",
+            "format": "Networking",
+            "level": "",
+            "room": "Main Auditorium",
+            "time": "03:25 PM - 04:00 PM",
+            "tags": [],
+            "isCommon": true,
+            "targetAudience": ""
+        },
+        {
+            "id": "panel-1",
+            "title": "Panel Discussion",
+            "description": "Details coming soon.",
+            "format": "Panel",
+            "level": "",
+            "room": "Main Auditorium",
+            "time": "10:35 AM - 11:15 AM",
+            "tags": ["Panel"],
+            "isCommon": false,
+            "targetAudience": "All Attendees",
+            "speakers": []
+        },
+        {
+            "id": "1346716",
+            "title": "Before Your AI Agent Touches Production: MCP, Handoff and Retry Lessons From Real Systems",
+            "description": "Connecting an agent to your tools with MCP or function calling takes an afternoon. The hard part comes after: what it is allowed to read, what it is allowed to change, what happens when the same webhook arrives twice, and who is in charge when a person replies while the model is still generating.\n\nThis talk covers that layer using three systems I've worked on, each deployed and in use:\n\n- Read: a read-only MCP path into an internal operations platform I built at Achour Holding. Its credentials can't act as a logged-in user, its tools are bounded reads over a read model with no write statements, access scope is resolved before any query runs, and ambiguous identifiers are refused instead of guessed.\n- Act: Hader, a multi-tenant WhatsApp and voice AI platform with paying clients, where conversations create orders, bookings and payment links. Durable webhooks, tenant attribution, idempotent call and order operations, and deterministic validators around every action the model proposes.\n- Stop: human handoff as a state machine. A forward-only handset-reply timestamp, generation tokens and a final supersession check make sure a stale AI draft is never sent after a person has answered.\n- Stay truthful: in Alinia, a multilingual property search, the model proposes candidates and approved listing records decide what the user actually sees.\n\nIt ends with a short checklist to run before your own agent goes live. No client data or proprietary code: the talk is about the patterns, the race conditions and the tradeoffs.",
+            "format": "Talk (40 minutes)",
+            "level": "Intermediate Level",
+            "room": "B1008",
+            "time": "10:35 AM - 11:15 AM",
+            "tags": [],
+            "isCommon": false,
+            "targetAudience": "Developers building with LLMs, agents, MCP or function calling; backend engineers connecting AI to messaging, voice, databases or CRMs; and students who want to see production AI engineering beyond tutorials. Assumes you have called an LLM API; no distributed-systems background required.",
+            "speakerId": "d507dbd3-75aa-4447-9c15-17df889cc1a7",
+            "speakers": [
+                {
+                    "id": "d507dbd3-75aa-4447-9c15-17df889cc1a7",
+                    "name": "Layth Ayache"
+                }
+            ]
+        },
+        {
+            "id": "1348386",
+            "title": "Steady in the Storm: Team Management for Uncertain Times.",
+            "description": "This session explores how tech leads, managers, and developers can build teams that adapt quickly without burning out. Drawing on organizational development practice, it covers how to keep teams focused and connected when plans change, how to build psychological safety so people speak up early about risks, and how to turn setbacks into learning rather than blame. Attendees will leave with practical tools to strengthen team resilience, communicate clearly under pressure, and lead with steadiness when everything else is moving.",
+            "format": "Talk (40 minutes)",
+            "level": "Intermediate Level",
+            "room": "B1008",
+            "time": "11:20 AM - 11:55 AM",
+            "tags": [],
+            "isCommon": false,
+            "targetAudience": "tech leads, engineering managers, and team leads who guide developers through change, as well as senior and mid-level developers stepping into leadership roles. ",
+            "speakerId": "b84432ec-f9df-4313-96ab-dbb6e0a97b37",
+            "speakers": [
+                {
+                    "id": "b84432ec-f9df-4313-96ab-dbb6e0a97b37",
+                    "name": "Dr. Mariam Saleh"
+                }
+            ]
+        },
+        {
+            "id": "1351098",
+            "title": "Designing APIs and Docs for Agents, Not Humans",
+            "description": "More and more API calls now come from AI agents, not developers. An agent reads your docs on every call, takes every word literally, and never asks on Slack. For an agent, your docs are the interface, and a vague sentence is a bug.\n\nWe follow one example: a support agent trying to refund an order. Step by step, with before and after examples, we fix the tool descriptions, names, errors and docs, see where MCP fits, and build an agent-safe refund with scoped tokens, idempotency keys and audit logs. You leave with a checklist and small changes you can make on Monday.",
+            "format": "Talk (40 minutes)",
+            "level": "Beginner",
+            "room": "B1005",
+            "time": "11:20 AM - 11:55 AM",
+            "tags": [],
+            "isCommon": false,
+            "targetAudience": "Anyone ",
+            "speakerId": "4aa857c8-3ad6-46b5-a0a3-ef92db483a43",
+            "speakers": [
+                {
+                    "id": "4aa857c8-3ad6-46b5-a0a3-ef92db483a43",
+                    "name": "Mhamad El Itawi"
+                }
+            ]
+        },
+        {
+            "id": "1353182",
+            "title": "When the target is an AI: breaking and defending LLM systems",
+            "description": "AI introduces a new attack surface, and the model itself can become the target. Through a practical prompt injection demonstration, this talk explores how attackers manipulate LLM-powered applications, where malicious instructions can enter, and how guardrails and secure system design can help contain the damage.",
+            "format": "Talk (40 minutes)",
+            "level": "Beginner",
+            "room": "Main Auditorium",
+            "time": "11:20 AM - 11:55 AM",
+            "tags": [],
+            "isCommon": false,
+            "targetAudience": "Univerity students and Tech employees",
+            "speakerId": "7c7eef87-6e10-4fe7-80f0-d162fb4f01c9",
+            "speakers": [
+                {
+                    "id": "7c7eef87-6e10-4fe7-80f0-d162fb4f01c9",
+                    "name": "Hadi Zeinaldeen"
+                }
+            ]
+        },
+        {
+            "id": "1351755",
+            "title": "AI can do it. But Should it?",
+            "description": "AI Can Do It. But Should It? explores a question we often overlook in the AI era: just because AI can perform a task, does that mean we should use it? Through relatable real-world scenarios—from writing, studying, and creating to coding and decision-making—the talk invites the audience to think critically about when AI adds genuine value and when using it may be unnecessary, costly, or even counterproductive. The goal is not to be pro- or anti-AI, but to develop better AI judgment: knowing when to use AI, when to work with it, and when the smartest choice is simply to do it ourselves.",
+            "format": "Talk (40 minutes)",
+            "level": "Intermediate Level",
+            "room": "Main Auditorium",
+            "time": "12:05 PM - 12:40 PM",
+            "tags": [],
+            "isCommon": false,
+            "targetAudience": "pre-graduate students as well as graduate students",
+            "speakerId": "cb72b3d1-cfe4-49cc-b89f-85bbbd1fc364",
+            "speakers": [
+                {
+                    "id": "cb72b3d1-cfe4-49cc-b89f-85bbbd1fc364",
+                    "name": "Amani Raad"
+                }
+            ]
+        },
+        {
+            "id": "1352144",
+            "title": "Front End, Back End... What About the Business End?",
+            "description": "KPIs? OKRs? Geeks, no more feeling like a stranger in the room. Let's talk the business side of tech.\n\nYou know the front end. You know the back end. But every app has a third side that nobody teaches developers: the business end.\n\nIt is the side where features get approved, delayed, or cut, and it speaks its own language: KPIs, OKRs, ROI, MVP, churn. In this session, we decode that language using real examples from apps you already know, with a few quick quiz moments to keep it fun.\n\nBy the end, you will understand what those terms mean, why they decide what happens to your code, and how to join the conversation with confidence.",
+            "format": "Talk (40 minutes)",
+            "level": "Beginner",
+            "room": "B1008",
+            "time": "12:05 PM - 12:40 PM",
+            "tags": [],
+            "isCommon": false,
+            "targetAudience": "developers, students and startups owners",
+            "speakerId": "d8b7c739-047a-463f-afa0-270fcdab38ce",
+            "speakers": [
+                {
+                    "id": "d8b7c739-047a-463f-afa0-270fcdab38ce",
+                    "name": "Gardenia Homsi"
+                }
+            ]
+        },
+        {
+            "id": "1342660",
+            "title": "How I Went From Earning $300 to $4,000+ as a Developer",
+            "description": "I’ll share the key decisions, skills, opportunities, and lessons that helped me grow my career and increase my value in the tech industry, from 300$ salary to 4000$ salary, including the mistakes I made along the way and what I would do differently today.",
+            "format": "Talk (40 minutes)",
+            "level": "Beginner",
+            "room": "Main Auditorium",
+            "time": "12:50 PM - 01:25 PM",
+            "tags": [],
+            "isCommon": false,
+            "targetAudience": "Everybody interested in tech",
+            "speakerId": "34d36b86-4ad7-4f07-9487-198ecc663198",
+            "speakers": [
+                {
+                    "id": "34d36b86-4ad7-4f07-9487-198ecc663198",
+                    "name": "Sam Shouman"
+                }
+            ]
+        },
+        {
+            "id": "1352015",
+            "title": "From Beginner to Cybersecurity Expert: A Practical Roadmap",
+            "description": "This session provides a practical roadmap for anyone interested in starting a career in cybersecurity and progressing toward a high technical level. It covers the essential foundations to build, how to develop practical skills, and how to gradually progress toward advanced cybersecurity and offensive security.\n\nThe roadmap is based on practical experience in cybersecurity and penetration testing, combined with an academic background in cybersecurity from Télécom Paris. It also draws on real-world security research, including vulnerability research recognized by Apple.",
+            "format": "Talk (40 minutes)",
+            "level": "Beginner",
+            "room": "B1008",
+            "time": "12:50 PM - 01:25 PM",
+            "tags": [],
+            "isCommon": false,
+            "targetAudience": "Computer Science and IT students, recent graduates, cybersecurity students and professionals, as well as anyone interested in learning cybersecurity and developing practical skills in ethical hacking, penetration testing, and information security.",
+            "speakerId": "c3346524-8c8b-45bb-9830-52f60228dfc3",
+            "speakers": [
+                {
+                    "id": "c3346524-8c8b-45bb-9830-52f60228dfc3",
+                    "name": "Oussama Barbar"
+                }
+            ]
+        },
+        {
+            "id": "panel-2",
+            "title": "Panel Discussion",
+            "description": "Details coming soon.",
+            "format": "Panel",
+            "level": "",
+            "room": "Main Auditorium",
+            "time": "01:30 PM - 02:05 PM",
+            "tags": ["Panel"],
+            "isCommon": false,
+            "targetAudience": "All Attendees",
+            "speakers": []
+        },
+        {
+            "id": "1344241",
+            "title": "From Chatbots to AI Agents: Making AI Take Action",
+            "description": "We are moving from AI systems that simply generate answers to AI systems that can observe their environment, use tools, take actions, and verify the results.\n\nThis session introduces the practical difference between a traditional chatbot and an AI agent through a live, interactive demonstration. Instead of asking an AI, “Why is my network slow?” and receiving a list of possible causes, we will give an AI agent a goal: “The network is slow. Find the problem and fix it.”\n\nThe agent will observe a simulated network, inspect connected devices, identify an abnormal traffic source, use tools to investigate the problem, propose an action, request human approval, apply a corrective policy, and finally verify that the network has recovered.\n\nAlong the way, we will break down the architecture behind this behavior: the AI model as the reasoning engine, tools and APIs as the agent’s capabilities, the environment in which it operates, the agent loop, and the guardrails needed when AI is allowed to take action.\n\nThe networking scenario is only the playground. The same principles can be applied to GitHub, databases, cloud infrastructure, IoT systems, DevOps pipelines, cybersecurity, and many other developer workflows.\n\nThe goal is to leave attendees with a practical mental model they can reuse when designing their own AI-powered applications: Goal → Observe → Reason → Use Tools → Act → Verify.",
+            "format": "Talk (40 minutes)",
+            "level": "Intermediate Level",
+            "room": "B1008",
+            "time": "01:30 PM - 02:05 PM",
+            "tags": [],
+            "isCommon": false,
+            "targetAudience": "Developers, software engineers, AI/ML practitioners, DevOps and cloud engineers, IoT developers, computer science students, and technology professionals interested in practical applications of generative AI and AI agents. The session is designed for a mixed technical audience. No specialized knowledge of networking or machine learning is required; the network scenario is used to make the agent behavior concrete and easy to visualize.",
+            "speakerId": "50839307-f276-4b21-bfba-f717d299047b",
+            "speakers": [
+                {
+                    "id": "50839307-f276-4b21-bfba-f717d299047b",
+                    "name": "Rana Rahim"
+                }
+            ]
+        },
+        {
+            "id": "1345323",
+            "title": "The Tree Shaped Software Engineer: T Shaped Is Not Enough, Grow Roots",
+            "description": "The \"T shaped engineer\" is the standard career advice, but it skips the part that decides who survives the next tool cycle: what sits underneath. This talk introduces the Tree Shaped Engineer. The roots are the fundamentals (networking, data, how a request actually travels, what happens when things fail). They are invisible but they carry everything. The trunk is deep ownership of one real production system in one language. The branches are the frameworks, cloud services, and AI tools you grow on top, and they die and get replaced constantly. The tree survives because the trunk holds. We will look at what a thin-trunk, many-branch engineer looks like, how roots and trunk grow together rather than in phases, and how to tell where you are in your own growth.",
+            "format": "Talk (40 minutes)",
+            "level": "Beginner",
+            "room": "Main Auditorium",
+            "time": "02:10 PM - 02:45 PM",
+            "tags": [],
+            "isCommon": false,
+            "targetAudience": "Junior developers, students, and career shifters who feel busy learning tools but stuck in growth. Working engineers who want a clearer path from framework user to engineer others trust with production. Hiring managers and team leads who want a better way to judge depth in candidates. No prerequisites beyond having built at least one small project.",
+            "speakerId": "43c5a63b-7c5d-4ef8-ae57-b844e96c7142",
+            "speakers": [
+                {
+                    "id": "43c5a63b-7c5d-4ef8-ae57-b844e96c7142",
+                    "name": "Sami Shames El Deen"
+                }
+            ]
+        },
+        {
+            "id": "1357242",
+            "title": "“From ERP to AI: How Technology Is Redefining the Modern Business”",
+            "description": "The presentation will focus on how technology is changing the way businesses operate, using Odoo ERP as a practical example to explain the connection between ERP, automation, data analytics, and Artificial Intelligence.",
+            "format": "Talk (40 minutes)",
+            "level": "Intermediate Level",
+            "room": "B1008",
+            "time": "02:10 PM - 02:45 PM",
+            "tags": [],
+            "isCommon": false,
+            "targetAudience": "University students, academic professionals, business owners, managers, and representatives from different industries.",
+            "speakerId": "ca0cf8af-8107-4c15-b138-b3f75e08fd08",
+            "speakers": [
+                {
+                    "id": "ca0cf8af-8107-4c15-b138-b3f75e08fd08",
+                    "name": "Redwan Hasbini"
+                }
+            ]
+        },
+        {
+            "id": "1345310",
+            "title": "Zero Hype: The Pragmatic Playbook for Early Career Engineers in the Age of AI",
+            "description": "The tech landscape has fundamentally changed, and succeeding in the industry today requires much more than traditional milestones or a degree. Join this session to explore how to navigate your tech career in the post-AI era. We will break down what it means to deliver real value, build a personal brand and portfolio that stand out as an early career engineer, and leverage AI tools without sacrificing core technical depth. Walk away with actionable strategies to gain a competitive edge and build a resilient career path.",
+            "format": "Talk (40 minutes)",
+            "level": "Beginner",
+            "room": "Main Auditorium",
+            "time": "02:50 PM - 03:25 PM",
+            "tags": [],
+            "isCommon": false,
+            "targetAudience": "​Students and recent graduates preparing to enter the tech job market. ​Early-career engineers looking to navigate industry shifts, stand out to employers, and strategically grow their careers.",
+            "speakerId": "0c3b5dee-1204-4660-88fd-38d29255378c",
+            "speakers": [
+                {
+                    "id": "0c3b5dee-1204-4660-88fd-38d29255378c",
+                    "name": "Nour Shamaa"
+                }
+            ]
+        },
+        {
+            "id": "1353755",
+            "title": "From Specs to Systems: Engineering the Agentic Enterprise",
+            "description": "AI is changing software engineering faster than most engineering practices are adapting.\n\nThe current conversation is heavily focused on how AI can generate code, create applications faster, or power autonomous agents. But in real-world engineering environments, code is rarely the hardest problem. The harder problem is translating business intent into systems that are correct, governed, observable, secure, and able to evolve without losing their original meaning.\n\nAs implementation becomes increasingly assisted by AI, the engineering bottleneck moves upstream.\n\nThe critical questions become:\n\nWhat exactly are we asking the system to do?\n\nWhich decisions should be deterministic, and which genuinely require AI reasoning?\n\nWhat context and data should an agent be allowed to access?\n\nWhat actions should it be authorized to perform?\n\nHow do we verify its decisions?\n\nHow do we preserve state, traceability, governance, and accountability?\n\nAnd how do we prevent ambiguous requirements from becoming autonomous mistakes at machine speed?\n\nThis talk explores a shift from code-first engineering toward specification-driven, agentic system engineering.\n\nInstead of treating specifications as static documents that eventually become obsolete, the session explores how specifications can become the structured contract between human intent and machine execution: defining processes, decisions, constraints, policies, permissions, data requirements, expected outcomes, and verification rules.\n\nFrom there, the talk expands into the architecture of modern agentic systems.\n\nWe will explore why enterprise AI requires far more than an LLM and a tool call. Reliable agents need grounding, operational state, memory, permissions, deterministic safeguards, observability, and clear boundaries between probabilistic reasoning and traditional software logic.\n\nThe session will also examine the role of modern data platforms such as MongoDB in supporting the evolving agentic data layer: operational state, contextual data, documents, vectors, events, interaction history, execution traces, and auditability.\n\nA major theme of the talk is that not every problem should become an AI problem.\n\nRules that are known should remain deterministic. Structured decisions may belong in decision models. Repetitive activities may belong in automation. AI becomes most valuable where ambiguity, interpretation, contextual reasoning, or complex orchestration genuinely exist.\n\nThe talk also connects agentic architecture with business process engineering. Rather than inserting AI as another mandatory step inside an existing workflow, we will examine how processes themselves can be redesigned when agents can gather context, make bounded decisions, coordinate systems, and escalate only genuine exceptions to humans.\n\nUltimately, this session is about the changing role of the engineer.\n\nAs machines become increasingly capable of generating implementation, engineers will spend less time translating specifications manually into code and more time engineering the intent, constraints, architecture, data, policies, autonomy boundaries, and verification mechanisms that govern intelligent systems.\n\nThis is not a live-coding session and not another \"build an AI agent in 30 minutes\" presentation.\n\nIt is a systems-level discussion about what software engineering becomes when software can increasingly participate in building, operating, and evolving itself.",
+            "format": "Talk (40 minutes)",
+            "level": "Intermediate Level",
+            "room": "B1008",
+            "time": "02:50 PM - 03:25 PM",
+            "tags": [],
+            "isCommon": false,
+            "targetAudience": "Engineers, Developers, Data Analysts, BAs, Cloud Engineers, Team Leaders",
+            "speakerId": "d8008556-939e-4ba8-87b1-9cf2b76ac5c0",
+            "speakers": [
+                {
+                    "id": "d8008556-939e-4ba8-87b1-9cf2b76ac5c0",
+                    "name": "Elie Hannouch"
+                }
+            ]
         }
-    },
-    {
-        "id": "e4072f71-75fe-45a0-8690-1450fe2e48ac",
-        "firstName": "Judy",
-        "lastName": "Abi Nehme",
-        "fullName": "Judy Abi Nehme",
-        "tagLine": "Software engineer at Upwork ",
-        "company": "Upwork ",
-        "bio": "Judy started his career as an electrical engineer in smart homes and electrical installations before shifting into software engineering. He is currently a software engineer at Upwork, a data structures and algorithms teacher. Occasionally, he helps talent with mock interviews. ",
-        "profilePicture": "https://sessionize.com/image/59c4-400o400o1-URnqw6nkqFD6oAsyoHsbBw.png",
-        "socials": {
-            "linkedin": "https://www.linkedin.com/in/judyabinehme/",
-            "website": "www.upwork.com",
-            "blog": "https://medium.com/@judabne"
-        }
-    },
-    {
-        "id": "d5c60999-eb9c-4245-9d0d-6409c5a27a0d",
-        "firstName": "Jaafar",
-        "lastName": "Nasrallah",
-        "fullName": "Jaafar Nasrallah",
-        "tagLine": "Senior DevOps Engineer",
-        "company": "Cardinal Health",
-        "bio": "I\u2019m a Google-certified DevOps engineer with over 10 years of experience across systems administration, cloud infrastructure, CI/CD, and backend development. I\u2019m passionate about breaking down complex DevOps concepts into clear, hands-on learning experiences that empower others to build, automate, and deploy with confidence",
-        "profilePicture": "https://sessionize.com/image/be2d-400o400o1-U6MN4u9SbdoadfDUA67hqt.jpg",
-        "socials": {
-            "linkedin": "https://www.linkedin.com/in/jaafarnasrallah",
-            "website": "Cardinalhealth.com",
-            "instagram": "https://www.instagram.com/jaafar_nasrallah"
-        }
-    },
-    {
-        "id": "d8b7c739-047a-463f-afa0-270fcdab38ce",
-        "firstName": "Gardenia",
-        "lastName": "Homsi",
-        "fullName": "Gardenia Homsi",
-        "tagLine": "Tech Product Manager at Wakilni ",
-        "company": "Wakilni",
-        "bio": "Gardenia Al Homsi is a Technical Product Manager at Wakilni, bringing over six years of experience across software development and product management. With a background in computer engineering and PMI-certified expertise in Agile methodologies, she specializes in digital transformation, cross-functional team leadership, and delivering scalable, business-driven technology solutions. Gardenia has worked with companies both locally and internationally on building in-house and SaaS products. She is known for her ability to create products that customers love while aligning with strategic business objectives.",
-        "profilePicture": "https://sessionize.com/image/2de6-400o400o1-VHS7HAoRuxwbjTbo6oeEGh.jpg",
-        "socials": {
-            "linkedin": "https://www.linkedin.com/in/gardenia-homsi",
-            "website": "wakilni.com"
-        }
-    },
-    {
-        "id": "ce57780b-b2fd-4f06-8bd1-cdcf2c471e2b",
-        "firstName": "Abed-R",
-        "lastName": "Ghaleb",
-        "fullName": "Abed-R Ghaleb",
-        "tagLine": "Co-founder & CEO @ SILNI AI",
-        "company": "Khawarizme Community & SILNI AI",
-        "bio": "Dr. Abed-R Ghaleb is the CEO and founder of SILNI, an AI-powered B2B sales platform, and an organizational strategist with over 15 years\u2019 experience in business development, SaaS solutions, and executive training across the MENA region. Passionate about turning AI potential into practical business wins, \n\nDr. Abed-R Ghaleb empowers companies to bridge the gap between technology and strategy. Whether working with startups or established enterprises, he brings a proven record in AI adoption, market analysis, and sales enablement that drives meaningful results for organizations at every stage.",
-        "profilePicture": "https://sessionize.com/image/5063-400o400o1-UDpSa2Ax8Y4DTWoomV1tFr.jpg",
-        "socials": {
-            "linkedin": "https://www.linkedin.com/in/abed-r-ghaleb-8b000653/",
-            "website": "https://www.silni.ai/en"
-        }
-    },
-    {
-        "id": "d0523778-7fbc-41e4-b4a5-6122650a000e",
-        "firstName": "Stephane",
-        "lastName": "Boghossian",
-        "fullName": "Stephane Boghossian",
-        "tagLine": "Head of Customer Success, AI Builder & Vibe Coding Advocate",
-        "company": "Lovable.dev / Vibemind",
-        "bio": "Stephane Boghossian is an AI-native product builder working at the intersection of design, multi-agent systems, and rapid prototyping. He has helped hundreds of founders and creators build and ship products using Vibe Coding methods. He co-develops Vibemind, an AI operating system built around multi-agent automation and intent-driven creation.",
-        "profilePicture": "https://sessionize.com/image/ed6f-400o400o1-Hx6emiLNXVJUNmBr36goHx.png",
-        "socials": {
-            "linkedin": "https://www.linkedin.com/in/stephboghossian/",
-            "website": "https://vibemind.space",
-            "blog": "https://stephane.bio/"
-        }
-    },
-    {
-        "id": "1eaeee06-9ccd-4481-9c96-72fa05c2576e",
-        "firstName": "Roc",
-        "lastName": "Khalil",
-        "fullName": "Roc Khalil",
-        "tagLine": "VP of Engineering at HAQQ",
-        "company": "HAQQ",
-        "bio": "With over 12 years of experience in web development and team leadership, I specialize in building scalable applications, optimizing deployment workflows, and introducing innovative solutions. I\u2019m passionate about helping startups and developers discover tools and frameworks that can accelerate productivity and open up global opportunities.",
-        "profilePicture": "https://sessionize.com/image/d45b-400o400o1-GgqRcwcx8hDtCC46fDuiv1.jpg",
-        "socials": {
-            "linkedin": "https://www.linkedin.com/in/rockhalil/",
-            "website": "https://haqq.ai"
-        }
-    },
-    {
-        "id": "0f0e7f44-cdab-4de7-a1e7-4f97a40b42e1",
-        "firstName": "Rami",
-        "lastName": "Kronbi",
-        "fullName": "Rami Kronbi",
-        "tagLine": "Computer Vision Engineer, Oreyeon",
-        "company": "Oreyeon",
-        "bio": "Computer Vision Engineer and Edge AI Developer working on vision models, embedded AI, and embedded software design. A lifelong robotics enthusiast with several national competition wins, I\u2019m driven by impact-focused solutions and leadership in the AI field. Outside of work, I\u2019m passionate about space and exploration.",
-        "profilePicture": "https://sessionize.com/image/1125-400o400o1-XynJB2xi41cDbCi11rpDWn.jpg",
-        "socials": {
-            "linkedin": "www.linkedin.com/in/rami-kronbi",
-            "website": "https://www.oreyeon.com/",
-            "instagram": "https://www.instagram.com/ramikronbi/",
-            "blog": "https://ramikronbi.com/"
-        }
-    },
-    {
-        "id": "b31b6747-781b-44d0-8189-cb4b222240be",
-        "firstName": "Aisha",
-        "lastName": "Harrash",
-        "fullName": "Aisha Harrash",
-        "tagLine": "Namou Properties - Tech Business Analyst",
-        "company": "Namou Properties",
-        "bio": "A Tech BA, helping startups use technology to increase the business impact and team productivity",
-        "profilePicture": "https://sessionize.com/image/caeb-400o400o1-3FyGpt12XhCM9afEyj1mGC.jpg",
-        "socials": {
-            "linkedin": "https://www.linkedin.com/in/aichaharrach/",
-            "website": "Not Launched yet"
-        }
-    },
-    {
-        "id": "3a70a459-beb6-4c10-af2f-9958d49b2793",
-        "firstName": "Ibrahim",
-        "lastName": "Zakaria",
-        "fullName": "Ibrahim Zakaria",
-        "tagLine": "Innovation Team Lead @NavyBits , mentor @ Winners Academy by NavyBits",
-        "company": "NavyBits",
-        "bio": "Ibrahim Zakaria is a software engineer and AI-driven product builder with experience designing and scaling modern web and mobile applications. He specializes in blending creative problem-solving with advanced development workflows, using tools like AI assistants, NestJS, Prisma, PostgreSQL, and cloud-based architectures to build efficient, user-centered digital products.",
-        "profilePicture": "https://sessionize.com/image/e185-400o400o1-a97RKuSTDi6fZHvdiVBg1R.jpg",
-        "socials": {
-            "linkedin": "https://www.linkedin.com/in/ibrahim-zakaria/",
-            "website": "https://www.navybits.com",
-            "instagram": "https://www.instagram.com/ibrahimzak10/",
-            "facebook": "https://www.facebook.com/ibrahim.zakaria.1422/"
-        }
-    },
-    {
-        "id": "b17b7459-ef0f-45d1-b4c0-df52cc7cc691",
-        "firstName": "Ahmad",
-        "lastName": "Kharma",
-        "fullName": "Ahmad Kharma",
-        "tagLine": "Ai Solution Developer & Winners Academy Leadership",
-        "company": "Navybits",
-        "bio": "Full\u2011stack Developer with ~3 years of experience, delivering scalable frontend and backend solutions. Skilled\nin Next.js, React, Node.js, Laravel, Directus, MongoDB/MySQL. Passionate about shipping real product value,\nmentoring students, and integrating AI models and MCP\u2011based tools to automate workflows and unlock new\ncapabilities.",
-        "profilePicture": "https://sessionize.com/image/4a74-400o400o1-DtkNbrSNmBXJdUbip7S1V6.jpg",
-        "socials": {
-            "linkedin": "https://www.linkedin.com/in/ahmad-kharma-098596268/",
-            "website": "https://www.navybits.com/",
-            "instagram": "https://www.instagram.com/ahmad.kharma.8/",
-            "facebook": "https://www.facebook.com/ahmad.kharma.96"
-        }
-    },
-    {
-        "id": "cc489475-0a10-4c0b-8e6d-9878e83c84d8",
-        "firstName": "Rayan",
-        "lastName": "Salhab",
-        "fullName": "Rayan Salhab",
-        "tagLine": "CTO @ AIY Expert Solutions",
-        "company": "AIY Expert Solutions",
-        "bio": "Rayan Salhab is the CTO at AIY Expert Solutions, leading a 40+ person team building automation and software products used by customers around the world.\n\nHe works across engineering, cloud infrastructure, and product, with a strong focus on developer experience and reliability. Inside AIY, he runs continuous education programs and internal workshops on AI tools, modern development practices, and engineering culture.\n\nRayan is obsessed with turning buzzwords into working systems: testing new technologies like AI in real products, then sharing the lessons, failures, and playbooks with the community.",
-        "profilePicture": "https://sessionize.com/image/92c7-400o400o1-Ky8tH6jBLxVJ5umDDvJ1cF.jpg",
-        "socials": {
-            "linkedin": "https://www.linkedin.com/in/rayan-salhab",
-            "website": "https://www.aiyexpertsolutions.com/"
-        }
-    },
-    {
-        "id": "3da1e85c-a7a9-4869-9a37-f355307cff2d",
-        "firstName": "Mohyddine",
-        "lastName": "Al-lahham",
-        "fullName": "Mohyddine Al-lahham",
-        "tagLine": "Senior Android Developer",
-        "company": "Code With Mehyo",
-        "bio": "Senior Android developer\nKotlin Multiplatform Developer \nGDG Android/Kotlin Speaker \nYouTube Content Creator ",
-        "profilePicture": "https://sessionize.com/image/6b9f-400o400o1-KQkJHUgHanV5n5k7j3k4wo.jpg",
-        "socials": {
-            "linkedin": "https://www.linkedin.com/in/mohyddine-lahham",
-            "website": "www.codewithmehyo.com"
-        }
-    },
-    {
-        "id": "261c2a2a-88cf-4821-b3a9-f5003eb66216",
-        "firstName": "Sarah",
-        "lastName": "Rashidi",
-        "fullName": "Sarah Rashidi",
-        "tagLine": "AI Architect & Researcher | University Instructor | Community Builder",
-        "company": "RHU",
-        "bio": "Sarah is a University Instructor at Rafik Hariri University (RHU), where she teaches computer science and helps students bridge theory with practical applications. She is also an AI Researcher, Engineer, and Architect with over three years of experience building scalable AI systems, with a focus on MLOps, generative AI, and applied machine learning. Holding dual master\u2019s degrees in Computer Science and Data Intelligence, she works at the intersection of research and engineering to design solutions that connect innovation with real-world impact.\n\nBeyond her professional work, Sarah is an active community leader. She joined Google Developer Groups (GDG) as an organizer earlier this year and is the founder of Code with Serah, a STEAM community at the crossroads of technology and creativity. Through these initiatives, she creates inclusive spaces for young people to learn, collaborate, and bring their ideas to life.\n\n",
-        "profilePicture": "https://sessionize.com/image/5e37-400o400o1-R4sPDooML43Sq62Qwezq4f.jpg",
-        "socials": {
-            "linkedin": "linkedin.com/in/serahrashidi/",
-            "website": "https://www.rhu.edu.lb/home"
-        }
-    },
-    {
-        "id": "cb72b3d1-cfe4-49cc-b89f-85bbbd1fc364",
-        "firstName": "Amani",
-        "lastName": "Raad",
-        "fullName": "Amani Raad",
-        "tagLine": "Associate professor at the Lebanese University engineering faculty branch I",
-        "company": "Lebanese University engineering faculty branch I",
-        "bio": "Amani RAAD obtained her PhD in Information Technology and Systems from the University of Technology of Compiegne in France. After graduation, she was a Research and teaching Assistant in the Heudyasic Laboratory in France. She has been a part-time Assistant Professor in the Electrical and Electronics Engineering Department, Lebanese University, engineering faculty. Since July 2014, she has been a full-time assistant professor at the same department. Her research interests include mainly Digital Signal Processing and Artificial Intelligence for several applications and mainly for predictive maintenance. She received the award of the distinguished professor from the Lebanese University in 2019.",
-        "profilePicture": "https://sessionize.com/image/0b02-400o400o1-WuN4JSxYEF1P1JbiTsffRt.jpg",
-        "socials": {
-            "linkedin": "https://www.linkedin.com/in/amani-raad-60738384?utm_source=share_via&utm_content=profile&utm_medium=member_android",
-            "website": "ul.edu.lb"
-        }
-    },
-    {
-        "id": "089bb622-9b5d-436f-b531-e1a653264f51",
-        "firstName": "Omar",
-        "lastName": "Chaaban",
-        "fullName": "Omar Chaaban",
-        "tagLine": "Senior Software Engineer at DTP",
-        "company": "DTP",
-        "bio": "Senior software engineer with 15+ years of experience developing and architecting enterprise-grade applications using the Java ecosystem. Skilled in leading technical teams, designing complex distributed systems, and driving end-to-end solution delivery.",
-        "profilePicture": "https://sessionize.com/image/3d6c-400o400o1-Qru82oMapiiNwdniQxeQAX.jpg",
-        "socials": {
-            "linkedin": "https://www.linkedin.com/in/omarchaaban",
-            "website": "https://dtp.ae/"
-        }
-    },
-    {
-        "id": "08589cfa-0867-493b-b32b-66882fb54314",
-        "firstName": "Elias",
-        "lastName": "Atik",
-        "fullName": "Elias Atik",
-        "tagLine": "Co-founder and CEO/CTO at Webspot",
-        "company": "Webspot",
-        "bio": "Co-founder and CEO of Webspot, Lebanon\u2019s leading Generative AI solutions firm, Elias has spent more than a decade building and deploying end-to-end AI systems. A passionate instructor and speaker, he delivers practical AI education to both non-specialists and technical teams across sectors. He is driven by a mission to make AI accessible to every company, organization, and individual.",
-        "profilePicture": "https://sessionize.com/image/09dc-400o400o1-Q6ee5cXhvGRy6at28qRB7m.png",
-        "socials": {
-            "linkedin": "https://www.linkedin.com/in/eliasatik/",
-            "website": "https://webspot me",
-            "instagram": "https://Instagram.com/elias.atik"
-        }
-    },
-    {
-        "id": "ffc51179-bbaf-4e96-8101-1a770db74061",
-        "firstName": "Mohamad",
-        "lastName": "Tabikh",
-        "fullName": "Mohamad Tabikh",
-        "tagLine": "Netwatch-co founder - it consultant",
-        "company": "Netwatch",
-        "bio": "Mohamad \u2013 Strategic IT Consultant, Netwatch  \nMohamad is a Strategic IT Consultant specializing in cloud computing, MSP solutions, and digital transformation. He advises hospitals, universities, and enterprises on building secure, scalable, and vendor\u2011independent infrastructures. At DevFest, he bridges technical depth with practical impact, showcasing real\u2011world tools like Zabbix, Acronis, and Nextcloud alongside Google services to empower developers, students, and institutions.",
-        "profilePicture": "https://sessionize.com/image/f1e4-400o400o1-PxH3w2BXWdXq5WFK9mM1QF.jpg",
-        "socials": {
-            "linkedin": "https://www.linkedin.com/in/mohamad-tabikh-a907b329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-            "website": "www.netwatchlb.com"
-        }
-    },
-    {
-        "id": "7b455539-7556-477b-9d3b-bec814e5f8b8",
-        "firstName": "Nicolas",
-        "lastName": "El Khoury",
-        "fullName": "Nicolas El Khoury",
-        "tagLine": "Technology Consultant | Lecturer - Lebanese American University",
-        "company": "",
-        "bio": "With 11 years of international experience, I specialize in designing and delivering reliable, and scalable web-based systems. My work has empowered startups, enterprises, and everything in between to grow faster, scale smarter, and operate more effectively.\n\nWhat sets me apart is my ability to bridge the gap between business, product, and technology. Having played many roles, including being an engineer, consultant, team leader, manager, and university lecturer, I bring both strategic vision and execution power to the table.\n\nToday I work independently, offering expertise and experience to anyone who wants to turn technology into a strategic advantage without the jargon or vendor lock\u2011in.\n\nI believe in building long-term relationships based on trust, transparency, and mutual respect.",
-        "profilePicture": "https://sessionize.com/image/18a5-400o400o1-hYi16Tq9gZNwxSSw3Vuadi.jpg",
-        "socials": {
-            "linkedin": "https://www.linkedin.com/in/nicolas-el-khoury/",
-            "website": "https://devopsbeyondlimits.com/"
-        }
-    },
-    {
-        "id": "75c1f6c6-22e4-4561-82d5-d26ef8862769",
-        "firstName": "Omar",
-        "lastName": "Chouman",
-        "fullName": "Omar Chouman",
-        "tagLine": "Senior Software Engineer | AWS Certified",
-        "company": "Aspire Software",
-        "bio": "Omar is a self-taught, dynamic, highly motivated individual with a passion for learning and solving problems. I work in teams and individually, driving quality and consistency throughout all phases of software development projects. Partner with developers, analysts, QA, and support engineers throughout the product lifecycle to produce high-quality, user-friendly, scalable, and bug-free software.\n\nOmar has worked on a diverse range of projects, from building scalable microservices to integrating AI and machine learning models into production environments. His expertise spans various cloud platforms, with a particular focus on AWS, where he has implemented numerous serverless applications that are both cost-effective and highly scalable.\n\nWhen he's not coding or speaking at events, Omar enjoys exploring the latest advancements in tech, mentoring aspiring developers, and contributing to open-source projects.",
-        "profilePicture": "https://sessionize.com/image/b90e-400o400o1-H8uVDSn3oNFpSnE175bLKJ.jpg",
-        "socials": {
-            "linkedin": "https://www.linkedin.com/in/omarchouman/",
-            "twitter": "https://twitter.com/OmarChouman5",
-            "website": "https://www.aspiresoftware.com/",
-            "instagram": "https://www.instagram.com/omar__chouman/",
-            "blog": "https://medium.com/@omarchouman"
-        }
-    },
-    {
-        "id": "843f8376-0c95-40cd-9b31-1e8b8939e59d",
-        "firstName": "Mohammad",
-        "lastName": "Omar",
-        "fullName": "Mohammad Omar",
-        "tagLine": " Technology Executive | CTO | Cloud & DevOps Leader",
-        "company": "Drive Terra",
-        "bio": "As Chief Technology Officer at Drive Terra, I focus on leveraging cloud and DevOps expertise to drive technological innovation and operational efficiency. My role builds on prior experience as Digital Transformation Manager at TEC-Tripoli Entrepreneurs Club, where I developed IT policies, customized software, and migrated technical operations to the cloud. \n\nWith a Master's degree in Computer Science from Arizona State University, I bring a strong foundation to roles requiring IT strategy and interpersonal communication. Passionate about aligning technology with organizational goals, I aim to foster innovation while enabling teams and stakeholders to thrive.",
-        "profilePicture": "https://sessionize.com/image/9e00-400o400o1-KwNz8QdhoAfMUaMJkJE2MD.jpg",
-        "socials": {
-            "linkedin": "https://www.linkedin.com/in/mohammad0omar/",
-            "twitter": "https://twitter.com/mohamad0omar",
-            "website": "driveterra.com",
-            "instagram": "https://www.instagram.com/mohammadomar40/",
-            "blog": "https://mohammad-omar.com/"
-        }
-    },
-    {
-        "id": "ad560724-c409-406a-908a-f33583684a21",
-        "firstName": "Nisrine",
-        "lastName": "Bou Ghannam",
-        "fullName": "Nisrine Bou Ghannam",
-        "tagLine": "CEO & Founder of Techlarious",
-        "company": "Techlarious",
-        "bio": "Nisrine Bou Ghannam is a passionate tech entrepreneur and educator, dedicated to empowering youth, women, and communities through innovative digital solutions and STEM education. She is the CEO of Techlarious and a STEM Certified\u2122 Master Trainer. She completed an internship at Apple, Cupertino, USA in September 2024. Nisrine is also a TechWomen 2024 Alumna, MongoDB Creator & Community Lead, Tech & Education Strategist, Product Manager, and co-founder of the Lebanese TechWomen Council.",
-        "profilePicture": "https://sessionize.com/image/9829-400o400o1-KsKCtvA3PL8DYk1AS4se6K.jpg",
-        "socials": {
-            "linkedin": "https://www.linkedin.com/company/107960122/admin/dashboard/",
-            "website": "https://www.techlarious.academy/"
-        }
-    },
-    {
-        "id": "5c886983-8e34-423a-ae2a-a6c222657667",
-        "firstName": "Majd",
-        "lastName": "Chahine",
-        "fullName": "Majd Chahine",
-        "tagLine": "Founder of CBI (Corporate Business Intelligence) & Manager @ Forvis Mazars",
-        "company": "CBI (Corporate Business Intelligence)",
-        "bio": "Manager - Business Intelligence & Data Analysis",
-        "profilePicture": "https://sessionize.com/image/81c7-400o400o1-YYtjyrv97iPAV46AheWqhT.png",
-        "socials": {
-            "linkedin": "https://www.linkedin.com/in/majdchahine/",
-            "website": "https://www.rcl-group.com/en/cBI-Business-intelligence/"
-        }
-    },
-    {
-        "id": "2bc79d2f-0b1d-4d69-9894-4e1deaff9482",
-        "firstName": "Nader",
-        "lastName": "Bakir",
-        "fullName": "Nader Bakir",
-        "tagLine": "Assistant professor BAU",
-        "company": "",
-        "bio": "Nader Bakir earned his Ph.D. in Image Processing and Artificial Intelligence (AI) from INSA Rennes (IETR-France) in 2020. Combining his robust academic foundation with over five years of industry experience, he is a specialist in key technological areas such as Deep Learning, Data Analysis, and ERP. He currently serves as an Assistant Professor at BAU University in Lebanon, focusing his research primarily on the fields of Deep Learning and Image Processing.",
-        "profilePicture": "https://sessionize.com/image/be8e-400o400o1-G4kEVhftBMePdAG7hSDeN1.jpg",
-        "socials": {
-            "linkedin": "https://www.linkedin.com/in/nader-b-09a1aa72/"
-        }
-    },
-    {
-        "id": "6615d9d9-bed5-4446-bd21-cbe811ed9128",
-        "firstName": "Robert",
-        "lastName": "Mansour",
-        "fullName": "Robert Mansour",
-        "tagLine": "Commander of Signal Corps - Lebanese Armed Forces | Brigadier General Engineer PhD",
-        "company": "",
-        "bio": "Experienced Communications Specialist and researcher in International Strategy, Technology, & Security, with a demonstrated history of working in the Telecom applications, Mission Critical Networks, Military Communications & Services. Skilled in Private Mobile Radio (PMR) & Universal Mobile Telecommunications System (UMTS), Project Management, Business Support System (BSS), Defense Acquisition Systems, and Network Design, Technology Evolution & Security, and Domain Awareness. Entrepreneurship competencies & engineering professional with a PhD focused in Cyber Security & Cyber Deterrence within International Relations and Diplomacy from CEDS - Centre d'\u00c9tudes Diplomatiques et Strat\u00e9giques- Paris, part of OMNES Education",
-        "profilePicture": "https://sessionize.com/image/9932-400o400o1-WtsBarwP68FLgG7CtjhRdJ.jpg",
-        "socials": {
-            "linkedin": "https://www.linkedin.com/in/bgen-robert-mansour-phd-7847a715"
-        }
-    },
-    {
-        "id": "fa16bb05-09ae-429b-90d1-178f20ed8e2e",
-        "firstName": "Bassel",
-        "lastName": "Al Ayoubi  ",
-        "fullName": "Bassel Al Ayoubi",
-        "tagLine": "General Director of Investment and Maintenance - Ministry of Telecommunication",
-        "company": "",
-        "bio": "General Director of Investment and Maintenance- Ministry of Telecommunication",
-        "profilePicture": "https://sessionize.com/image/ebe1-400o400o1-HJXGZRVQDXP8E3NtjJux9K.jpg",
-        "socials": {
-            "linkedin": "https://www.linkedin.com/in/bayoubi/"
-        }
-    },
-    {
-        "id": "a0981f90-70ea-4023-a1d6-b537899b4e73",
-        "firstName": "Dr. Ali ",
-        "lastName": "El Masri",
-        "fullName": "Dr. Ali  El Masri",
-        "tagLine": "",
-        "company": "",
-        "bio": "",
-        "profilePicture": "https://sessionize.com/image/acab-400o400o1-Ycf1PS9uBLvuKFQLbqrYKT.jpg",
-        "socials": {}
-    },
-    {
-        "id": "2ca1f722-a92b-407a-b4a1-6a43c08ea68a",
-        "firstName": "Elias",
-        "lastName": "Dagher",
-        "fullName": "Elias Dagher",
-        "tagLine": " Major IT Engineer, Internal Security ",
-        "company": "",
-        "bio": "",
-        "profilePicture": "https://sessionize.com/image/8ebd-400o400o1-3RfjcDaKAHMRQp6aD4PE7n.jpg",
-        "socials": {}
-    },
-    {
-        "id": "e060d7fd-6fec-426f-8978-07783bdd3896",
-        "firstName": "Sally",
-        "lastName": "Harrouk",
-        "fullName": "Sally Harrouk",
-        "tagLine": "Certified public accountant",
-        "company": "Basics for Auditing& Accounting",
-        "bio": "Certified public accountant-founder of Basics for Accounting&Auditing- Co founder of Career lab",
-        "profilePicture": "https://sessionize.com/image/bdd9-400o400o1-Tfsbo6cDrJ8iWNH2C2ghot.jpg",
-        "socials": {
-            "linkedin": "https://www.linkedin.com/in/sally-harrouk-198478220?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-            "website": "-"
-        }
-    },
-    {
-        "id": "26348375-0c9a-4c72-b32e-b6bbd455b060",
-        "firstName": "Mohammad",
-        "lastName": "Ahdab",
-        "fullName": "Mohammad Ahdab",
-        "tagLine": "DAS 360 Co-Founder- General Manager. , Degree in Law, EMBA , Scout Leader, Social Worker.",
-        "company": "",
-        "bio": "Born in Tripoli Lebanon in 1973, Graduated from Lebanese University Law Faculty in 1997. \nStarted to work for the Public Sector in 1998. \nin 2010 started teaching Business Law at AUL university and stayed for 10 years in delivering relevant legal information for Business students. \nstarted as a partner in DAS 360 in 2019, since then found my passion in Business, that's why i started my EMBA at UOB in 2021. \nmy ambition is always one thing SUCCESS. ",
-        "profilePicture": "https://sessionize.com/image/4d07-400o400o1-S5C5TSYWWCAwZgNhm71vEW.jpg",
-        "socials": {
-            "linkedin": "https://www.linkedin.com/in/mohamad-al-ahdab-emba-7b191670/"
-        }
-    },
-    {
-        "id": "95f10b13-6911-4611-961c-bde0294e8654",
-        "firstName": "Rami",
-        "lastName": "Assoum",
-        "fullName": "Rami Assoum",
-        "tagLine": "VAS head of department at Alfa Telecom",
-        "company": "",
-        "bio": "Director at one of the mobile operators in lebanon\n\nhe participated as as speaker in multiple telecoms conferences in UK,  dubai,  newyork,  and lebanon \n\nauthor of many articles on economic policies in Lebanese and international journals\n\n\nEducation: \n\n\nBachelor of engineering in telecoms and computer,  lebanese university\n\n\nMasters in technology management,  UCD Dublin,  Ireland\n\n\nMasters in Political Economy,  Kings colllege London,  UK",
-        "profilePicture": "https://sessionize.com/image/4590-400o400o1-f24EyGpnw3KTGNSkWb6uY5.jpg",
-        "socials": {
-            "linkedin": "https://www.linkedin.com/in/rami-assoum-8a5b60157/"
-        }
-    },
-    {
-        "id": "86ea4325-df87-47ff-8f93-7ad5f5188201",
-        "firstName": "Jonah",
-        "lastName": "Tebaa",
-        "fullName": "Jonah Tebaa",
-        "tagLine": "Marketing and AI Solutions Director | Digital Transformation Leader | Entrepreneur",
-        "company": "",
-        "bio": "With over 20 years of experience in marketing and business innovation, I specialize in leveraging AI to revolutionize strategies and deliver measurable results.\n\nAs the co-founder of Webspot, I\u2019ve helped businesses in the MENA region enhance their operations through AI-driven marketing, achieving tangible outcomes like reducing client acquisition costs by 43% and increasing ROI by over 340%. From directing startups to become nation leaders in their industry in less than a year, to spearheading campaigns that increased online sales efficiency by over 45%, to training global teams in AI adoption, my focus is always on driving growth through data-driven insights and cutting-edge solutions.\n\nWhether it\u2019s mentoring startups, consulting SMEs, or speaking on the transformative power of AI, I bring a visionary, results-oriented approach to every challenge. Let\u2019s connect to explore how AI and marketing innovation can unlock your business's full potential.",
-        "profilePicture": "https://sessionize.com/image/d3b2-400o400o1-XeeNKySaso1iKsZKLbsetr.jpg",
-        "socials": {
-            "linkedin": "https://www.linkedin.com/in/jonahtebaa/"
-        }
-    },
-    {
-        "id": "43e481ba-cf96-4c37-8abd-f5dc87a75530",
-        "firstName": "Dr. Khaled",
-        "lastName": "Dassouki",
-        "fullName": "Dr. Khaled Dassouki",
-        "tagLine": "",
-        "company": "",
-        "bio": "Khaled Dassouki is a cybersecurity researcher and Senior Lecturer at the American University of Beirut. He holds a PhD in Cybersecurity with a focus on intrusion detection and has over 18 years of experience in telecom, AI, and cloud solutions. As co-founder of Ubility AI, he has led innovative projects in AI and DevOps, alongside publishing research on network security and intrusion detection. He is fluent in Arabic, English, and French.\n\n",
-        "profilePicture": "https://sessionize.com/image/c736-400o400o1-aasPZtSsMYAAwFm49QoAkC.jpg",
-        "socials": {}
-    },
-    {
-        "id": "5a5cc937-6540-4f05-ba7d-1bb939b06e0a",
-        "firstName": "Majd",
-        "lastName": "Dhainy",
-        "fullName": "Majd Dhainy",
-        "tagLine": "Co-Founder, Semicolon Security",
-        "company": "",
-        "bio": "Cybersecurity Researcher with a strong background in software engineering, specializing in securing web services, mobile applications, APIs, and addressing issues from requirements to deployment. \n\nAcknowledged for uncovering global security vulnerabilities, listed on bug bounty Hall of Fames for Meta, Google, LinkedIn, Medium, Revolut, Trivago, and more.\n\nMerged cybersecurity skills with over three years of hands-on experience in backend development, contributing significantly to projects serving millions.",
-        "profilePicture": "https://sessionize.com/image/e047-400o400o1-BjxWc51T49scc4oj149cCT.png",
-        "socials": {
-            "linkedin": "linkedin.com/in/majddhainy"
-        }
-    },
-    {
-        "id": "00c8cf27-41d6-4c1c-8250-81adcbc82263",
-        "firstName": "Kassem",
-        "lastName": "Bazzoun",
-        "fullName": "Kassem Bazzoun",
-        "tagLine": "Co-Founder, Semicolon Security",
-        "company": "",
-        "bio": "",
-        "profilePicture": "https://sessionize.com/image/cc48-400o400o1-njP9HVgLSE1itqpNYNjyGt.png",
-        "socials": {}
-    },
-    {
-        "id": "aaeba722-0aab-45b7-8679-7338efc49fbd",
-        "firstName": "Hassan",
-        "lastName": "Diab",
-        "fullName": "Hassan Diab",
-        "tagLine": "Managing Director and Co-Founder of Aveo Studios, Co-Founder of Career Lab",
-        "company": "",
-        "bio": "",
-        "profilePicture": "https://sessionize.com/image/dc5d-400o400o1-MF1scwXjvUxmneCp7xk1xD.jpg",
-        "socials": {}
-    },
-    {
-        "id": "788709c5-d070-4972-969b-fe783536f6f8",
-        "firstName": "Karim",
-        "lastName": "Soueissi",
-        "fullName": "Karim Soueissi",
-        "tagLine": "Business Consultant & Career Coach",
-        "company": "",
-        "bio": "",
-        "profilePicture": "https://sessionize.com/image/d353-400o400o1-4iuK2WzTQCjf6Kz1WD1HFt.jpg",
-        "socials": {}
-    },
-    {
-        "id": "1f119072-1d65-4d1d-ba7d-170e66f1e05b",
-        "firstName": "Dania",
-        "lastName": "Hallab",
-        "fullName": "Dania Hallab",
-        "tagLine": "Managing Partner at KnD Consulting, The Analyst",
-        "company": "",
-        "bio": "",
-        "profilePicture": "https://sessionize.com/image/0bc6-400o400o1-RL4wXWRgBELiNbs7oqsxa.jpg",
-        "socials": {}
-    },
-    {
-        "id": "60fd3502-9d97-4218-b206-71b03694c19b",
-        "firstName": "Sally",
-        "lastName": "Harrouk",
-        "fullName": "Sally Harrouk",
-        "tagLine": "Certified Public Accountant, Founder of Basics for Accounting & Auditing, Co-founder of Career Lab",
-        "company": "",
-        "bio": "",
-        "profilePicture": "https://sessionize.com/image/ca30-400o400o1-HJf2GRt8SMa39kQNUoU3M3.jpg",
-        "socials": {}
-    }
-],
-    schedule: {
-    "timeSlots": [
-        "08:30 AM - 09:30 AM",
-        "09:30 AM - 10:30 AM",
-        "10:30 AM - 11:10 AM",
-        "11:10 AM - 11:50 AM",
-        "11:50 AM - 12:30 PM",
-        "12:30 PM - 12:50 PM",
-        "12:50 PM - 01:25 PM",
-        "01:25 PM - 02:00 PM",
-        "02:00 PM - 02:35 PM",
-        "02:35 PM - 03:10 PM",
-        "03:10 PM - 03:50 PM"
     ],
-    "auditoriums": [
-        "Main Auditorium",
-        "B1008",
-        "B105",
-        "Workshops Auditorium"
-    ]
-},
+    speakers: [
+        {
+            "id": "d507dbd3-75aa-4447-9c15-17df889cc1a7",
+            "firstName": "Layth",
+            "lastName": "Ayache",
+            "fullName": "Layth Ayache",
+            "tagLine": "Senior AI Systems & Web Engineer | Technical Lead at Achour Holding",
+            "company": "Achour Holding",
+            "bio": "Layth Ayache is a Senior AI Systems & Web Engineer and Technical Lead at Achour Holding in Beirut, where he builds and runs internal operations systems and a fleet of hotel and business websites. Before that, at Aligned Tech, he joined as an AI Systems Engineer and was promoted to Technical Lead, working on Hader, a multi-tenant WhatsApp and voice AI platform, and Alinia, a multilingual property-search product.\n\nHis work sits between models and operations: webhooks and integrations, retrieval checked against authoritative records, deployment and handover. He is the AI & ML lead of OmniSign, a Lebanese Sign Language recognition project that won First Prize in the Public Choice category at Lebanon's National FYP Demo Day 2025, and the author of PrivacyGuard, an open-source local video-masking pipeline. He holds a BE in Computer and Communications Engineering from Rafik Hariri University.",
+            "profilePicture": "https://cdn.sessionize.com/image/5ce4-400o400o1-LQ5bnUXgaYvfjKfPEsozdz.jpg",
+            "socials": {
+                "linkedin": "https://www.linkedin.com/in/laythayache",
+                "website": "https://www.achourholding.com/",
+                "blog": "https://laythayache.com"
+            }
+        },
+        {
+            "id": "b84432ec-f9df-4313-96ab-dbb6e0a97b37",
+            "firstName": "Dr. Mariam",
+            "lastName": "Saleh",
+            "fullName": "Dr. Mariam Saleh",
+            "tagLine": "EIU - Lecturer",
+            "company": "-",
+            "bio": "Dr. Mariam El Saleh is an HR and Organizational Development expert, consultant, trainer and university lecturer with more than 15 years of experience in Management and HR.\n\nShe holds a Doctorate in Business Administration (DBA), from (Magellan, IAE Lyon, University Jean Moulin Lyon 3). Her doctoral research examined how human resources strategies shape the quality of administrative services in higher education institutions.\n\nAs founder of Mariam El Saleh Consultancy, based in Tripoli, Lebanon, she advises organizations across diverse sectors, including education, higher and vocational education, healthcare, architecture, and security services. Her work bridges research and practice, turning evidence-based HR strategy into practical organizational change.",
+            "profilePicture": "https://cdn.sessionize.com/image/f1a3-400o400o1-MkPLUraRAHxsCKAHKdmyiy.jpg",
+            "socials": {
+                "linkedin": "-",
+                "website": "-",
+                "instagram": "https://www.instagram.com/mariam.el.saleh?stkn=emUwNTIzZnZrZHU2&utm_source=qr",
+                "facebook": "https://www.facebook.com/share/1dXBRctxdY/?mibextid=wwXIfr"
+            }
+        },
+        {
+            "id": "4aa857c8-3ad6-46b5-a0a3-ef92db483a43",
+            "firstName": "Mhamad",
+            "lastName": "El Itawi",
+            "fullName": "Mhamad El Itawi",
+            "tagLine": "Tech lead and Senior Software Engineer",
+            "company": "Lyxa",
+            "bio": "Hi, I’m Mhamad El-Itawi , a Tech Lead and Senior Software Engineer with over 8 years of experience building scalable systems, leading engineering teams, and driving digital transformation.\n\nI specialize in backend architecture, cloud infrastructure, Ai systems, DevOps practices, and legacy system modernization. Over the years, I’ve led major cloud migrations, optimized backend systems for performance and cost-efficiency, and delivered impactful solutions across Europe and the Middle East. I’m certified in Kubernetes and AWS, and hold an MBA in International Business  which helps me bridge the gap between technology and business strategy.\n\nAs a speaker, I focus on real-world lessons from the field, including:\n\n- Designing scalable, cloud-native architectures\n- Leading technical teams through change\n- Applying AI to create smarter systems\n- Transforming legacy codebases\n- Building efficient DevOps pipelines\n\nI’m passionate about sharing knowledge, building communities, and helping teams deliver software that truly makes a difference. If you're organizing an event or panel around engineering, cloud, or leadership in tech I’d love to connect.",
+            "profilePicture": "https://cdn.sessionize.com/image/65f8-400o400o1-RdmRPqXwd4eSYev2puQGd1.jpg",
+            "socials": {
+                "linkedin": "https://www.linkedin.com/in/mhamadelitawi",
+                "twitter": "https://x.com/mhamadelitawi",
+                "website": "https://lyxa.ai",
+                "instagram": "https://www.instagram.com/shard.by.shard",
+                "blog": "https://mhamadelitawi.com/"
+            }
+        },
+        {
+            "id": "7c7eef87-6e10-4fe7-80f0-d162fb4f01c9",
+            "firstName": "Hadi",
+            "lastName": "Zeinaldeen",
+            "fullName": "Hadi Zeinaldeen",
+            "tagLine": "Pentester & Researcher @ Semicolon Security",
+            "company": "Semicolon Security",
+            "bio": "● Pentester & Researcher @ Semicolon\n● Team lead @ Ethrocore.ai",
+            "profilePicture": "https://cdn.sessionize.com/image/0a3a-400o400o1-BZdT6BGdQWGQEanGjvxT72.png",
+            "socials": {
+                "linkedin": "https://www.linkedin.com/in/hdzd/",
+                "website": "semsec.org"
+            }
+        },
+        {
+            "id": "cb72b3d1-cfe4-49cc-b89f-85bbbd1fc364",
+            "firstName": "Amani",
+            "lastName": "Raad",
+            "fullName": "Amani Raad",
+            "tagLine": "Associate professor at the Lebanese University engineering faculty branch I",
+            "company": "Lebanese University Engineering Faculty ",
+            "bio": "Amani RAAD obtained her PhD in Information Technology and Systems from the University of Technology of Compiegne in France. After graduation, she was a Research and teaching Assistant in the Heudyasic Laboratory in France. She has been a part-time Assistant Professor in the Electrical and Electronics Engineering Department, Lebanese University, engineering faculty. Since July 2014, she has been a full-time assistant professor at the same department. Her research interests include mainly Digital Signal Processing and Artificial Intelligence for several applications and mainly for predictive maintenance. She received the award of the distinguished professor from the Lebanese University in 2019.",
+            "profilePicture": "https://cdn.sessionize.com/image/5db9-400o400o1-LDkgwk1duoPJdbHt8SXuCZ.jpg",
+            "socials": {
+                "linkedin": "https://www.linkedin.com/in/amani-raad-60738384?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+                "website": "http://www.ulfg.ul.edu.lb/"
+            }
+        },
+        {
+            "id": "d8b7c739-047a-463f-afa0-270fcdab38ce",
+            "firstName": "Gardenia",
+            "lastName": "Homsi",
+            "fullName": "Gardenia Homsi",
+            "tagLine": "Tech Product Manager at Wakilni ",
+            "company": "Wakilni",
+            "bio": "Gardenia Al Homsi is a Technical Product Manager at Wakilni, bringing over six years of experience across software development and product management. With a background in computer engineering and PMI-certified expertise in Agile methodologies, she specializes in digital transformation, cross-functional team leadership, and delivering scalable, business-driven technology solutions. Gardenia has worked with companies both locally and internationally on building in-house and SaaS products. She is known for her ability to create products that customers love while aligning with strategic business objectives.",
+            "profilePicture": "https://cdn.sessionize.com/image/2de6-400o400o1-VHS7HAoRuxwbjTbo6oeEGh.jpg",
+            "socials": {
+                "linkedin": "https://www.linkedin.com/in/gardenia-homsi/",
+                "website": "https://wakilni.com/"
+            }
+        },
+        {
+            "id": "34d36b86-4ad7-4f07-9487-198ecc663198",
+            "firstName": "Sam",
+            "lastName": "Shouman",
+            "fullName": "Sam Shouman",
+            "tagLine": "Senior Android Developer at FOO - Content Creator - Co-founder",
+            "company": "Samdroid.mobi",
+            "bio": "Senior Android Developer and content creator known as samDroid. Co-founder of Develeb, the tech community of Lebanon.",
+            "profilePicture": "https://cdn.sessionize.com/image/3c75-400o400o1-Q1z8QAymNE1Fg8BjNWSyJ2.png",
+            "socials": {
+                "linkedin": "https://www.linkedin.com/in/samshouman/",
+                "website": "Samdroid.mobi",
+                "instagram": "https://www.instagram.com/samdroid.mobi?igsh=MWZocXMwc2M1b2wwNQ==",
+                "blog": "Https://www.samdroid.mobi",
+                "facebook": "https://www.facebook.com/profile.php?id=61578403592243"
+            }
+        },
+        {
+            "id": "c3346524-8c8b-45bb-9830-52f60228dfc3",
+            "firstName": "Oussama",
+            "lastName": "Barbar",
+            "fullName": "Oussama Barbar",
+            "tagLine": "Foxvoid Academy",
+            "company": "Foxvoid Academy",
+            "bio": "Oussama Barbar is a Cybersecurity Engineer and graduate of Télécom Paris, France, with a strong focus on offensive security, penetration testing, and bug bounty. He has been practicing bug bounty since 2023 and has discovered and responsibly reported security vulnerabilities to major companies, including Apple, where his work was officially recognized.\n\nHe is also the founder of FoxVoid Academy, a cybersecurity education platform focused on providing high-quality, practical cybersecurity education inspired by French academic and professional standards. Through his experience in both academia and the industry, Oussama aims to help the next generation of cybersecurity professionals develop the technical skills, mindset, and ethical approach needed to succeed.",
+            "profilePicture": "https://cdn.sessionize.com/image/e567-400o400o1-N1p9da4gTFJJ4teVhGxa3w.jpg",
+            "socials": {
+                "linkedin": "www.linkedin.com/in/oussama-barbar",
+                "website": "https://foxvoidacademy.com/"
+            }
+        },
+        {
+            "id": "50839307-f276-4b21-bfba-f717d299047b",
+            "firstName": "Rana",
+            "lastName": "Rahim",
+            "fullName": "Rana Rahim",
+            "tagLine": "Professor of Computer Science & Networks at Lebanese University | AI, Networks & Emerging Technologies",
+            "company": "Lebanese University",
+            "bio": "Rana Rahim is a Full Professor of Computer Science and Networks at Lebanese University. Her academic and research work spans computer networks, distributed and multi-agent systems, AI, IoT, SDN, cloud networking, and 5G/6G technologies.\n\nShe has been teaching and conducting research in computer science and networking since 2009, with experience across Licence, Master, and doctoral education. She has supervised and co-supervised research projects and theses and has published extensively in the fields of intelligent networked systems and emerging networking technologies.\n\nHer current interests include AI-driven systems, multi-agent intelligence, network automation, and intelligent resource management. She is particularly interested in bridging research and practical technology education and in making emerging technologies understandable and useful to students, developers, and technology professionals.",
+            "profilePicture": "https://cdn.sessionize.com/image/9058-400o400o1-fCuQ2PZmv5VHdCgZundc2H.jpg",
+            "socials": {
+                "linkedin": "https://www.linkedin.com/in/rana-rahim-316297130/",
+                "website": "https://www.ul.edu.lb/"
+            }
+        },
+        {
+            "id": "43c5a63b-7c5d-4ef8-ae57-b844e96c7142",
+            "firstName": "Sami",
+            "lastName": "Shames El Deen",
+            "fullName": "Sami Shames El Deen",
+            "tagLine": "Founder & CEO of SE², a software engineering accelerator with ~200 students. Teaches fundamentals first and creates Arabic developer content for 59K+ followers.",
+            "company": "SE² (Software Engineering Excellence S.A.R.L.)",
+            "bio": "Sami is the Founder and CEO of SE² (Software Engineering Excellence), a software engineering accelerator built around supervised, fundamentals-first training. As lead instructor, he mentors around 200 active students, from career shifters to working engineers, through 250 hours of hands-on training, code review, and real projects. He also creates Arabic-language software engineering content at @samish.dev for a MENA developer audience of 59K+ followers. He has spoken at AWS Community Day, and his talks focus on why lasting careers are built on fundamentals rather than tool-chasing.",
+            "profilePicture": "https://cdn.sessionize.com/image/e013-400o400o1-nwCrMukznoW6TMdVtiKz8o.png",
+            "socials": {
+                "linkedin": "https://www.linkedin.com/in/samish-dev/",
+                "website": "se2.dev",
+                "instagram": "https://www.instagram.com/samish.dev/"
+            }
+        },
+        {
+            "id": "ca0cf8af-8107-4c15-b138-b3f75e08fd08",
+            "firstName": "Redwan",
+            "lastName": "Hasbini",
+            "fullName": "Redwan Hasbini",
+            "tagLine": "EDM Senior Pre-Sales Consultant",
+            "company": "EDM",
+            "bio": "I hold a Bachelor’s degree in Industrial Engineering and a Master’s degree in Project Management from Beirut Arab University (BAU). My academic background, combined with my professional experience, has shaped my approach to understanding business operations, analyzing challenges, and identifying opportunities for improvement.\n\nI began my professional career as an HR Manager in 2021, a role I held until 2022, before transitioning into the ERP and software industry. I started as a Functional Consultant and have since progressed to my current role as a Senior Presales Consultant.\n\nThroughout my career, I have had the opportunity to work with companies across different industries, learning how each business operates, identifying its challenges, and understanding the processes that drive its success. These experiences have strengthened my ability to analyze business needs, challenge traditional ways of working, and develop innovative ideas that help organizations optimize their operations.\n\nI believe that effective digital transformation goes beyond implementing software. It requires a deep understanding of how a business operates, a clear vision of how its processes can be improved, and the ability to translate that vision into practical and sustainable solutions. My goal is to bridge the gap between business and technology, helping organizations rethink their operations, improve efficiency, and build better ways of working.",
+            "profilePicture": "https://cdn.sessionize.com/image/63fc-400o400o1-hBRiwTzeqbrcdzdzovuwzi.jpg",
+            "socials": {
+                "linkedin": "Redwan Hasbini",
+                "website": "edm-tech.com"
+            }
+        },
+        {
+            "id": "0c3b5dee-1204-4660-88fd-38d29255378c",
+            "firstName": "Nour",
+            "lastName": "Shamaa",
+            "fullName": "Nour Shamaa",
+            "tagLine": "Staff/Lead DevOps Engineer",
+            "company": "Jumpcloud",
+            "bio": "Nour AlShamaa is a Staff/Lead DevOps Engineer at JumpCloud with a rich background in building scalable platform infrastructure, driving automation, and modernizing cloud ecosystems. Throughout his career, Nour has spearheaded large-scale Kubernetes migrations, engineered Infrastructure-as-Code (IaC) solutions across AWS, Azure, and GCP, and delivered digital transformation initiatives for major enterprise environments.  \n​He holds the distinction of being the first Kubeastronaut in Lebanon, backed by top-tier industry credentials including Certified Kubernetes Security Specialist (CKS), Administrator (CKA), Application Developer (CKAD), AWS Certified Solutions Architect Associate, and Terraform Associate.  \n​Beyond technical architecture, Nour focuses heavily on Developer Experience (DevEx), toil reduction, and engineering growth. He actively mentors engineers at all stages of their career, helping them bridge skill gaps, master modern DevOps practices, and build sustainable tech careers in the AI era.",
+            "profilePicture": "https://cdn.sessionize.com/image/1cd9-400o400o1-JhimBuXDaiZHFdygomR3Du.jpg",
+            "socials": {
+                "linkedin": "https://linkedin.com/in/nourshamaa",
+                "website": "Jumpcloud.com"
+            }
+        },
+        {
+            "id": "d8008556-939e-4ba8-87b1-9cf2b76ac5c0",
+            "firstName": "Elie",
+            "lastName": "Hannouch",
+            "fullName": "Elie Hannouch",
+            "tagLine": "Engineering Manager , Netways",
+            "company": "Netways",
+            "bio": "I work on the part of digital transformation that quietly decides whether a program succeeds or fails: the space between 𝗮𝗺𝗯𝗶𝗴𝘂𝗼𝘂𝘀 𝗿𝗲𝗾𝘂𝗶𝗿𝗲𝗺𝗲𝗻𝘁𝘀 𝗮𝗻𝗱 𝘀𝗵𝗶𝗽𝗽𝗲𝗱 𝘀𝗼𝗳𝘁𝘄𝗮𝗿𝗲.\n \nMost government and enterprise programs don't fall apart in the build. They fall apart months earlier in messy requirements, lost context, and rework loops between consultants and clients. My work sits in that gap, across 𝗽𝗿𝗼𝗱𝘂𝗰𝘁, 𝗮𝗿𝗰𝗵𝗶𝘁𝗲𝗰𝘁𝘂𝗿𝗲, 𝗮𝗻𝗱 𝗲𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴 𝗹𝗲𝗮𝗱𝗲𝗿𝘀𝗵𝗶𝗽.\n \nWhat I do, day to day:\n \n→ Lead 𝗽𝗿𝗼𝗱𝘂𝗰𝘁 𝘀𝘁𝗿𝗮𝘁𝗲𝗴𝘆 turning vague mandates into roadmaps teams can actually execute against. \n\n→ Architect 𝗺𝗼𝗱𝘂𝗹𝗮𝗿 𝗽𝗹𝗮𝘁𝗳𝗼𝗿𝗺𝘀 for highly regulated environments where the wrong design decision costs years. \n\n→ Run 𝗲𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴 𝘁𝗲𝗮𝗺𝘀 that ship with an eye on technical debt, code quality, and the things that decide whether a system survives its second year.\n\n→ Hold the line on 𝗱𝗲𝘀𝗶𝗴𝗻 𝗾𝘂𝗮𝗹𝗶𝘁𝘆. Brand systems, iconography, and UI polish are part of how I ship, not an afterthought.\n \nBeyond the work itself, I spend real time on 𝗽𝗲𝗼𝗽𝗹𝗲 𝗮𝗻𝗱 𝗰𝗼𝗺𝗺𝘂𝗻𝗶𝘁𝘆 mentoring engineers and consultants moving into senior roles, building communities around the tools I believe in (MongoDB Champion, among others), running workshops, and writing for a craft I care about deeply.\n \nI care about how software 𝗹𝗼𝗼𝗸𝘀, 𝘀𝗵𝗶𝗽𝘀, 𝗮𝗻𝗱 𝗮𝗴𝗲𝘀. A system that's architecturally sound but visually careless is half a system. A product that ships fast but ages badly is worse than one that took longer. That's the standard I try to bring to every project.",
+            "profilePicture": "https://cdn.sessionize.com/image/3fce-400o400o1-fpfNBVJTfeDqnjKWxDYqcL.jpg",
+            "socials": {
+                "linkedin": "https://www.linkedin.com/in/elie-hannouch/",
+                "website": "https://netways.com/"
+            }
+        }
+    ],
+    schedule: {
+        "timeSlots": [
+            "08:30 AM - 09:30 AM",
+            "09:30 AM - 10:30 AM",
+            "10:35 AM - 11:15 AM",
+            "11:20 AM - 11:55 AM",
+            "12:05 PM - 12:40 PM",
+            "12:50 PM - 01:25 PM",
+            "01:30 PM - 02:05 PM",
+            "02:10 PM - 02:45 PM",
+            "02:50 PM - 03:25 PM",
+            "03:25 PM - 04:00 PM"
+        ],
+        "auditoriums": [
+            "Main Auditorium",
+            "B1008",
+            "B1005"
+        ]
+    },
     sponsors: [
         {
             name: "Semicolon Security",
