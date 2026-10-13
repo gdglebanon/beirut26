@@ -679,7 +679,7 @@ const devFestData = {
                         "firstName": "Sami",
                         "lastName": "Shames El Deen",
                         "fullName": "Sami Shames El Deen",
-                        "tagLine": "Founder & CEO of SE\u00b2, a software engineering accelerator with ~200 students. Teaches fundamentals first and creates Arabic developer content for 59K+ followers.",
+                        "tagLine": "Founder & CEO of SE\u00b2",
                         "company": "SE\u00b2 (Software Engineering Excellence S.A.R.L.)",
                         "bio": "Sami is the Founder and CEO of SE\u00b2 (Software Engineering Excellence), a software engineering accelerator built around supervised, fundamentals-first training. As lead instructor, he mentors around 200 active students, from career shifters to working engineers, through 250 hours of hands-on training, code review, and real projects. He also creates Arabic-language software engineering content at @samish.dev for a MENA developer audience of 59K+ followers. He has spoken at AWS Community Day, and his talks focus on why lasting careers are built on fundamentals rather than tool-chasing.",
                         "profilePicture": "https://cdn.sessionize.com/image/e013-400o400o1-nwCrMukznoW6TMdVtiKz8o.png",
