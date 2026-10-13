@@ -268,7 +268,7 @@ function renderAgenda(container, data) {
     // 4. Render Chunks
     container.innerHTML = ''; // Clear existing
 
-    const mainRooms = ['Main Auditorium', 'B1008', 'B1005'];
+    const mainRooms = ['Main Auditorium', 'BT105', 'BT108'];
 
     chunks.forEach(chunk => {
         if (chunk.type === 'common') {
