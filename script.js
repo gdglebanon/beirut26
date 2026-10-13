@@ -89,15 +89,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // 3. Render Sponsors or Coming Soon
-    const sponsorsContainer = document.querySelector('#sponsors .container');
-    if (sponsorsContainer) {
+    // 3. Render Sponsors or Hide
+    const sponsorsSection = document.getElementById('sponsors');
+    if (sponsorsSection) {
         if (showSponsors && typeof devFestData !== 'undefined' && devFestData.sponsors) {
-            renderSponsors(sponsorsContainer, devFestData.sponsors);
+            sponsorsSection.style.display = 'block';
+            const sponsorsContainer = sponsorsSection.querySelector('.container');
+            if (sponsorsContainer) renderSponsors(sponsorsContainer, devFestData.sponsors);
         } else {
-            renderSponsorsComingSoon(sponsorsContainer);
+            sponsorsSection.style.display = 'none';
         }
     }
+    document.querySelectorAll('a[href="#sponsors"]').forEach(link => {
+        const parentLi = link.closest('li');
+        if (parentLi) parentLi.style.display = showSponsors ? '' : 'none';
+    });
 
     // 4. Render FAQ
     const faqData = [
@@ -936,6 +942,7 @@ function openSpeakerModal(speaker) {
                 <div class="social-links">
                     ${speaker.socials.linkedin ? `<a href="${speaker.socials.linkedin}" target="_blank">LinkedIn</a>` : ''}
                     ${speaker.socials.twitter ? `<a href="${speaker.socials.twitter}" target="_blank">Twitter</a>` : ''}
+                    ${speaker.socials.instagram ? `<a href="${speaker.socials.instagram}" target="_blank">Instagram</a>` : ''}
                     ${speaker.socials.website ? `<a href="${speaker.socials.website}" target="_blank">🌐 Website</a>` : ''}
                     ${speaker.socials.blog ? `<a href="${speaker.socials.blog}" target="_blank">Blog</a>` : ''}
                 </div>
