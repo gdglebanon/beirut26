@@ -47,7 +47,7 @@ const devFestData = {
         },
         {
                 "id": "1361290",
-                "title": "Panel",
+                "title": "Soverign AI and Data in the region",
                 "description": "Panel discussion featuring Krystel Mahfoud, Abdul Samih El-Charif, Rami Assoum, and Jonah Tabaa.",
                 "format": "Panel",
                 "level": "",
@@ -155,7 +155,7 @@ const devFestData = {
         },
         {
                 "id": "panel-1",
-                "title": "Panel 1",
+                "title": "Are Universities Still prepapring students for real jobs?",
                 "description": "Details coming soon.",
                 "format": "Panel",
                 "level": "",

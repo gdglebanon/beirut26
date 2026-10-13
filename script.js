@@ -343,6 +343,40 @@ function renderAgenda(container, data) {
             });
 
             container.appendChild(trackBlock);
+
+            // Desktop: equalize session card heights per row across tracks
+            if (window.innerWidth > 768) {
+                const tracks = trackBlock.querySelectorAll('.track');
+                // Collect session cards per track (excluding the track-header)
+                const trackCards = Array.from(tracks).map(track =>
+                    Array.from(track.querySelectorAll('.session-card'))
+                );
+                // Find the max number of cards in any track
+                const maxCards = Math.max(...trackCards.map(cards => cards.length));
+
+                // For each row index, find the max height and apply it
+                for (let i = 0; i < maxCards; i++) {
+                    // Reset heights first so natural height is measured
+                    trackCards.forEach(cards => {
+                        if (cards[i]) cards[i].style.minHeight = '';
+                    });
+
+                    // Measure max height at this row index
+                    let maxHeight = 0;
+                    trackCards.forEach(cards => {
+                        if (cards[i]) {
+                            maxHeight = Math.max(maxHeight, cards[i].offsetHeight);
+                        }
+                    });
+
+                    // Apply max height to all cards at this row index
+                    trackCards.forEach(cards => {
+                        if (cards[i]) {
+                            cards[i].style.minHeight = maxHeight + 'px';
+                        }
+                    });
+                }
+            }
         }
     });
 }
