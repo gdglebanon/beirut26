@@ -155,7 +155,7 @@ const devFestData = {
                 },
                 {
                         "id": "panel-1",
-                        "title": "Are Universities Still prepapring students for real jobs?",
+                        "title": "Technology & Education?",
                         "description": "Details coming soon.",
                         "format": "Panel",
                         "level": "",
@@ -461,8 +461,8 @@ const devFestData = {
                         "firstName": "Jonah",
                         "lastName": "Tabaa",
                         "fullName": "Jonah Tabaa",
-                        "tagLine": "",
-                        "company": "",
+                        "tagLine": "Co-founder and Co-CEO",
+                        "company": "Webspot",
                         "bio": "",
                         "profilePicture": "https://cdn.sessionize.com/image/e042-400o400o1-fursfmPVVsnn4GDDHLTtZh.jpg",
                         "socials": {}
