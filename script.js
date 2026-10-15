@@ -714,11 +714,10 @@ function renderSponsors(container, sponsors) {
     container.innerHTML = '';
     if (header) container.appendChild(header);
 
-    // Grouping Logic
-    const sponsoredBy = sponsors.filter(s => ['Gold', 'Silver', 'Bronze'].includes(s.tier));
-    const partners = sponsors.filter(s => !['Gold', 'Silver', 'Bronze'].includes(s.tier));
+    const partners = sponsors.filter(s => ['Host', 'Main Supporter'].includes(s.tier));
+    const sponsoredBy = sponsors.filter(s => !['Host', 'Main Supporter'].includes(s.tier));
 
-    // 1. Partners & Supporters Section (Moved up)
+    // 1. Partners & Supporters Section (BAU and Google For Developers)
     if (partners.length > 0) {
         const sectionTitle = document.createElement('h3');
         sectionTitle.className = 'sponsor-section-title';
@@ -756,16 +755,14 @@ function renderSponsors(container, sponsors) {
 
 function createSponsorCard(sponsor) {
     const card = document.createElement('div');
-    card.className = `sponsor-card ${sponsor.tier.toLowerCase().replace(/\s+/g, '-')}`;
+    const isPartner = ['Host', 'Main Supporter'].includes(sponsor.tier);
+    card.className = isPartner ? `sponsor-card ${sponsor.tier.toLowerCase().replace(/\s+/g, '-')}` : 'sponsor-card';
 
-    // Determine badge color class based on tier
-    let badgeClass = 'badge-default';
-    if (sponsor.tier === 'Gold') badgeClass = 'badge-gold';
-    if (sponsor.tier === 'Silver') badgeClass = 'badge-silver';
-    if (sponsor.tier === 'Bronze') badgeClass = 'badge-bronze';
-    if (sponsor.tier === 'Host') badgeClass = 'badge-host';
-    if (sponsor.tier === 'Main Supporter') badgeClass = 'badge-main';
-    if (sponsor.tier === 'Media Partner') badgeClass = 'badge-media';
+    let badgeHtml = '';
+    if (isPartner) {
+        const badgeClass = sponsor.tier === 'Host' ? 'badge-host' : 'badge-main';
+        badgeHtml = `<span class="sponsor-badge ${badgeClass}">${sponsor.tier}</span>`;
+    }
 
     card.innerHTML = `
         <div class="sponsor-logo-wrapper">
@@ -773,7 +770,7 @@ function createSponsorCard(sponsor) {
         </div>
         <div class="sponsor-info">
             <h4>${sponsor.name}</h4>
-            <span class="sponsor-badge ${badgeClass}">${sponsor.tier}</span>
+            ${badgeHtml}
         </div>
     `;
     card.addEventListener('click', () => openSponsorModal(sponsor));
@@ -857,14 +854,10 @@ function openSponsorModal(sponsor) {
     if (sessionModal.classList.contains('show')) closeModal(sessionModal);
     if (speakerModal.classList.contains('show')) closeModal(speakerModal);
 
-    // Badge styling for modal
-    let badgeClass = 'badge-default';
-    if (sponsor.tier === 'Gold') badgeClass = 'badge-gold';
-    if (sponsor.tier === 'Silver') badgeClass = 'badge-silver';
-    if (sponsor.tier === 'Bronze') badgeClass = 'badge-bronze';
-    if (sponsor.tier === 'Host') badgeClass = 'badge-host';
-    if (sponsor.tier === 'Main Supporter') badgeClass = 'badge-main';
-    if (sponsor.tier === 'Media Partner') badgeClass = 'badge-media';
+    const socials = sponsor.socials || {};
+    const formattedDesc = (sponsor.description || 'Proud supporter of DevFest North 2026.').replace(/\n/g, '<br>');
+    const isPartner = ['Host', 'Main Supporter'].includes(sponsor.tier);
+    const badgeHtml = isPartner ? `<span class="sponsor-badge ${sponsor.tier === 'Host' ? 'badge-host' : 'badge-main'}"><span class="icon">🏆</span> ${sponsor.tier}</span>` : '';
 
     sponsorBody.innerHTML = `
         <div class="sponsor-modal-content">
@@ -873,10 +866,10 @@ function openSponsorModal(sponsor) {
                     <img src="${sponsor.logo}" alt="${sponsor.name}">
                 </div>
                 <div class="sponsor-modal-info">
-                    <h2>${sponsor.name} <span class="sponsor-badge ${badgeClass}"><span class="icon">🏆</span> ${sponsor.tier}</span></h2>
+                    <h2>${sponsor.name} ${badgeHtml}</h2>
                     
                     <div class="sponsor-description">
-                        ${sponsor.description || 'Proud supporter of DevFest North 2025.'}
+                        ${formattedDesc}
                     </div>
 
                     <div class="sponsor-meta">
@@ -887,8 +880,10 @@ function openSponsorModal(sponsor) {
             
             <div class="sponsor-modal-footer">
                 <div class="social-links">
-                    ${sponsor.socials.website ? `<a href="${sponsor.socials.website}" target="_blank" class="social-icon">🌐 Website</a>` : ''}
-                    ${sponsor.socials.linkedin ? `<a href="${sponsor.socials.linkedin}" target="_blank" class="social-icon">🔗 LinkedIn</a>` : ''}
+                    ${socials.website ? `<a href="${socials.website}" target="_blank" rel="noopener noreferrer" class="social-icon">🌐 Website</a>` : ''}
+                    ${socials.linkedin ? `<a href="${socials.linkedin}" target="_blank" rel="noopener noreferrer" class="social-icon">🔗 LinkedIn</a>` : ''}
+                    ${socials.instagram ? `<a href="${socials.instagram}" target="_blank" rel="noopener noreferrer" class="social-icon">📸 Instagram</a>` : ''}
+                    ${sponsor.phone ? `<a href="tel:${sponsor.phone}" class="social-icon">📞 ${sponsor.phone}</a>` : ''}
                 </div>
                 <button class="btn btn-secondary close-modal-btn" onclick="closeModal(document.getElementById('sponsor-modal'))">Close</button>
             </div>

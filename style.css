@@ -820,13 +820,18 @@ html[data-js="true"] .reveal-up.is-visible {
     background-color: #5f6368;
 }
 
+.badge-sponsor {
+    background-color: #1a73e8;
+}
+
 /* Removing colored border overrides for smooth glass look */
 .sponsor-card.gold,
 .sponsor-card.silver,
 .sponsor-card.bronze,
 .sponsor-card.host,
 .sponsor-card.main-supporter,
-.sponsor-card.media-partner {
+.sponsor-card.media-partner,
+.sponsor-card.sponsor {
     border-top: none;
 }
 
@@ -2522,6 +2527,11 @@ html[data-js="true"] .reveal-up.is-visible {
 
 .sponsor-modal-info .badge-bronze {
     background-color: #ce8a78;
+    color: white;
+}
+
+.sponsor-modal-info .badge-sponsor {
+    background-color: #1a73e8;
     color: white;
 }
 

@@ -15,7 +15,7 @@ const devFestConfig = {
         // Visibility toggles: Set to true when you want to reveal the full content!
         showAgenda: true,           // Toggle agenda schedule / tracks
         showSpeakers: true,         // Toggle speakers grid
-        showSponsors: false,        // Toggle sponsors grid
+        showSponsors: true,         // Toggle sponsors grid
         showBadgeGenerator: true,   // Toggle badge generator
 };
 
@@ -755,137 +755,109 @@ const devFestData = {
                 ]
         },
         sponsors: [
-                {
-                        name: "Semicolon Security",
-                        logo: "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/events/semsec-logo_Mkjxdc3.png",
-                        tier: "Gold",
-                        url: "https://semsec.org/home/",
-                        description: "A Lebanese cybersecurity company and training academy focused on ethical hacking, security workshops, penetration testing services and educational programs.",
-                        socials: {
-                                website: "https://semsec.org/home/"
-                        }
-                },
-                {
-                        name: "DAS360",
-                        logo: "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/events/DAS360_onDF0iW.png",
-                        tier: "Gold",
-                        url: "https://das-360.net/",
-                        description: "Delivering 360\u00B0\nDAS 360 is a driven and data-focused digital marketing firm that specializes in crafting comprehensive online solutions to enhance the visibility and success of companies in GCC.",
-                        socials: {
-                                website: "https://das-360.net/"
-                        }
-                },
-                {
-                        name: "AIY Experts Solutions",
-                        logo: "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/events/Photo%2520from%2520%2540bed%2520%25283%2529-Photoroom_59T0KnY.png",
-                        tier: "Silver",
-                        url: "https://www.aiyexpertsolutions.com/",
-                        description: "AIY Expert Solutions is a 40+ member company with a vision to continuously gather talent, knowledge, and expertise to build a leading enterprise in various markets.\nThis talent, combined with expert-level practices, helped us create a specialized software that dominates the billion-dollar reselling industry and is used by tens of thousands of clients.\nIt’s been featured on CNBC, Yahoo Finance, Vice, The Globe, Forbes, and The Mail.",
-                        socials: {
-                                website: "https://www.aiyexpertsolutions.com/"
-                        }
-                },
-                {
-                        name: "Khwarizme",
-                        logo: "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/events/Logo%2520-%2520Khwarizme%2520%25281%2529-Photoroom_PCz8iEh.png",
-                        tier: "Bronze",
-                        url: "https://www.khwarizme.com/",
-                        description: "At Khwarizme LB, we believe in the power of knowledge, innovation, and community.\n\nOur mission is to empower youth and entrepreneurs through education and hands-on experiences.\n\nFrom training programs and workshops to venture building and mentorship, we create real opportunities.\n\nWe connect students, startups, and professionals to resources that help them grow and thrive.\n\nRooted in Lebanon yet open to the world, we aim to build solutions with lasting impact.",
-                        socials: {
-                                website: "https://www.khwarizme.com/"
-                        }
-                },
-                {
-                        name: "NavyBits",
-                        logo: "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/events/navyBits_logo_final_2048_QPkBhgA.png",
-                        tier: "Bronze",
-                        url: "https://www.navybits.com/",
-                        description: "At NavyBits, our mission goes beyond delivering technology, we are here to empower businesses, strengthen communities, and bring happiness to families. We believe that innovation should be simple, effective, and accessible to everyone.\nBy providing tools that streamline operations and drive growth, we help our clients achieve success while creating a positive impact that extends far beyond their businesses. Together, we\u2019re building a future where technology is the foundation of stronger, happier",
-                        socials: {
-                                website: "https://www.navybits.com/"
-                        }
-                },
-                {
-                        name: "Career Lab (Aveo)",
-                        logo: "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/events/careerLAB_white-modified_60sZtTa.png",
-                        tier: "Bronze",
-                        url: "https://www.careerlab.space/",
-                        description: "Experiment. Learn. Evolve. Level Up Your Career with Career Lab\n\nWhether you're just starting out, growing your career, or running a business. Career Lab helps you master the software, skills, and strategies to stay ahead in today\u2019s fast-changing world",
-                        socials: {
-                                website: "https://www.careerlab.space/"
-                        }
-                },
-                {
-                        name: "Netwatch",
-                        logo: "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/events/Netwatch-Logo_I7QlxVv.png",
-                        tier: "Bronze",
-                        url: "https://www.linkedin.com/company/netwatch-lb/about/",
-                        description: "NETWATCH is an IT Company was founded in 2007 in Tripoli, Lebanon, with over ten years of cumulative experience from its founding partners. The company is known for providing high-quality technical support services to businesses, as well as selling computers, laptops, accessories, surveillance systems, server systems, and cloud computing services. NETWATCH Technology always strives to meet the needs of its customers and achieve their complete satisfaction.\n\nThe company operates in four main area",
-                        socials: {
-                                linkedin: "https://www.linkedin.com/company/netwatch-lb/about/"
-                        }
-                },
-                {
-                        name: "Space Technology",
-                        logo: "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/events/space%2520technology%2520logo%2520%25281%2529-Photoroom_fZQh7Go.png",
-                        tier: "Bronze",
-                        url: "https://www.facebook.com/p/Space-Technology-100063717213064/",
-                        description: "Sales and maintenance of all computers and laptops, based in Tripoli",
-                        socials: {
-                                website: "https://www.facebook.com/p/Space-Technology-100063717213064/"
-                        }
-                },
-                {
-                        name: "Energy Plus",
-                        logo: "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/events/Energy%2520Drink%2520Logo%2520%25282%2529_hyBfsvW.png",
-                        tier: "Bronze",
-                        url: "https://www.instagram.com/energypluslb/?hl=en",
-                        description: "Lebanese Energy drink, Naturally Powered by Guarana",
-                        socials: {
-                                website: "https://www.instagram.com/energypluslb/?hl=en"
-                        }
-                },
-                {
-                        name: "Qabassat Computers",
-                        logo: "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/events/QabassatComputers_LRRTlLU.png",
-                        tier: "Bronze",
-                        url: "https://qabassat.computer/",
-                        description: "Qabassat is an online shopping platform offering computers, electronics, gadgets, toys, home and stationary accessories.",
-                        socials: {
-                                website: "https://qabassat.computer/"
-                        }
-                },
-                {
-                        name: "NIC Group (Network and IT Consultancy)",
-                        logo: "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/events/NIC-Photoroom_H2Lku2o.png",
-                        tier: "Bronze",
-                        url: "https://nicgroup.co",
-                        description: "NIC Group (Network and IT Consultancy) \n\nNIC Group is a leading IT consultancy firm specializing in network and IT services, including cybersecurity, network management, and IT infrastructure. Our expert developer teams can create any app, website, or solution tailored to your needs. With a focus on keeping your business connected, secure, and efficient, we deliver reliable, scalable, and secure IT solutions to help you achieve your business goals.",
-                        socials: {
-                                website: "https://nicgroup.co"
-                        }
-                },
-                {
-                        name: "Beirut Arab University",
-                        logo: "https://alefliban.org/wp-content/uploads/2015/02/BAU.gif",
-                        tier: "Host",
-                        url: "https://www.bau.edu.lb/",
-                        description: "Beirut Arab University is a private Lebanese higher education institution...",
-                        socials: {
-                                linkedin: "#",
-                                website: "https://www.bau.edu.lb/"
-                        }
-                },
-                {
-                        name: "Google For Developers",
-                        logo: "https://devfest25.gdglebanon.com/img/sponsors/googlefordevelopers.png", // Placeholder
-                        tier: "Main Supporter",
-                        url: "#",
-                        description: "Google's official developer platform offering APIs, SDKs, tools, documentation, training, and support for software developers worldwide.",
-                        socials: {
-                                linkedin: "#",
-                                website: "https://developers.google.com"
-                        }
-                }
-        ]
+		{
+			name: "Semicolon Security",
+			logo: "assets/images/sponsors/semsec-logo.png",
+			url: "https://semsec.org",
+			description: "For over a decade, we’ve been at the forefront of cyber defense and education, protecting organizations worldwide while empowering the next generation of cybersecurity leaders through Semicolon Academy.",
+			phone: "+9613095808",
+			socials: {
+				website: "https://semsec.org",
+				linkedin: "https://www.linkedin.com/company/semicolon-security"
+			}
+		},
+		{
+			name: "TECHSTORE GROUP",
+			logo: "assets/images/sponsors/TECHSTORE GROUP HORIZENTAL - Marketing Tech Store.png",
+			url: "https://techstorelb.com/",
+			description: "TechStore Group is a technology solutions provider delivering integrated security, surveillance, networking, ELV, and renewable energy solutions across Lebanon and the wider region. The Group combines global technology brands, professional technical expertise, reliable supply chains, and tailored solutions to serve residential, commercial, corporate, and project-based applications.\n\nWithin the security and surveillance sector, TechStore Group places a strong focus on UNV (Uniview), providing advanced video surveillance technologies including IP cameras, CCTV systems, NVRs, intelligent video solutions, and related security infrastructure.",
+			socials: {
+				website: "https://techstorelb.com/"
+			}
+		},
+		{
+			name: "EDM",
+			logo: "assets/images/sponsors/edm.png",
+			url: "https://edm-tech.com/",
+			description: "EDM is a leading provider of software, IT, and cybersecurity solutions in Lebanon and the Middle East, bringing 35 years of expertise in empowering businesses through technology and digital transformation.\n\nIts portfolio includes ERP solutions from SAP, Microsoft, and Odoo, alongside its proprietary NORIA Business Suite, as well as business intelligence, mobile and web applications, cybersecurity, IT solutions, telematics, and power solutions.",
+			socials: {
+				website: "https://edm-tech.com/",
+				linkedin: "https://www.linkedin.com/company/engineering-design-&-manufacturing/",
+				instagram: "https://www.instagram.com/edm.softwaresolutions/"
+			}
+		},
+		{
+			name: "Al Afak Center",
+			logo: "assets/images/sponsors/Logo Al Afak - Alafak Center.png",
+			url: "https://alafakcenter.com/",
+			description: "Established in 2002, Al Afak Center is an educational institution based in Tripoli, Lebanon, offering German language courses from A1 to B2 and supporting students and professionals seeking study and career opportunities in Germany.\n\nOur services include university admissions, vocational training (Ausbildung), visa assistance, and specialized programs for engineers, nurses, and healthcare professionals.\n\nHorizon Academy, part of Al Afak Center, offers a wider range of training programs in technology, AI, business, leadership, and professional development, serving both individuals and organizations.",
+			socials: {
+				website: "https://alafakcenter.com/",
+				linkedin: "https://www.linkedin.com/company/horizonacademy-lb/",
+				instagram: "https://www.instagram.com/alafak.ger.center/"
+			}
+		},
+		{
+			name: "UBSA Pharma Industries",
+			logo: "assets/images/sponsors/UBSA Logo 1_261014_101005 - Rami NAGI.png",
+			url: "http://www.ubsapharma.com",
+			description: "Pharmaceutical industry",
+			socials: {
+				website: "http://www.ubsapharma.com",
+				linkedin: "https://www.linkedin.com/company/ubsapharma/",
+				instagram: "https://www.instagram.com/energypluslb/"
+			}
+		},
+		{
+			name: "Bazarkon",
+			logo: "assets/images/sponsors/bazarkon logo design1-01 - hajar baytiye.png",
+			url: "https://bazarkon.com/",
+			description: "Ecommerce Retail Business",
+			socials: {
+				website: "https://bazarkon.com/",
+				linkedin: "https://www.linkedin.com/in/bazarkon-lb-26ba16443",
+				instagram: "https://instagram.com/bazarkon.lb?dlrf=MTdibmo1bTRnM2N4cw%3D%3D"
+			}
+		},
+		{
+			name: "Edutory",
+			logo: "assets/images/sponsors/image (2) (1) - Edutory Courses copy.png",
+			url: "http://www.edutory.net",
+			description: "Edutory is an integrated ecosystem connecting education, professional development, engineering services, and internationally recognized certifications.\n\nBuilt on decades of engineering experience, Edutory was founded to bridge the gap between talent and opportunity by providing practical learning, industry expertise, and real-world career pathways.\n\nOur ecosystem brings together hands-on technical training, professional certifications, career guidance, job readiness programs, and engineering services, ranging from cybersecurity and turnkey solutions to full-cycle project delivery.\n\nAs an official Pearson VUE Authorized Test Center, Edutory also provides access to internationally recognized certification examinations, helping individuals validate their skills and advance their careers.\n\nAt Edutory, we believe in learning by doing, developing skills that matter, and creating meaningful opportunities for individuals and businesses.\n\nOne ecosystem. Real skills. Real opportunities.",
+			socials: {
+				website: "http://www.edutory.net",
+				linkedin: "https://www.linkedin.com/company/edutory-professional-development-center/home/",
+				instagram: "https://www.instagram.com/edutory_center/"
+			}
+		},
+		{
+			name: "Qabassat Computers",
+			logo: "assets/images/sponsors/final logo.png",
+			url: "https://qabassat.computer/",
+			description: "Qabassat is an online shopping platform offering computers, electronics, gadgets, toys, home and stationary accessories.",
+			socials: {
+				website: "https://qabassat.computer/"
+			}
+		},
+		{
+			name: "Beirut Arab University",
+			logo: "https://alefliban.org/wp-content/uploads/2015/02/BAU.gif",
+			tier: "Host",
+			url: "https://www.bau.edu.lb/",
+			description: "Beirut Arab University is a private Lebanese higher education institution.",
+			socials: {
+				website: "https://www.bau.edu.lb/"
+			}
+		},
+		{
+			name: "Google For Developers",
+			logo: "https://devfest25.gdglebanon.com/img/sponsors/googlefordevelopers.png",
+			tier: "Main Supporter",
+			url: "https://developers.google.com",
+			description: "Google's official developer platform offering APIs, SDKs, tools, documentation, training, and support for software developers worldwide.",
+			socials: {
+				website: "https://developers.google.com"
+			}
+		}
+	]
 };
