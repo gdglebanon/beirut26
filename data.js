@@ -450,7 +450,7 @@ const devFestData = {
                         "firstName": "Rami",
                         "lastName": "Assoum",
                         "fullName": "Rami Assoum",
-                        "tagLine": "Director at a Mobile Operator, Economic Advisor",
+                        "tagLine": "Economic Advisor",
                         "company": "",
                         "bio": "",
                         "profilePicture": "https://cdn.sessionize.com/image/8746-400o400o1-ntpQBAaTUrDApubkL3tXCR.jpg",
