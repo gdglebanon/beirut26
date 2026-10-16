@@ -1,4 +1,4 @@
-<!-- Created as scan.html (Same functionality as test.html) -->
+<!-- Created as scan.html (Updated with Timestamps) -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -276,8 +276,8 @@
         // Endpoints
         // 1. GET endpoint to check attendee and Food status
         const GET_ENDPOINT = "https://script.google.com/macros/s/AKfycbzs-_taSc1Pex-FZGCT0xge5JKarvp5oiR_KPVyOGx9jILoFcfe2cA3gVZGO-6tX1sD/exec";
-        // 2. POST endpoint to update Food to TRUE
-        const POST_ENDPOINT = "https://script.google.com/macros/s/AKfycbyRDMLLrzQFrf2j94yZevHeLH25MUixGgmIampYjTKAUA7xGBoFO8H3yXxJrDBObCIP/exec";
+        // 2. POST endpoint to update Food status
+        const POST_ENDPOINT = "https://script.google.com/macros/s/AKfycbwwq0G4rcMNulVuJVy5ubkbTXzf1iLV5M994O0-cpulu_W39C29vRSEZlsma_De7CLz/exec"
 
         // State
         let html5QrScanner = null;
@@ -527,13 +527,16 @@
             `;
         }
 
-        function showSuccessResult(id, postResult, attendee) {
+        function showSuccessResult(id, postResult, attendee, timestamp) {
             resultCardEl.className = 'block bg-emerald-950/60 border border-emerald-500/40 p-5 rounded-2xl shadow-2xl space-y-4';
 
             const fullName = attendee ? `${attendee['First Name'] || attendee.firstName || ''} ${attendee['Last Name'] || attendee.lastName || ''}`.trim() : 'Attendee Validated';
             const company = attendee ? (attendee['University / Company'] || attendee.company || 'Attendee') : 'DevFest Attendee';
             const specialization = attendee ? (attendee['Your Specialization'] || attendee.specialization || '') : '';
             const email = attendee ? (attendee['Email'] || attendee.email || '') : '';
+
+            // Clean up timestamp for display
+            const displayTime = timestamp.split(',')[1] ? timestamp.split(',')[1].trim() : timestamp;
 
             resultCardEl.innerHTML = `
                 <div class="flex items-start justify-between">
@@ -543,7 +546,7 @@
                         </div>
                         <div>
                             <span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
-                                Food Marked as TRUE
+                                Recorded at ${displayTime}
                             </span>
                             <h3 class="text-lg font-bold text-white leading-tight mt-0.5">${fullName}</h3>
                             <p class="text-xs text-emerald-300 font-medium">${company} ${specialization ? '• ' + specialization : ''}</p>
@@ -566,7 +569,7 @@
                     </div>` : ''}
                     <div class="flex justify-between items-center text-slate-400">
                         <span>Server Response:</span>
-                        <span class="text-emerald-400 font-medium">${postResult.message || 'Food column updated successfully'}</span>
+                        <span class="text-emerald-400 font-medium">Food collected successfully</span>
                     </div>
                 </div>
 
@@ -579,13 +582,16 @@
             resultCardEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
 
-        function showAlreadyCollectedResult(id, attendee) {
+        function showAlreadyCollectedResult(id, attendee, foodVal) {
             resultCardEl.className = 'block bg-red-950/80 border-2 border-red-500/70 p-5 rounded-2xl shadow-2xl space-y-4 animate-shake';
 
             const fullName = attendee ? `${attendee['First Name'] || attendee.firstName || ''} ${attendee['Last Name'] || attendee.lastName || ''}`.trim() : 'Attendee';
             const company = attendee ? (attendee['University / Company'] || attendee.company || '') : '';
             const specialization = attendee ? (attendee['Your Specialization'] || attendee.specialization || '') : '';
             const email = attendee ? (attendee['Email'] || attendee.email || '') : '';
+
+            // Format the display string (fallback to "previously" if they have old data in the sheet)
+            const displayTime = (foodVal === true || foodVal === 'TRUE') ? 'previously' : foodVal;
 
             resultCardEl.innerHTML = `
                 <div class="flex items-start justify-between">
@@ -610,7 +616,7 @@
                     <i class="fas fa-exclamation-triangle text-amber-400 text-lg flex-shrink-0"></i>
                     <div>
                         <p class="font-bold text-white text-sm">Meal Already Collected!</p>
-                        <p class="text-red-200 mt-0.5">This attendee's food status is already marked as <strong class="underline">TRUE</strong> in the database. Do not issue another meal.</p>
+                        <p class="text-red-200 mt-0.5">This attendee's food status is already marked as collected <strong class="underline font-bold text-red-100">at ${displayTime}</strong> in the database.</p>
                     </div>
                 </div>
 
@@ -624,10 +630,6 @@
                         <span>Email:</span>
                         <span class="text-slate-200">${email}</span>
                     </div>` : ''}
-                    <div class="flex justify-between items-center text-slate-400">
-                        <span>Database Status:</span>
-                        <span class="text-red-400 font-bold">Food = TRUE</span>
-                    </div>
                 </div>
 
                 <div class="flex items-center gap-2 pt-1">
@@ -764,6 +766,7 @@
             const now = Date.now();
             const parsedId = extractId(decodedText);
 
+            // Prevent rapid re-scanning of the same ID
             if (parsedId === lastScannedId && (now - lastScanTimestamp) < 3500) {
                 return;
             }
@@ -803,7 +806,8 @@
             counterEl.textContent = scanHistory.filter(h => h.status === 'success').length;
 
             if (scanHistory.length === 0) {
-                listEl.innerHTML = `<p id="emptyHistory" class="text-center text-xs text-slate-500 py-6">No scans recorded yet in this session.</p>`;
+                listEl.innerHTML = `<p id="emptyHistory" class="text-center text-xs text-slate-500 py-6">No scans recorded yet in this
+                    session.</p>`;
                 return;
             }
 
@@ -834,7 +838,7 @@
                             </span>
                             <div class="overflow-hidden">
                                 <p class="text-white font-semibold truncate">${item.name || item.id}</p>
-                                <p class="text-[10px] text-slate-400 font-mono truncate">${item.id}</p>
+                                <p class="text-[10px] text-slate-400 font-mono truncate">${item.message}</p>
                             </div>
                         </div>
                         <div class="text-right flex-shrink-0 ml-2">
