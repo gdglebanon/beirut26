@@ -161,8 +161,11 @@
   <script>
     const header = document.querySelector('.site-header');
     const hero = document.querySelector('.hero');
+    const phoneSwitchPoint = hero.querySelector('.hero-actions .button');
+    const desktopSwitchPoint = hero.querySelector('.hero-facts');
     const updateHeader = () => {
-      header.classList.toggle('past-hero', hero.getBoundingClientRect().bottom <= header.offsetHeight);
+      const switchPoint = window.matchMedia('(max-width: 760px)').matches ? phoneSwitchPoint : desktopSwitchPoint;
+      header.classList.toggle('show-devfest-brand', switchPoint.getBoundingClientRect().bottom <= header.offsetHeight);
     };
     window.addEventListener('scroll', updateHeader, { passive: true });
     window.addEventListener('resize', updateHeader);
