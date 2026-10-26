@@ -15,3 +15,6 @@
 @media(max-width:460px){.brand-artwork{width:220px;height:69px}.brand-artwork img{width:220px;transform:translateY(-29px)}}
 @media(max-width:760px){.edition-strip{padding:16px 0}.edition-grid{grid-template-columns:1fr;gap:9px}.edition-card{min-height:86px;padding:17px 20px}.impact-panel{margin-top:5px}.impact-panel .stat-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 16px}}
 @media(max-width:460px){.edition-pill{font-size:.7rem;padding:9px 12px}.impact-panel .stat-since strong{font-size:1.4rem}.impact-panel .stat{min-height:92px}}
+.hero h1.hero-wordmark{font-family:'Google Sans',Arial,sans-serif;letter-spacing:-.055em;line-height:1;margin-top:22px}
+.hero-wordmark img{display:block;width:100%;max-width:575px;height:auto;margin-bottom:.06em}
+.hero-wordmark span{display:block;color:var(--red);white-space:nowrap}
