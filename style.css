@@ -20,3 +20,4 @@
 .hero-wordmark span{display:block;color:var(--red);white-space:nowrap}
 .package-card .booth-add-on{list-style:none;margin:15px 0 0 -21px;padding:12px 14px;border:1px solid #a9d7b6;border-left:4px solid var(--green);border-radius:10px;background:#e6f4ea;color:#145e32;font-weight:600}
 .site-header.at-top .brand{display:none}
+.hero-gdg-wordmark{display:block;width:min(100%,340px);height:auto;margin-bottom:20px}
