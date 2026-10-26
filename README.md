@@ -9,7 +9,7 @@ Serve this directory with any static file server, for example `python3 -m http.s
 ## Content sources
 
 - The [DevFest Beirut 2026 sponsorship deck](https://docs.google.com/presentation/d/1BuKJnen9-sMG9DPsjzI0P-iAUb-UXvu2qSyHo91uqT4/edit) supplies the event description, venue, audience estimate, contact email, and Partner/Sponsor packages.
-- `assets/images/devfest-beirut-2026.svg` and `assets/images/beirut-poster-2026.jpg` are the artwork supplied for this site. The supplied `favicon-beirut.svg` is used for both the browser icon and the header logo. `assets/images/hero-devfest.svg` is cropped from the supplied DevFest wordmark, with a CSS light effect on its green Fest panel.
+- `assets/images/devfest-beirut-2026.svg` and `assets/images/beirut-poster-2026.jpg` are the artwork supplied for this site. The supplied `favicon-beirut.svg` is used for both the browser icon and the header logo. `assets/images/hero-devfest.svg` uses the supplied DevFest wordmark with a right-to-left light sweep over Fest. When the light is off, Fest appears green on the page background.
 
 The November 28 event is an exclusive professional edition: attendance is free with a confirmed invitation. A public edition will be announced later. Until the organizers provide a confirmed registration page, invitation and sponsorship inquiries link to `info@gdglebanon.com`. The agenda, speakers, and sponsor roster are intentionally unpublished until confirmed.
 
