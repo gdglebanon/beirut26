@@ -22,7 +22,8 @@
   <header class="site-header at-top">
     <div class="container header-inner">
       <a class="brand" href="#home" aria-label="DevFest Beirut 2026 home">
-        <span class="brand-artwork"><img src="assets/images/favicon-beirut.svg" alt="DevFest Beirut 2026 · GDG Coast Lebanon"></span>
+        <span class="brand-artwork brand-artwork-devfest"><img src="assets/images/favicon-beirut.svg" alt="DevFest Beirut 2026 · GDG Coast Lebanon"></span>
+        <span class="brand-artwork brand-artwork-gdg"><img src="assets/images/gdg-wordmark.svg" alt="Google Developer Groups"></span>
       </a>
       <nav class="desktop-nav" aria-label="Main navigation">
         <a href="#about">About</a>
@@ -160,8 +161,13 @@
   <footer class="site-footer"><div class="container footer-inner"><div><strong>DevFest Beirut 2026</strong><span>Organized by GDG Coast Lebanon</span></div><div><a href="mailto:info@gdglebanon.com">info@gdglebanon.com</a><a href="https://developers.google.com/community/gdg/" target="_blank" rel="noopener noreferrer">About Google Developer Groups ↗</a></div></div><div class="container footer-bottom"><span>© 2026 GDG Coast Lebanon</span><p>GDG Coast Lebanon is an independent community group. Its activities and opinions are not those of Google.</p></div></footer>
   <script>
     const header = document.querySelector('.site-header');
-    const updateHeader = () => header.classList.toggle('at-top', window.scrollY < 12);
+    const hero = document.querySelector('.hero');
+    const updateHeader = () => {
+      header.classList.toggle('at-top', window.scrollY < 12);
+      header.classList.toggle('past-hero', hero.getBoundingClientRect().bottom <= header.offsetHeight);
+    };
     window.addEventListener('scroll', updateHeader, { passive: true });
+    window.addEventListener('resize', updateHeader);
     window.addEventListener('pageshow', updateHeader);
     updateHeader();
   </script>
