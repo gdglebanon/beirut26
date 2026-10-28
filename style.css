@@ -28,3 +28,29 @@
 .site-header.show-devfest-brand .brand-artwork-devfest{display:block}
 .site-header.show-devfest-brand .brand-artwork-gdg{display:none}
 @media(max-width:360px){.header-inner{gap:10px}.brand-artwork{width:190px;height:60px}.brand-artwork-devfest img{width:190px;transform:translateY(-25px)}}
+
+/* Hero lockup and footer social links */
+.hero{padding-top:34px}
+.hero-grid{align-items:start}
+.hero-copy{padding-top:12px}
+.beirut-lockup{display:flex!important;align-items:center;justify-content:center;gap:.24em;width:100%;max-width:575px;white-space:nowrap;font-size:1.18em}
+.beirut-name{display:inline!important}
+.beirut-year{display:inline-flex!important;align-items:center;padding:.42em .58em .45em;border:3px solid currentColor;border-radius:999px;color:var(--ink);font-size:.56em;font-weight:400;line-height:.82;letter-spacing:-.04em}
+.footer-links{display:flex!important;flex-direction:column;gap:7px!important;align-items:flex-start}
+.social-links{display:flex;flex-wrap:wrap;gap:14px;margin-top:8px}
+.social-links a{color:#c9ddff;font-size:.82rem}
+.closing-actions{display:flex;flex-wrap:wrap;gap:12px}
+.button-closing-secondary{border-color:#fff;color:#fff;background:transparent}
+@media(max-width:760px){
+  .hero{padding-top:26px}
+  .hero-copy{padding-top:0}
+  .hero-wordmark img{margin-bottom:.12em}
+  .beirut-year{border-width:2px}
+  .footer-links{margin-top:22px}
+  .closing-actions{flex-direction:column;align-items:flex-start}
+}
+@media(max-width:460px){
+  .hero h1.hero-wordmark{font-size:clamp(2.55rem,11.7vw,4.5rem);letter-spacing:-.06em}
+  .beirut-lockup{gap:.18em}
+  .beirut-year{font-size:.5em;padding:.38em .45em .41em}
+}
