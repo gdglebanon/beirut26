@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;700&amp;display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -30,17 +30,28 @@
         <a href="#experience">Experience</a>
         <a href="#venue">Venue</a>
         <a href="#sponsorship">Sponsorship</a>
+        <a href="#supporters">Supporters</a>
+        <a href="#team">Team</a>
       </nav>
       <a class="button button-small button-dark header-cta" href="mailto:info@gdglebanon.com?subject=DevFest%20Beirut%202026%20invitation%20inquiry">Ask about invitations <span aria-hidden="true">↗</span></a>
       <details class="mobile-menu">
         <summary aria-label="Open navigation">Menu <span aria-hidden="true">☰</span></summary>
         <nav aria-label="Mobile navigation">
-          <a href="#about">About</a><a href="#experience">Experience</a><a href="#venue">Venue</a><a href="#sponsorship">Sponsorship</a>
+          <a href="#about">About</a><a href="#experience">Experience</a><a href="#venue">Venue</a><a href="#sponsorship">Sponsorship</a><a href="#supporters">Supporters</a><a href="#team">Team</a>
           <a href="mailto:info@gdglebanon.com?subject=DevFest%20Beirut%202026%20invitation%20inquiry">Ask about invitations</a>
         </nav>
       </details>
     </div>
   </header>
+
+  <nav class="mobile-dock" aria-label="Quick navigation">
+    <a href="#home" aria-label="Home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></svg><span>Home</span></a>
+    <a href="#about" aria-label="About"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7h.01"/></svg><span>About</span></a>
+    <a href="#venue" aria-label="Venue"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Venue</span></a>
+    <a href="#sponsorship" aria-label="Sponsorship"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="9" width="18" height="12" rx="2"/><path d="M12 9v12M3 13h18M12 9c-2.8 0-5-1.2-5-3a2 2 0 0 1 2-2c1.8 0 3 2.2 3 5Zm0 0c2.8 0 5-1.2 5-3a2 2 0 0 0-2-2c-1.8 0-3 2.2-3 5Z"/></svg><span>Sponsor</span></a>
+    <a href="#supporters" aria-label="Supporters"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 4.4-8.8 10.7-8.8 10.7S3.2 13 3.2 8.6a4.6 4.6 0 0 1 8.8-1.8 4.6 4.6 0 0 1 8.8 1.8Z"/></svg><span>Supporters</span></a>
+    <a href="#team" aria-label="Team"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20v-2a6 6 0 0 1 12 0v2M17 5a3 3 0 0 1 0 6M18 14a5 5 0 0 1 3 5v1"/></svg><span>Team</span></a>
+  </nav>
 
   <main id="main">
     <section class="hero" id="home" aria-labelledby="hero-title">
@@ -160,6 +171,45 @@
       </div>
     </section>
 
+    <section class="section supporters-section" id="supporters" aria-labelledby="supporters-title">
+      <div class="container">
+        <div class="compact-heading"><div><span class="section-index">COMMUNITY SUPPORT</span><h2 id="supporters-title">Supporters, past and present.</h2></div></div>
+        <div class="main-supporter">
+          <div><span class="supporter-label">MAIN SUPPORTER · 2026</span><a href="https://developers.google.com/" target="_blank" rel="noopener noreferrer" aria-label="Google for Developers website"><img src="assets/images/google-for-developers.png" alt="Google for Developers" width="300" height="44" loading="lazy"></a></div>
+          <p>Helping developer communities connect, learn and build.</p>
+        </div>
+        <div class="rail-heading"><div><span class="section-index">A LOOK BACK</span><h3>2025 sponsors &amp; partners</h3></div><div class="rail-controls"><button type="button" class="rail-arrow" data-rail="sponsor-track" data-direction="-1" aria-label="Previous 2025 supporters">←</button><button type="button" class="rail-arrow" data-rail="sponsor-track" data-direction="1" aria-label="Next 2025 supporters">→</button></div></div>
+        <div class="logo-rail" id="sponsor-track" aria-label="2025 sponsors and partners">
+          <article class="logo-tile"><img src="assets/images/partners-2025/semicolon.jpeg" alt="Semicolon logo" loading="lazy"><strong>Semicolon</strong><span>Gold sponsor</span></article>
+          <article class="logo-tile"><img src="assets/images/partners-2025/murex.png" alt="Murex logo" loading="lazy"><strong>Murex</strong><span>Silver sponsor</span></article>
+          <article class="logo-tile"><img src="assets/images/partners-2025/supportful.png" alt="Supportful logo" loading="lazy"><strong>Supportful</strong><span>Bronze sponsor</span></article>
+          <article class="logo-tile"><img src="assets/images/partners-2025/speedlane.png" alt="Speedlane logo" loading="lazy"><strong>Speedlane</strong><span>Silver sponsor</span></article>
+          <article class="logo-tile"><img src="assets/images/partners-2025/monty.png" alt="Monty Holding logo" loading="lazy"><strong>Monty Holding</strong><span>Bronze sponsor</span></article>
+          <article class="logo-tile"><img src="assets/images/partners-2025/eurisko.png" alt="Eurisko logo" loading="lazy"><strong>Eurisko</strong><span>Partner</span></article>
+          <article class="logo-tile"><img src="assets/images/partners-2025/42-beirut.png" alt="42 Beirut logo" loading="lazy"><strong>42 Beirut</strong><span>Partner</span></article>
+          <article class="logo-tile"><img src="assets/images/partners-2025/upaint.webp" alt="uPaint logo" loading="lazy"><strong>uPaint</strong><span>Partner</span></article>
+        </div>
+        <p class="history-source">These organizations supported DevFest Beirut in 2025. <a href="https://devfest25.gdglebanon.com/partnersApplication" target="_blank" rel="noopener noreferrer">See the 2025 sponsor page ↗</a></p>
+      </div>
+    </section>
+
+    <section class="section team-section" id="team" aria-labelledby="team-title">
+      <div class="container">
+        <div class="compact-heading"><div><span class="section-index">GDG COAST LEBANON</span><h2 id="team-title">Meet the team.</h2></div><div class="team-actions"><button type="button" class="button button-outline button-small team-expand-button" id="expand-team-button" aria-expanded="false" aria-controls="team-track"><span class="expand-label">View full team</span><span class="expand-icon" aria-hidden="true">↓</span></button><div class="rail-controls"><button type="button" class="rail-arrow" data-rail="team-track" data-direction="-1" aria-label="Previous team members">←</button><button type="button" class="rail-arrow" data-rail="team-track" data-direction="1" aria-label="Next team members">→</button></div></div></div>
+        <div class="team-rail" id="team-track" aria-label="GDG Coast Lebanon team">
+          <a class="team-mini-card" href="https://www.linkedin.com/in/rihamzeidan/" target="_blank" rel="noopener noreferrer" aria-label="Riham Zeidan on LinkedIn"><img src="assets/images/team-riham-zeidan.jpg" alt="" loading="lazy"><span><strong>Riham Zeidan</strong><small>GDG Lead Organizer</small><em>LinkedIn ↗</em></span></a>
+          <a class="team-mini-card" href="https://www.linkedin.com/in/mohammad-darsa/" target="_blank" rel="noopener noreferrer" aria-label="Mohamad Darsa on LinkedIn"><img src="assets/images/team-mohamad-darsa.jpg" alt="" loading="lazy"><span><strong>Mohamad Darsa</strong><small>Kedra</small><em>LinkedIn ↗</em></span></a>
+          <a class="team-mini-card" href="https://www.linkedin.com/in/abed-attal/" target="_blank" rel="noopener noreferrer" aria-label="Abdul Rahman Masri Attal on LinkedIn"><img src="assets/images/team-abdul-rahman-masri-attal.jpg" alt="" loading="lazy"><span><strong>Abdul Rahman Masri Attal</strong><small>GDG Core &amp; Lead Organizer</small><em>LinkedIn ↗</em></span></a>
+          <a class="team-mini-card" href="https://www.linkedin.com/in/mashoun/" target="_blank" rel="noopener noreferrer" aria-label="Mahmoud Mashoun on LinkedIn"><img src="assets/images/team-mahmoud-mashoun.jpg" alt="" loading="lazy"><span><strong>Mahmoud Mashoun</strong><small>Software Developer · Google Cloud Automation</small><em>LinkedIn ↗</em></span></a>
+          <a class="team-mini-card" href="https://www.linkedin.com/in/serahrashidi/" target="_blank" rel="noopener noreferrer" aria-label="Sarah Rashidi on LinkedIn"><img src="assets/images/team-sarah-rashidi.jpg" alt="" loading="lazy"><span><strong>Sarah Rashidi</strong><small>Organizer</small><em>LinkedIn ↗</em></span></a>
+          <a class="team-mini-card" href="https://lb.linkedin.com/in/amir-bou-ghanem" target="_blank" rel="noopener noreferrer" aria-label="Amir Bou Ghanem on LinkedIn"><img src="assets/images/team-amir-bou-ghanem.jpg" alt="" loading="lazy"><span><strong>Amir Bou Ghanem</strong><small>GDG on Campus · Lebanese University</small><em>LinkedIn ↗</em></span></a>
+          <a class="team-mini-card" href="https://gdg.community.dev/u/mgwafv/" target="_blank" rel="noopener noreferrer" aria-label="Georgio Nassar on GDG"><img src="assets/images/team-georgio-nassar.jpg" alt="" loading="lazy"><span><strong>Georgio Nassar</strong><small>Organizer · Lebanese American University</small><em>GDG ↗</em></span></a>
+          <a class="team-mini-card" href="https://www.linkedin.com/in/mohamad-nassif-04b5b434b/" target="_blank" rel="noopener noreferrer" aria-label="Mohamad Nassif on LinkedIn"><img src="assets/images/team-mohamad-nassif.jpg" alt="" loading="lazy"><span><strong>Mohamad Nassif</strong><small>Organizer · American University of Beirut</small><em>LinkedIn ↗</em></span></a>
+          <a class="team-mini-card" href="https://www.linkedin.com/in/abdullah-alaadine/" target="_blank" rel="noopener noreferrer" aria-label="Abdullah AlaaDine on LinkedIn"><img src="assets/images/team-abdullah-alaadine.jpg" alt="" loading="lazy"><span><strong>Abdullah AlaaDine</strong><small>Go Backend Developer · Monty Mobile</small><em>LinkedIn ↗</em></span></a>
+        </div>
+      </div>
+    </section>
+
     <section class="section faq-section" id="faq" aria-labelledby="faq-title"><div class="container faq-grid"><div><span class="section-index">GOOD TO KNOW</span><h2 id="faq-title">Your questions,<br><span>answered.</span></h2></div><div class="faq-list">
       <details><summary>When and where is DevFest Beirut 2026?</summary><p>Saturday, November 28, 2026 at MEA Conference Center in Beirut’s airport district.</p></details>
       <details><summary>How do I attend?</summary><p>The November 28 professional edition is free and invitation only. A confirmed invitation is required. Email <a href="mailto:info@gdglebanon.com?subject=DevFest%20Beirut%202026%20invitation%20inquiry">info@gdglebanon.com</a> to ask about invitations.</p></details>
@@ -170,6 +220,7 @@
     </div></div></section>
 
     <section class="closing-section"><div class="container closing-inner"><div><span class="section-index">SEE YOU IN BEIRUT</span><h2>Let’s connect,<br>learn & grow.</h2></div><div><p>Join the conversation with GDG Coast Lebanon on November 28.</p><div class="closing-actions"><a class="button button-light" href="mailto:info@gdglebanon.com?subject=DevFest%20Beirut%202026%20inquiry">Get in touch <span aria-hidden="true">↗</span></a><a class="button button-closing-secondary" href="https://gdg.community.dev/gdg-coast-lebanon/" target="_blank" rel="noopener noreferrer">Join the community <span aria-hidden="true">↗</span></a></div></div></div></section>
+
   </main>
 
   <footer class="site-footer"><div class="container footer-inner"><div><strong>DevFest Beirut 2026</strong><span>Organized by GDG Coast Lebanon</span></div><div class="footer-links"><a href="mailto:info@gdglebanon.com">info@gdglebanon.com</a><a href="https://developers.google.com/community/gdg/" target="_blank" rel="noopener noreferrer">About Google Developer Groups ↗</a><nav class="social-links" aria-label="Social media"><a href="https://www.linkedin.com/company/gdg-coast-lebanon/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://www.instagram.com/gdgcoastlebanon/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://www.youtube.com/@gdgcoastlebanon513" target="_blank" rel="noopener noreferrer">YouTube ↗</a></nav></div></div><div class="container footer-bottom"><span>© 2026 GDG Coast Lebanon</span><p>GDG Coast Lebanon is an independent community group. Its activities and opinions are not those of Google.</p></div></footer>
@@ -178,14 +229,58 @@
     const hero = document.querySelector('.hero');
     const phoneSwitchPoint = hero.querySelector('.hero-actions .button');
     const desktopSwitchPoint = hero.querySelector('.hero-facts');
+    const sectionLinks = [...document.querySelectorAll('.desktop-nav a, .mobile-menu nav a[href^="#"], .mobile-dock a')];
+    const sections = [...document.querySelectorAll('main > section')].filter(section => !section.classList.contains('edition-strip'));
     const updateHeader = () => {
       const switchPoint = window.matchMedia('(max-width: 760px)').matches ? phoneSwitchPoint : desktopSwitchPoint;
       header.classList.toggle('show-devfest-brand', switchPoint.getBoundingClientRect().bottom <= header.offsetHeight);
+      const navThreshold = Math.max(header.offsetHeight + 130, window.innerHeight * .5);
+      const currentSection = sections.filter(section => section.getBoundingClientRect().top <= navThreshold).at(-1);
+      sectionLinks.forEach(link => {
+        if (currentSection && link.hash === `#${currentSection.id}`) link.setAttribute('aria-current', 'location');
+        else link.removeAttribute('aria-current');
+      });
     };
-    window.addEventListener('scroll', updateHeader, { passive: true });
-    window.addEventListener('resize', updateHeader);
-    window.addEventListener('pageshow', updateHeader);
+    sectionLinks.forEach(link => link.addEventListener('click', () => { document.querySelector('.mobile-menu').open = false; }));
+    const mobileDock = document.querySelector('.mobile-dock');
+    let previousScrollY = Math.max(0, window.scrollY);
+    let scrollTravel = 0;
+    let scrollDirection = 0;
+    const updateDock = () => {
+      const scrollY = Math.max(0, window.scrollY);
+      const movement = scrollY - previousScrollY;
+      if (scrollY < 96) mobileDock.classList.remove('is-hidden');
+      else if (movement) {
+        const direction = Math.sign(movement);
+        scrollTravel = direction === scrollDirection ? scrollTravel + Math.abs(movement) : Math.abs(movement);
+        scrollDirection = direction;
+        if (scrollTravel > 14) {
+          mobileDock.classList.toggle('is-hidden', direction > 0);
+          scrollTravel = 0;
+        }
+      }
+      previousScrollY = scrollY;
+    };
+    document.querySelectorAll('.rail-arrow').forEach(button => button.addEventListener('click', () => {
+      const rail = document.getElementById(button.dataset.rail);
+      const direction = Number(button.dataset.direction);
+      const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+      rail.scrollBy({ left: direction * rail.clientWidth * .8, behavior });
+    }));
+    const teamSection = document.getElementById('team');
+    const teamExpandButton = document.getElementById('expand-team-button');
+    teamExpandButton.addEventListener('click', () => {
+      const expanded = teamSection.classList.toggle('is-expanded');
+      teamExpandButton.setAttribute('aria-expanded', String(expanded));
+      teamExpandButton.querySelector('.expand-label').textContent = expanded ? 'Show fewer team members' : 'View full team';
+      teamExpandButton.querySelector('.expand-icon').textContent = expanded ? '↑' : '↓';
+      if (!expanded) document.getElementById('team-track').scrollLeft = 0;
+    });
+    window.addEventListener('scroll', () => { updateHeader(); updateDock(); }, { passive: true });
+    window.addEventListener('resize', () => { updateHeader(); updateDock(); });
+    window.addEventListener('pageshow', () => { updateHeader(); updateDock(); });
     updateHeader();
+    updateDock();
   </script>
 </body>
 </html>
