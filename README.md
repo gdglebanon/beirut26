@@ -24,3 +24,9 @@ On phones, a compact bottom navigation provides shortcuts to the main sections. 
 The GDG Lebanon impact figures on the page (5,000+ members, 200+ on-site events, 5,000+ past DevFest attendees, active since 2017) were supplied by the organizers.
 
 Edit `index.html` for content and `style.css` for presentation. There is no build step or JavaScript dependency.
+
+## Search visibility
+
+The production URL is `https://devfest26.gdglebanon.com/`. `index.html` uses it for the canonical URL and social previews; `sitemap.xml` lists the single indexable page, and `robots.txt` points crawlers to that sitemap. Update all three if the domain changes.
+
+After deploying these files, verify the URL-prefix property in [Google Search Console](https://search.google.com/search-console/), submit `https://devfest26.gdglebanon.com/sitemap.xml`, and use URL Inspection to request indexing of the home page. Search indexing is not guaranteed. This invitation-only edition is not eligible for Google's [event rich result experience](https://developers.google.com/search/docs/appearance/structured-data/event), so the page does not declare Event rich-result markup.

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://devfest26.gdglebanon.com/sitemap.xml
