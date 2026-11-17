@@ -167,7 +167,7 @@
 .supporter-group-heading{margin:39px 0 17px}
 .supporter-group-heading h3{font:700 clamp(1.6rem,2.7vw,2.4rem)/1.1 var(--font-head);letter-spacing:-.055em;margin:6px 0 0}
 .supporter-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.sponsor-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.sponsor-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 .supporter-card{display:flex;flex-direction:column;min-width:0;min-height:300px;padding:19px 20px 20px;background:#d9e8ff;border:1px solid #9fc3fb;border-radius:20px;color:var(--ink);box-shadow:0 8px 22px #1e4c8b09;transition:transform .2s,box-shadow .2s,border-color .2s}
 .supporter-card:hover{transform:translateY(-4px);box-shadow:0 18px 36px #1725361c;border-color:#8bb7ff}
 .supporter-open{display:flex;flex-direction:column;align-items:center;flex:1;width:100%;min-width:0;min-height:225px;padding:0;border:0;background:transparent;color:inherit;text-align:center;cursor:pointer;font:inherit}
@@ -197,7 +197,6 @@
 .supporter-dialog-description a{color:#174ea6;text-decoration-thickness:1px;text-underline-offset:3px}
 .supporter-dialog-website{display:inline-flex;gap:10px;align-items:center;padding:10px 16px;border-radius:999px;background:#1745a4;color:#fff;font:700 .84rem/1.2 'Google Sans',Arial,sans-serif;text-decoration:none}
 .supporter-dialog-website:hover{background:#0f347f}
-@media(max-width:1100px){.sponsor-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:860px){.partner-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:760px){.supporter-heading>p{margin:15px 0 0}}
 @media(max-width:540px){.supporter-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.supporter-card{min-height:245px;padding:12px 10px 13px;border-radius:16px}.supporter-open{min-height:188px}.supporter-card .sponsor-badge{max-width:100%;padding:6px 8px;font-size:.68rem;margin-bottom:10px}.supporter-logo{height:78px;padding:7px}.supporter-open strong{font-size:.84rem;min-height:3em;margin-top:8px}.card-action{font-size:.7rem}.supporter-website{font-size:.7rem;margin-top:10px;padding:6px 8px}.supporter-dialog{padding:22px}.supporter-dialog-logo{height:125px;margin:18px 0}.supporter-dialog p{font-size:.87rem}}
