@@ -46,7 +46,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;700&amp;display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=6">
+  <link rel="stylesheet" href="style.css?v=18">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -59,16 +59,17 @@
       <nav class="desktop-nav" aria-label="Main navigation">
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
+        <a href="#agenda">Agenda</a>
         <a href="#venue">Venue</a>
-        <a href="#sponsorship">Sponsorship</a>
         <a href="#supporters">Supporters</a>
+        <a href="#sponsorship">Sponsorship</a>
         <a href="#team">Team</a>
       </nav>
       <a class="button button-small button-dark header-cta" href="https://events.gdglebanon.com/e/8PboZ8aoiixG67cWduWI" target="_blank" rel="noopener noreferrer">Ask about invitations <span aria-hidden="true">↗</span></a>
       <details class="mobile-menu">
         <summary aria-label="Open navigation">Menu <span aria-hidden="true">☰</span></summary>
         <nav aria-label="Mobile navigation">
-          <a href="#about">About</a><a href="#experience">Experience</a><a href="#venue">Venue</a><a href="#sponsorship">Sponsorship</a><a href="#supporters">Supporters</a><a href="#team">Team</a>
+          <a href="#about">About</a><a href="#experience">Experience</a><a href="#agenda">Agenda</a><a href="#venue">Venue</a><a href="#supporters">Supporters</a><a href="#sponsorship">Sponsorship</a><a href="#team">Team</a>
           <a href="https://events.gdglebanon.com/e/8PboZ8aoiixG67cWduWI" target="_blank" rel="noopener noreferrer">Ask about invitations</a>
         </nav>
       </details>
@@ -77,10 +78,10 @@
 
   <nav class="mobile-dock" aria-label="Quick navigation">
     <a href="#home" aria-label="Home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></svg><span>Home</span></a>
-    <a href="#about" aria-label="About"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7h.01"/></svg><span>About</span></a>
+    <a href="#agenda" aria-label="Agenda"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 10h18M8 14h3M8 17h3M15 14h1"/></svg><span>Agenda</span></a>
     <a href="#venue" aria-label="Venue"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Venue</span></a>
-    <a href="#sponsorship" aria-label="Sponsorship"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="9" width="18" height="12" rx="2"/><path d="M12 9v12M3 13h18M12 9c-2.8 0-5-1.2-5-3a2 2 0 0 1 2-2c1.8 0 3 2.2 3 5Zm0 0c2.8 0 5-1.2 5-3a2 2 0 0 0-2-2c-1.8 0-3 2.2-3 5Z"/></svg><span>Sponsor</span></a>
     <a href="#supporters" aria-label="Supporters"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 4.4-8.8 10.7-8.8 10.7S3.2 13 3.2 8.6a4.6 4.6 0 0 1 8.8-1.8 4.6 4.6 0 0 1 8.8 1.8Z"/></svg><span>Supporters</span></a>
+    <a href="#sponsorship" aria-label="Sponsorship"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="9" width="18" height="12" rx="2"/><path d="M12 9v12M3 13h18M12 9c-2.8 0-5-1.2-5-3a2 2 0 0 1 2-2c1.8 0 3 2.2 3 5Zm0 0c2.8 0 5-1.2 5-3a2 2 0 0 0-2-2c-1.8 0-3 2.2-3 5Z"/></svg><span>Sponsor</span></a>
     <a href="#team" aria-label="Team"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20v-2a6 6 0 0 1 12 0v2M17 5a3 3 0 0 1 0 6M18 14a5 5 0 0 1 3 5v1"/></svg><span>Team</span></a>
   </nav>
 
@@ -143,86 +144,163 @@
           <article class="experience-card card-green"><span class="card-number">02</span><span class="card-symbol" aria-hidden="true">⌘</span><h3>Hands-on learning</h3><p>Explore ideas and tools through focused workshops and practical conversations.</p></article>
           <article class="experience-card card-yellow"><span class="card-number">03</span><span class="card-symbol" aria-hidden="true">↗</span><h3>Meaningful networking</h3><p>Connect with developers, tech leads, CTOs and organizations across the ecosystem.</p></article>
         </div>
-        <div class="coming-up"><span class="signal-dot"></span><strong>Program in progress</strong><span>Session and speaker details will be shared when confirmed.</span></div>
+        <div class="coming-up"><span class="signal-dot"></span><strong>Program in progress</strong><span>Explore the <a href="#agenda">draft agenda</a>; sessions and speakers remain subject to confirmation.</span></div>
+      </div>
+    </section>
+
+    <section class="section agenda-section" id="agenda" aria-labelledby="agenda-title">
+      <div class="container">
+        <div class="agenda-heading"><div><span class="section-index">DRAFT PROGRAM · ONE ROOM</span><h2 id="agenda-title">A day for ideas<br><span>that ship.</span></h2></div><p>One stage, no parallel talks: practical 15-minute sessions, candid panels and time to meet the community.</p></div>
+        <div class="agenda-status"><strong>PROPOSED · SUBJECT TO CONFIRMATION</strong><span>Saturday, 28 November 2026 · Beirut local time</span></div>
+        <ol class="agenda-list" aria-label="Proposed one-room agenda">
+          <li class="agenda-row agenda-break"><span class="agenda-time"><time datetime="09:30">09:30</time>–<time datetime="10:00">10:00</time></span><div><span class="agenda-type">Arrival</span><h3>Check-in, coffee and expo</h3></div></li>
+          <li class="agenda-row agenda-break"><span class="agenda-time"><time datetime="10:00">10:00</time>–<time datetime="10:10">10:10</time></span><div><span class="agenda-type">Opening</span><h3>Welcome to DevFest Beirut</h3></div></li>
+          <li class="agenda-row agenda-keynote"><span class="agenda-time"><time datetime="10:10">10:10</time>–<time datetime="10:50">10:50</time></span><div><span class="agenda-type">Main keynote · 40 min</span><h3>Beyond the AI demo: building products people can trust</h3><p>Where teams get stuck with data, evaluation, cost, security and adoption—and what to measure after launch.</p></div></li>
+          <li class="agenda-row agenda-sponsor"><span class="agenda-time"><time datetime="10:50">10:50</time>–<time datetime="11:05">11:05</time></span><div><span class="agenda-type">Sponsor session 1 · 15 min</span><h3>Sponsor spotlight</h3><p>Speaker and topic to be agreed with the sponsor.</p></div></li>
+          <li class="agenda-row agenda-panel"><span class="agenda-time"><time datetime="11:05">11:05</time>–<time datetime="11:40">11:40</time></span><div><span class="agenda-type">Panel discussion · 35 min</span><h3>Enterprise AI beyond the pilot</h3><p>What turns a promising prototype into measurable value for teams and customers?</p></div></li>
+          <li class="agenda-row agenda-break"><span class="agenda-time"><time datetime="11:40">11:40</time>–<time datetime="12:00">12:00</time></span><div><span class="agenda-type">Break · 20 min</span><h3>Coffee and conversations</h3></div></li>
+          <li class="agenda-row agenda-google"><span class="agenda-time"><time datetime="12:00">12:00</time>–<time datetime="12:30">12:30</time></span><div><span class="agenda-type">Googler or GDE · 30 min</span><h3>Open models to useful apps: Gemma and Google Cloud</h3><p>A practical expert session; speaker and final scope to be confirmed.</p></div></li>
+          <li class="agenda-row agenda-sponsor"><span class="agenda-time"><time datetime="12:30">12:30</time>–<time datetime="12:45">12:45</time></span><div><span class="agenda-type">Sponsor session 2 · 15 min</span><h3>Sponsor spotlight</h3><p>Speaker and topic to be agreed with the sponsor.</p></div></li>
+          <li class="agenda-row agenda-talk"><span class="agenda-time"><time datetime="12:45">12:45</time>–<time datetime="13:00">13:00</time></span><div><span class="agenda-type">Short talk · 15 min</span><h3>Architecture that survives growth</h3><p>Lessons from scaling services, cloud operations and real production tradeoffs.</p></div></li>
+          <li class="agenda-row agenda-break"><span class="agenda-time"><time datetime="13:00">13:00</time>–<time datetime="14:00">14:00</time></span><div><span class="agenda-type">Lunch · 60 min</span><h3>Lunch, career fair and expo</h3></div></li>
+          <li class="agenda-row agenda-sponsor"><span class="agenda-time"><time datetime="14:00">14:00</time>–<time datetime="14:15">14:15</time></span><div><span class="agenda-type">Sponsor session 3 · 15 min</span><h3>Sponsor spotlight</h3><p>Speaker and topic to be agreed with the sponsor.</p></div></li>
+          <li class="agenda-row agenda-panel"><span class="agenda-time"><time datetime="14:15">14:15</time>–<time datetime="14:50">14:50</time></span><div><span class="agenda-type">Panel discussion · 35 min</span><h3>Growing Lebanon’s tech talent</h3><p>Hiring, mentoring, open source and creating reasons for builders to stay.</p></div></li>
+          <li class="agenda-row agenda-talk"><span class="agenda-time"><time datetime="14:50">14:50</time>–<time datetime="15:05">15:05</time></span><div><span class="agenda-type">Short talk · 15 min</span><h3>Testing AI features before they meet users</h3><p>Evals, quality checks and human review for dependable applications.</p></div></li>
+          <li class="agenda-row agenda-break"><span class="agenda-time"><time datetime="15:05">15:05</time>–<time datetime="15:25">15:25</time></span><div><span class="agenda-type">Break · 20 min</span><h3>Coffee and conversations</h3></div></li>
+          <li class="agenda-row agenda-sponsor"><span class="agenda-time"><time datetime="15:25">15:25</time>–<time datetime="15:40">15:40</time></span><div><span class="agenda-type">Sponsor session 4 · 15 min</span><h3>Sponsor spotlight</h3><p>Speaker and topic to be agreed with the sponsor.</p></div></li>
+          <li class="agenda-row agenda-panel"><span class="agenda-time"><time datetime="15:40">15:40</time>–<time datetime="16:15">16:15</time></span><div><span class="agenda-type">Panel discussion · 35 min</span><h3>Startups that endure: capital, customers and execution</h3><p>How Lebanese founders can build beyond hype and find sustainable demand.</p></div></li>
+          <li class="agenda-row agenda-talk"><span class="agenda-time"><time datetime="16:15">16:15</time>–<time datetime="16:30">16:30</time></span><div><span class="agenda-type">Short talk · 15 min</span><h3>Secure by design: lessons from ethical hacking</h3><p>Small practices that prevent expensive surprises later.</p></div></li>
+          <li class="agenda-row agenda-break"><span class="agenda-time"><time datetime="16:30">16:30</time>–<time datetime="16:45">16:45</time></span><div><span class="agenda-type">Closing · 15 min</span><h3>What we take forward</h3></div></li>
+        </ol>
+        <p class="agenda-footnote">This is a planning draft. Speakers, session titles, timing and format may change.</p>
       </div>
     </section>
 
     <section class="section venue-section" id="venue" aria-labelledby="venue-title">
       <div class="container venue-grid">
-        <div><span class="section-index">WHERE WE MEET</span><h2 id="venue-title">A place to<br><span>come together.</span></h2><p>MEA Conference Center, at the Beirut Airport District, gives DevFest a dedicated auditorium for the main sessions and a reception hall for exhibits, showcases and conversations.</p><a class="text-link" href="https://www.google.com/maps/search/?api=1&query=MEA+Conference+Center+Beirut" target="_blank" rel="noopener noreferrer">Find the venue <span aria-hidden="true">↗</span></a></div>
+        <div><span class="section-index">WHERE WE MEET</span><h2 id="venue-title">A place to<br><span>come together.</span></h2><p>MEA Conference Center, at the Beirut Airport District, gives DevFest a dedicated auditorium for the main sessions and a reception hall for exhibits, showcases and conversations.</p><a class="text-link" href="https://maps.app.goo.gl/Y14dhv5LvyryqRcb9" target="_blank" rel="noopener noreferrer">Find the venue <span aria-hidden="true">↗</span></a></div>
         <div class="venue-card"><div class="venue-card-top"><span>BEIRUT / LEBANON</span><span aria-hidden="true">⌖</span></div><div class="venue-pin" aria-hidden="true"><span></span></div><strong>MEA<br>Conference<br>Center</strong><div class="venue-card-bottom"><span>Riad Salamé Auditorium</span><span>28.11.26</span></div></div>
-      </div>
-    </section>
-
-    <section class="section sponsor-section" id="sponsorship" aria-labelledby="sponsor-title">
-      <div class="container">
-        <div class="section-heading section-heading-split"><div><span class="section-index">SPONSORSHIP & PARTNERSHIP</span><h2 id="sponsor-title">Be part of<br><span>the conversation.</span></h2></div><p>Meet a focused audience of technical professionals and help make DevFest Beirut possible.</p></div>
-        <div class="sponsor-why">
-          <div><span aria-hidden="true">◈</span><h3>Connect</h3><p>Meet developers, tech leads and CTOs in person.</p></div>
-          <div><span aria-hidden="true">◎</span><h3>Showcase</h3><p>Put your organization in front of the community through the expo and event channels.</p></div>
-          <div><span aria-hidden="true">✳</span><h3>Find talent</h3><p>Share opportunities and start conversations with people building in tech.</p></div>
-        </div>
-        <div class="package-heading"><div><span class="section-index">CHOOSE YOUR PARTNERSHIP</span><h3>Two ways to join us</h3></div><p>All prices in USD. Sponsor spaces are limited to six.</p></div>
-        <div class="package-grid">
-          <article class="package-card"><div class="package-card-head"><span class="tier-label">PARTNER</span><span class="tier-price">$300</span></div><p>Make connections at the Career Fair & Expo and support the community.</p><ul><li>2 VIP invitations</li><li>Logo in the partners section</li><li>Expo flex banner and group social mention</li><li>1 website job posting</li><li class="booth-add-on"><strong>Optional booth space</strong> for an additional <strong>$200</strong></li></ul><a class="button button-outline" href="mailto:info@gdglebanon.com?subject=DevFest%20Beirut%202026%20Partner%20inquiry">Ask about partnering <span aria-hidden="true">↗</span></a></article>
-          <article class="package-card package-featured"><div class="package-card-head"><span class="tier-label">SPONSOR <small>6 SPOTS</small></span><span class="tier-price">$1,200</span></div><p>Get a prominent presence across the event and more ways to engage.</p><ul><li>4 VIP invitations and a 2 × 2 m booth</li><li>15-minute talk or panel participation</li><li>Featured website logo and social mention</li><li>Main-stage, print and video recap visibility</li><li>3 website job postings and sponsor-only add-ons</li></ul><a class="button button-light" href="mailto:info@gdglebanon.com?subject=DevFest%20Beirut%202026%20Sponsor%20inquiry">Ask about sponsoring <span aria-hidden="true">↗</span></a></article>
-        </div>
-        <details class="comparison"><summary>Compare all partnership benefits <span aria-hidden="true">＋</span></summary><div class="table-scroll"><table><caption>DevFest Beirut 2026 partnership benefits</caption><thead><tr><th scope="col">Benefit</th><th scope="col">Partner · $300</th><th scope="col">Sponsor · $1,200</th></tr></thead><tbody>
-          <tr><th scope="row">VIP invitations</th><td>2</td><td>4</td></tr>
-          <tr><th scope="row">Booth</th><td>Optional, +$200</td><td>2 × 2 m, priority placement</td></tr>
-          <tr><th scope="row">Speaking</th><td>—</td><td>15-minute talk or panel participation</td></tr>
-          <tr><th scope="row">Website and registration</th><td>Partner logo</td><td>Featured sponsor logo</td></tr>
-          <tr><th scope="row">Printed materials</th><td>Expo flex banner</td><td>Badges, notebooks and flex banner</td></tr>
-          <tr><th scope="row">Social media</th><td>Group mention</td><td>Featured mention</td></tr>
-          <tr><th scope="row">Main stage</th><td>—</td><td>Banner and dedicated slide</td></tr>
-          <tr><th scope="row">On-stage recognition</th><td>—</td><td>Verbal recognition and roll-up banner</td></tr>
-          <tr><th scope="row">Email marketing</th><td>—</td><td>Group email blast</td></tr>
-          <tr><th scope="row">Video recap branding</th><td>—</td><td>Included</td></tr>
-          <tr><th scope="row">Swag and inserts</th><td>—</td><td>Notebook insert</td></tr>
-          <tr><th scope="row">Break-area roll-up</th><td>—</td><td>1</td></tr>
-          <tr><th scope="row">Website job postings</th><td>1</td><td>3</td></tr>
-          <tr><th scope="row">Sponsor-only add-ons</th><td>—</td><td>Eligible; ask the team for details</td></tr>
-        </tbody></table></div></details>
-        <p class="sponsor-note">Package details are from the DevFest Beirut 2026 sponsorship deck. Availability and delivery details can be confirmed with the organizing team.</p>
-        <div class="sponsor-extras" aria-label="More sponsorship opportunities">
-          <article class="sponsor-extra sponsor-extra-deck">
-            <span class="section-index">FULL SPONSORSHIP DECK</span>
-            <h3>Want the full picture?</h3>
-            <p>Email us to request the full sponsorship deck and discuss the right partnership for your organization.</p>
-            <a class="button button-light" href="mailto:info@gdglebanon.com?subject=DevFest%20Beirut%202026%20full%20sponsorship%20deck%20request">Request the full deck <span aria-hidden="true">↗</span></a>
-          </article>
-          <article class="sponsor-extra sponsor-extra-ads">
-            <span class="section-index">SPECIAL BRANDING ADD-ONS</span>
-            <h3>Make your mark.</h3>
-            <p>Ask about additional event branding opportunities, such as lanyards, attendee gifts, break areas and on-site signage.</p>
-            <p class="sponsor-extra-note">Options and availability are confirmed with the organizing team.</p>
-            <a class="text-link" href="mailto:info@gdglebanon.com?subject=DevFest%20Beirut%202026%20special%20branding%20add-ons%20inquiry">Ask about special add-ons <span aria-hidden="true">↗</span></a>
-          </article>
-        </div>
       </div>
     </section>
 
     <section class="section supporters-section" id="supporters" aria-labelledby="supporters-title">
       <div class="container">
-        <div class="compact-heading"><div><span class="section-index">COMMUNITY SUPPORT</span><h2 id="supporters-title">Supporters, past and present.</h2></div></div>
-        <div class="main-supporter">
-          <div><span class="supporter-label">MAIN SUPPORTER · 2026</span><a href="https://developers.google.com/" target="_blank" rel="noopener noreferrer" aria-label="Google for Developers website"><img src="assets/images/google-for-developers.png" alt="Google for Developers" width="300" height="44" loading="lazy"></a></div>
-          <p>Helping developer communities connect, learn and build.</p>
+        <div class="compact-heading supporter-heading"><div><span class="section-index">DEVFEST BEIRUT 2026</span><h2 id="supporters-title">Sponsors &amp; partners.</h2></div><p>Meet the organizations supporting this year's developer community gathering.</p></div>
+        <section class="section sponsor-section" id="sponsorship" aria-labelledby="sponsor-title">
+          <div class="container">
+            <details class="partnership-disclosure">
+              <summary class="partnership-summary"><span class="section-index">WANT TO SPONSOR?</span><span class="partnership-summary-row"><span id="sponsor-title">Choose your Partnership</span><span class="partnership-toggle" aria-hidden="true">＋</span></span><span class="partnership-summary-note">All prices in USD. Sponsor spaces are limited to six.</span></summary>
+              <div class="partnership-content">
+                <div class="section-heading section-heading-split"><div><span class="section-index">SPONSORSHIP & PARTNERSHIP</span><h2>Be part of<br><span>the conversation.</span></h2></div><p>Meet a focused audience of technical professionals and help make DevFest Beirut possible.</p></div>
+                <div class="sponsor-why">
+                  <div><span aria-hidden="true">◈</span><h3>Connect</h3><p>Meet developers, tech leads and CTOs in person.</p></div>
+                  <div><span aria-hidden="true">◎</span><h3>Showcase</h3><p>Put your organization in front of the community through the expo and event channels.</p></div>
+                  <div><span aria-hidden="true">✳</span><h3>Find talent</h3><p>Share opportunities and start conversations with people building in tech.</p></div>
+                </div>
+                <div class="package-grid">
+                  <article class="package-card"><div class="package-card-head"><span class="tier-label">Partner</span><span class="tier-price">$300</span></div><p>Make connections at the Career Fair & Expo and support the community.</p><ul><li>2 VIP invitations</li><li>Logo in the partners section</li><li>Expo flex banner and group social mention</li><li>1 website job posting</li><li class="booth-add-on"><strong>Optional booth space</strong> for an additional <strong>$200</strong></li></ul><a class="button button-outline" href="mailto:info@gdglebanon.com?subject=DevFest%20Beirut%202026%20Partner%20inquiry">Ask about partnering <span aria-hidden="true">↗</span></a></article>
+                  <article class="package-card package-featured"><div class="package-card-head"><span class="tier-label">SPONSOR <small>6 SPOTS</small></span><span class="tier-price">$1,200</span></div><p>Get a prominent presence across the event and more ways to engage.</p><ul><li>4 VIP invitations and a 2 × 2 m booth</li><li>15-minute talk or panel participation</li><li>Featured website logo and social mention</li><li>Main-stage, print and video recap visibility</li><li>3 website job postings and sponsor-only add-ons</li></ul><a class="button button-light" href="mailto:info@gdglebanon.com?subject=DevFest%20Beirut%202026%20Sponsor%20inquiry">Ask about sponsoring <span aria-hidden="true">↗</span></a></article>
+                </div>
+                <details class="comparison"><summary>Compare all partnership benefits <span aria-hidden="true">＋</span></summary><div class="table-scroll"><table><caption>DevFest Beirut 2026 partnership benefits</caption><thead><tr><th scope="col">Benefit</th><th scope="col">Partner · $300</th><th scope="col">Sponsor · $1,200</th></tr></thead><tbody>
+                  <tr><th scope="row">VIP invitations</th><td>2</td><td>4</td></tr>
+                  <tr><th scope="row">Booth</th><td>Optional, +$200</td><td>2 × 2 m, priority placement</td></tr>
+                  <tr><th scope="row">Speaking</th><td>—</td><td>15-minute talk or panel participation</td></tr>
+                  <tr><th scope="row">Website and registration</th><td>Partner logo</td><td>Featured sponsor logo</td></tr>
+                  <tr><th scope="row">Printed materials</th><td>Expo flex banner</td><td>Badges, notebooks and flex banner</td></tr>
+                  <tr><th scope="row">Social media</th><td>Group mention</td><td>Featured mention</td></tr>
+                  <tr><th scope="row">Main stage</th><td>—</td><td>Banner and dedicated slide</td></tr>
+                  <tr><th scope="row">On-stage recognition</th><td>—</td><td>Verbal recognition and roll-up banner</td></tr>
+                  <tr><th scope="row">Email marketing</th><td>—</td><td>Group email blast</td></tr>
+                  <tr><th scope="row">Video recap branding</th><td>—</td><td>Included</td></tr>
+                  <tr><th scope="row">Swag and inserts</th><td>—</td><td>Notebook insert</td></tr>
+                  <tr><th scope="row">Break-area roll-up</th><td>—</td><td>1</td></tr>
+                  <tr><th scope="row">Website job postings</th><td>1</td><td>3</td></tr>
+                  <tr><th scope="row">Sponsor-only add-ons</th><td>—</td><td>Eligible; ask the team for details</td></tr>
+                </tbody></table></div></details>
+                <p class="sponsor-note">Package details are from the DevFest Beirut 2026 sponsorship deck. Availability and delivery details can be confirmed with the organizing team.</p>
+                <div class="sponsor-extras" aria-label="More sponsorship opportunities">
+                  <article class="sponsor-extra sponsor-extra-deck">
+                    <span class="section-index">FULL SPONSORSHIP DECK</span>
+                    <h3>Want the full picture?</h3>
+                    <p>Email us to request the full sponsorship deck and discuss the right partnership for your organization.</p>
+                    <a class="button button-light" href="mailto:info@gdglebanon.com?subject=DevFest%20Beirut%202026%20full%20sponsorship%20deck%20request">Request the full deck <span aria-hidden="true">↗</span></a>
+                  </article>
+                  <article class="sponsor-extra sponsor-extra-ads">
+                    <span class="section-index">SPECIAL BRANDING ADD-ONS</span>
+                    <h3>Make your mark.</h3>
+                    <p>Ask about additional event branding opportunities, such as lanyards, attendee gifts, break areas and on-site signage.</p>
+                    <p class="sponsor-extra-note">Options and availability are confirmed with the organizing team.</p>
+                    <a class="text-link" href="mailto:info@gdglebanon.com?subject=DevFest%20Beirut%202026%20special%20branding%20add-ons%20inquiry">Ask about special add-ons <span aria-hidden="true">↗</span></a>
+                  </article>
+                </div>
+              </div>
+            </details>
+          </div>
+        </section>
+
+        <div class="supporter-group-heading"><span class="section-index">WITH THANKS TO</span><h3>Sponsors</h3></div>
+        <div class="supporter-grid sponsor-grid" aria-label="DevFest Beirut 2026 sponsors">
+          <article class="supporter-card">
+            <button class="supporter-open" type="button" aria-haspopup="dialog"><span class="sponsor-badge">Sponsor</span><span class="supporter-logo"><img src="assets/images/sponsors-2026/aboard.png" alt="Aboard, formerly Speedlane" width="3670" height="1034" loading="lazy" decoding="async"></span><strong>Aboard</strong><span class="card-action">View details <span aria-hidden="true">↗</span></span></button>
+            <div class="supporter-description" hidden><p>Aboard is a business software platform driven by AI. We partner with you to build high-quality, data-driven software very quickly, at low cost.</p><p>Reach out at <a href="mailto:hello.lb@aboard.com">hello.lb@aboard.com</a>. For Aboard New York, visit <a href="https://www.linkedin.com/company/aboard-com" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p></div>
+            <a class="supporter-website" href="https://aboard.com" target="_blank" rel="noopener noreferrer" aria-label="Visit Aboard website (opens in a new tab)">Website <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="supporter-card supporter-card-community">
+            <button class="supporter-open" type="button" aria-haspopup="dialog"><span class="sponsor-badge sponsor-badge-community">Community Sponsor</span><span class="supporter-logo"><img src="assets/images/sponsors-2026/google-for-developers.png" alt="Google for Developers" width="1280" height="222" loading="lazy" decoding="async"></span><strong>Google for Developers</strong><span class="card-action">View details <span aria-hidden="true">↗</span></span></button>
+            <div class="supporter-description" hidden><p>Discover the latest technologies, resources, events, and announcements to help you build smarter and ship faster. Explore more at developers.google.com.</p></div>
+            <a class="supporter-website" href="https://developers.google.com" target="_blank" rel="noopener noreferrer" aria-label="Visit Google for Developers website (opens in a new tab)">Website <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="supporter-card">
+            <button class="supporter-open" type="button" aria-haspopup="dialog"><span class="sponsor-badge">Sponsor</span><span class="supporter-logo"><img src="assets/images/sponsors-2026/lyxa.png" alt="Lyxa" width="300" height="120" loading="lazy" decoding="async"></span><strong>Lyxa</strong><span class="card-action">View details <span aria-hidden="true">↗</span></span></button>
+            <div class="supporter-description" hidden><p>LYXA is an innovative startup focused on creating cutting-edge q-commerce and e-commerce solutions through our proprietary mobile app, LYXA. Our dedicated team combines business acumen with a passion for technology to deliver a seamless shopping experience. We are committed to redefining how consumers engage with commerce in the digital age, driving growth and convenience in the online marketplace.</p></div>
+            <a class="supporter-website" href="https://lyxa.ai/home" target="_blank" rel="noopener noreferrer" aria-label="Visit Lyxa website (opens in a new tab)">Website <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="supporter-card">
+            <button class="supporter-open" type="button" aria-haspopup="dialog"><span class="sponsor-badge">Sponsor</span><span class="supporter-logo"><img src="assets/images/sponsors-2026/murex.png" alt="Murex" width="723" height="276" loading="lazy" decoding="async"></span><strong>Murex</strong><span class="card-action">View details <span aria-hidden="true">↗</span></span></button>
+            <div class="supporter-description" hidden><p>For more than 35 years, Murex has provided enterprise-wide, cross-asset financial technology solutions to capital markets players. Its cross-function platform, MX.3, supports trading, treasury, risk and post-trade operations, enabling clients to better meet regulatory requirements, manage enterprise-wide risk and control IT costs. With more than 60,000 daily users in more than 65 countries, Murex has clients across the financial services industry, from banking and asset management to energy and commodities. Murex is an independent company with over 3,400 employees across 21 locations. Murex is committed to providing cutting-edge technology, superior customer service and unique product innovation. MX.3 is specifically designed and engineered to meet the multifaceted challenges of a transforming financial industry. Co-founder Elias Eddé is Murex's CEO. Elias leads the executive committee and reports to the board of directors. Maroun Eddé is executive chairman of the board of directors and is closely involved in key customer and partner relations and in defining Murex’s long-term objectives and strategy.</p></div>
+            <a class="supporter-website" href="https://www.murex.com" target="_blank" rel="noopener noreferrer" aria-label="Visit Murex website (opens in a new tab)">Website <span aria-hidden="true">↗</span></a>
+          </article>
         </div>
-        <div class="rail-heading"><div><span class="section-index">A LOOK BACK</span><h3>2025 sponsors &amp; partners</h3></div><div class="rail-controls"><button type="button" class="rail-arrow" data-rail="sponsor-track" data-direction="-1" aria-label="Previous 2025 supporters">←</button><button type="button" class="rail-arrow" data-rail="sponsor-track" data-direction="1" aria-label="Next 2025 supporters">→</button></div></div>
-        <div class="logo-rail" id="sponsor-track" aria-label="2025 sponsors and partners">
-          <article class="logo-tile"><img src="assets/images/partners-2025/semicolon.jpeg" alt="Semicolon logo" loading="lazy"><strong>Semicolon</strong><span>Gold sponsor</span></article>
-          <article class="logo-tile"><img src="assets/images/partners-2025/murex.png" alt="Murex logo" loading="lazy"><strong>Murex</strong><span>Silver sponsor</span></article>
-          <article class="logo-tile"><img src="assets/images/partners-2025/supportful.png" alt="Supportful logo" loading="lazy"><strong>Supportful</strong><span>Bronze sponsor</span></article>
-          <article class="logo-tile"><img src="assets/images/partners-2025/speedlane.png" alt="Speedlane logo" loading="lazy"><strong>Speedlane</strong><span>Silver sponsor</span></article>
-          <article class="logo-tile"><img src="assets/images/partners-2025/monty.png" alt="Monty Holding logo" loading="lazy"><strong>Monty Holding</strong><span>Bronze sponsor</span></article>
-          <article class="logo-tile"><img src="assets/images/partners-2025/eurisko.png" alt="Eurisko logo" loading="lazy"><strong>Eurisko</strong><span>Partner</span></article>
-          <article class="logo-tile"><img src="assets/images/partners-2025/42-beirut.png" alt="42 Beirut logo" loading="lazy"><strong>42 Beirut</strong><span>Partner</span></article>
-          <article class="logo-tile"><img src="assets/images/partners-2025/upaint.webp" alt="uPaint logo" loading="lazy"><strong>uPaint</strong><span>Partner</span></article>
+        <div class="supporter-group-heading"><span class="section-index">BUILDING TOGETHER</span><h3>Partners</h3></div>
+        <div class="supporter-grid partner-grid" aria-label="DevFest Beirut 2026 partners">
+          <article class="supporter-card">
+            <button class="supporter-open" type="button" aria-haspopup="dialog"><span class="sponsor-badge sponsor-badge-partner">Partner</span><span class="supporter-logo"><img src="assets/images/sponsors-2026/logisoft.png" alt="Logisoft" width="256" height="77" loading="lazy" decoding="async"></span><strong>Logisoft</strong><span class="card-action">View details <span aria-hidden="true">↗</span></span></button>
+            <div class="supporter-description" hidden>
+              <p>Logisoft is a leading provider of technology solutions designed for Roll-on/Roll-off (RoRo) logistics and Finished Vehicle Logistics (FVL). Since 2010, we’ve been empowering freight forwarders, terminal operators, and shipping lines to optimize the movement of wheeled cargo across global supply chains.</p>
+              <p>Our integrated suite of solutions includes:</p>
+              <ul>
+                <li><strong>Transport Management System (TMS):</strong> Purpose-built for RoRo logistics, it automates freight operations with real-time tracking, dynamic voyage management, automated quoting, invoicing, and seamless carrier integration.</li>
+                <li><strong>Terminal Operating System (TOS):</strong> Enhances terminal efficiency with real-time cargo tracking, inventory management, vessel planning, and integrated reporting for smooth coordination.</li>
+                <li><strong>Customer Relationship Management (CRM):</strong> Centralizes lead management, sales tracking, and team collaboration, delivering a unified view of customer interactions.</li>
+                <li><strong>Digital Freight Portal:</strong> A branded, interactive customer platform that integrates with the TMS, enabling users to manage quotes, track shipments, and access reports with ease.</li>
+              </ul>
+              <p>Logisoft systems provide real-time updates, end-to-end visibility, and data synchronization, helping to streamline every aspect of RoRo and FVL logistics—from cargo handling and inspection to inventory control and voyage management.</p>
+              <p>Our mission is to create more connected and efficient supply chains worldwide by integrating innovative technology, automation, and collaboration, empowering our partners to deliver smarter, faster, and more reliable logistics services.</p>
+            </div>
+            <a class="supporter-website" href="https://logisoft.io" target="_blank" rel="noopener noreferrer" aria-label="Visit Logisoft website (opens in a new tab)">Website <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="supporter-card">
+            <button class="supporter-open" type="button" aria-haspopup="dialog"><span class="sponsor-badge sponsor-badge-partner">Partner</span><span class="supporter-logo"><img src="assets/images/sponsors-2026/software-engineering-excellence.png" alt="Software Engineering Excellence SE²" width="500" height="309" loading="lazy" decoding="async"></span><strong>Software Engineering Excellence</strong><span class="card-action">View details <span aria-hidden="true">↗</span></span></button>
+            <div class="supporter-description" hidden><p>A Lebanese software engineering company with an active learning community.</p></div>
+            <a class="supporter-website" href="https://se2.dev/" target="_blank" rel="noopener noreferrer" aria-label="Visit Software Engineering Excellence website (opens in a new tab)">Website <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="supporter-card">
+            <button class="supporter-open" type="button" aria-haspopup="dialog"><span class="sponsor-badge sponsor-badge-partner">Partner</span><span class="supporter-logo"><img src="assets/images/sponsors-2026/supportful.png" alt="Supportful" width="104" height="141" loading="lazy" decoding="async"></span><strong>Supportful</strong><span class="card-action">View details <span aria-hidden="true">↗</span></span></button>
+            <div class="supporter-description" hidden><p>Supportful is your engineering ally, built for startups and scaleups that demand speed and quality.</p><p>We help growing companies build exceptional software teams with pre-vetted engineers and fractional CTOs; seamlessly integrated into your workflows and culture.</p><p>At our core, we’re a mission-driven company. We believe that happy engineers build better products; that’s why we help Lebanon’s top talent work remotely from their hometowns, contributing to their communities while powering innovation worldwide.</p><p>Built in Lebanon, connected to the world.</p></div>
+            <a class="supporter-website" href="https://supportful.world/" target="_blank" rel="noopener noreferrer" aria-label="Visit Supportful website (opens in a new tab)">Website <span aria-hidden="true">↗</span></a>
+          </article>
         </div>
-        <p class="history-source">These organizations supported DevFest Beirut in 2025. <a href="https://devfest25.gdglebanon.com/partnersApplication" target="_blank" rel="noopener noreferrer">See the 2025 sponsor page ↗</a></p>
       </div>
     </section>
+
+    <dialog class="supporter-dialog" id="supporter-dialog" aria-labelledby="supporter-dialog-title">
+      <button class="supporter-dialog-close" type="button" aria-label="Close sponsor details">×</button>
+      <span class="sponsor-badge" id="supporter-dialog-role"></span>
+      <span class="supporter-dialog-logo"><img id="supporter-dialog-image" alt=""></span>
+      <h3 id="supporter-dialog-title"></h3>
+      <div class="supporter-dialog-description" id="supporter-dialog-description"></div>
+      <a class="supporter-dialog-website" id="supporter-dialog-website" target="_blank" rel="noopener noreferrer">Visit website <span aria-hidden="true">↗</span></a>
+    </dialog>
 
     <section class="section team-section" id="team" aria-labelledby="team-title">
       <div class="container">
@@ -273,6 +351,33 @@
       });
     };
     sectionLinks.forEach(link => link.addEventListener('click', () => { document.querySelector('.mobile-menu').open = false; }));
+    const supporterDialog = document.getElementById('supporter-dialog');
+    let lastSupporterTrigger;
+    document.querySelectorAll('.supporter-open').forEach(button => button.addEventListener('click', () => {
+      const card = button.closest('.supporter-card');
+      const logo = card.querySelector('.supporter-logo img');
+      const website = card.querySelector('.supporter-website');
+      supporterDialog.querySelector('#supporter-dialog-role').className = card.querySelector('.sponsor-badge').className;
+      supporterDialog.querySelector('#supporter-dialog-role').textContent = card.querySelector('.sponsor-badge').textContent;
+      supporterDialog.querySelector('#supporter-dialog-image').src = logo.src;
+      supporterDialog.querySelector('#supporter-dialog-image').alt = logo.alt;
+      supporterDialog.querySelector('#supporter-dialog-title').textContent = card.querySelector('strong').textContent;
+      const description = card.querySelector('.supporter-description');
+      supporterDialog.querySelector('#supporter-dialog-description').replaceChildren(...[...description.childNodes].map(node => node.cloneNode(true)));
+      supporterDialog.querySelector('#supporter-dialog-website').href = website.href;
+      lastSupporterTrigger = button;
+      document.body.style.overflow = 'hidden';
+      supporterDialog.showModal();
+    }));
+    supporterDialog.querySelector('.supporter-dialog-close').addEventListener('click', () => supporterDialog.close());
+    supporterDialog.addEventListener('click', event => {
+      const bounds = supporterDialog.getBoundingClientRect();
+      if (event.target === supporterDialog && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) supporterDialog.close();
+    });
+    supporterDialog.addEventListener('close', () => {
+      document.body.style.overflow = '';
+      lastSupporterTrigger?.focus();
+    });
     const mobileDock = document.querySelector('.mobile-dock');
     let previousScrollY = Math.max(0, window.scrollY);
     let scrollTravel = 0;
