@@ -230,6 +230,11 @@
             <div class="supporter-description" hidden><p>For more than 35 years, Murex has provided enterprise-wide, cross-asset financial technology solutions to capital markets players. Its cross-function platform, MX.3, supports trading, treasury, risk and post-trade operations, enabling clients to better meet regulatory requirements, manage enterprise-wide risk and control IT costs. With more than 60,000 daily users in more than 65 countries, Murex has clients across the financial services industry, from banking and asset management to energy and commodities. Murex is an independent company with over 3,400 employees across 21 locations. Murex is committed to providing cutting-edge technology, superior customer service and unique product innovation. MX.3 is specifically designed and engineered to meet the multifaceted challenges of a transforming financial industry. Co-founder Elias Eddé is Murex's CEO. Elias leads the executive committee and reports to the board of directors. Maroun Eddé is executive chairman of the board of directors and is closely involved in key customer and partner relations and in defining Murex’s long-term objectives and strategy.</p></div>
             <a class="supporter-website" href="https://www.murex.com" target="_blank" rel="noopener noreferrer" aria-label="Visit Murex website (opens in a new tab)">Website <span aria-hidden="true">↗</span></a>
           </article>
+          <article class="supporter-card">
+            <button class="supporter-open" type="button" aria-haspopup="dialog"><span class="sponsor-badge">Sponsor</span><span class="supporter-logo"><img src="assets/images/sponsors-2026/semicolon-security.png" alt="Semicolon Security" width="1640" height="296" loading="lazy" decoding="async"></span><strong>Semicolon</strong><span class="card-action">View details <span aria-hidden="true">↗</span></span></button>
+            <div class="supporter-description" hidden><p>A Lebanese cybersecurity company and training academy focused on ethical hacking, security workshops, penetration testing services and educational programs.</p></div>
+            <a class="supporter-website" href="https://www.linkedin.com/company/semicolonllc" data-link-label="LinkedIn" target="_blank" rel="noopener noreferrer" aria-label="Visit Semicolon on LinkedIn (opens in a new tab)">LinkedIn <span aria-hidden="true">↗</span></a>
+          </article>
         </div>
         <div class="supporter-group-heading"><span class="section-index">BUILDING TOGETHER</span><h3>Partners</h3></div>
         <div class="supporter-grid partner-grid" aria-label="DevFest Beirut 2026 partners">
@@ -269,7 +274,7 @@
       <span class="supporter-dialog-logo"><img id="supporter-dialog-image" alt=""></span>
       <h3 id="supporter-dialog-title"></h3>
       <div class="supporter-dialog-description" id="supporter-dialog-description"></div>
-      <a class="supporter-dialog-website" id="supporter-dialog-website" target="_blank" rel="noopener noreferrer">Visit website <span aria-hidden="true">↗</span></a>
+      <a class="supporter-dialog-website" id="supporter-dialog-website" target="_blank" rel="noopener noreferrer"><span id="supporter-dialog-link-label">Visit website</span> <span aria-hidden="true">↗</span></a>
     </dialog>
 
     <section class="section team-section" id="team" aria-labelledby="team-title">
@@ -335,6 +340,7 @@
       const description = card.querySelector('.supporter-description');
       supporterDialog.querySelector('#supporter-dialog-description').replaceChildren(...[...description.childNodes].map(node => node.cloneNode(true)));
       supporterDialog.querySelector('#supporter-dialog-website').href = website.href;
+      supporterDialog.querySelector('#supporter-dialog-link-label').textContent = `Visit ${website.dataset.linkLabel || 'website'}`;
       lastSupporterTrigger = button;
       document.body.style.overflow = 'hidden';
       supporterDialog.showModal();
