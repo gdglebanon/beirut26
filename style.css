@@ -179,3 +179,48 @@
 .partnership-content{padding:44px 34px 38px;border-top:1px solid var(--line)}
 @media(max-width:760px){.sponsor-section{padding:28px 0 50px}.partnership-summary{padding:22px}.partnership-content{padding:30px 20px}.partnership-summary-row{gap:12px}.partnership-toggle{width:34px;height:34px;font-size:1.55rem}}
 @media(prefers-reduced-motion:reduce){.partnership-toggle{transition:none}}
+
+/* A quiet schedule preview, with the full agenda available on request. */
+.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+.agenda-section{padding:64px 0;background:var(--paper);border-top:1px solid var(--line)}
+.agenda-heading>p{margin:0;color:var(--muted);font-size:1rem}
+.agenda-disclosure{background:#fff;border:1px solid #cbdbe9;border-radius:23px;overflow:hidden}
+.agenda-summary{display:flex;flex-direction:column;gap:20px;padding:28px 34px;cursor:pointer;list-style:none}
+.agenda-summary::-webkit-details-marker{display:none}
+.agenda-summary:focus-visible{outline-offset:-5px;border-radius:22px}
+.agenda-summary-row{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.agenda-summary-row strong{display:block;font:700 clamp(1.4rem,2.5vw,2rem)/1.2 var(--font-head);letter-spacing:-.04em}
+.agenda-hours{display:block;margin-top:8px;color:var(--muted);font-size:1rem}
+.agenda-toggle{display:grid;place-items:center;flex:none;width:44px;height:44px;border-radius:50%;background:#e8f0fe;color:#174ea6;font:400 1.8rem/1 'Google Sans',Arial,sans-serif}
+.agenda-skeleton{display:grid;gap:14px;max-width:650px}
+.agenda-skeleton>span{display:grid;grid-template-columns:100px 1fr;gap:24px;align-items:center}
+.agenda-skeleton i{display:block;height:12px;border-radius:6px;background:#e8edf3}
+.agenda-skeleton i:first-child{background:#dbe7f7}
+.agenda-skeleton>span:nth-child(2) i:last-child{width:76%}
+.agenda-skeleton>span:nth-child(3) i:last-child{width:88%}
+.agenda-action{color:#174ea6;font-size:.9rem;font-weight:700}
+.agenda-action-close,.agenda-disclosure[open] .agenda-action-open,.agenda-disclosure[open] .agenda-skeleton{display:none}
+.agenda-disclosure[open] .agenda-action-close{display:inline}
+.agenda-disclosure[open] .agenda-toggle{transform:rotate(45deg)}
+.agenda-sessions{list-style:none;padding:0;margin:0;border-top:1px solid var(--line)}
+.agenda-session{display:grid;grid-template-columns:260px minmax(0,1fr);gap:24px;align-items:start;padding:22px 34px}
+.agenda-session+.agenda-session{border-top:1px solid var(--line)}
+.agenda-time{color:var(--muted);font-size:.9rem;font-variant-numeric:tabular-nums;line-height:1.6;white-space:nowrap}
+.agenda-session h3{font:700 1.05rem/1.5 var(--font-head);margin:0;overflow-wrap:anywhere}
+.agenda-session p{margin:6px 0 0;color:var(--muted);font-size:.9rem}
+@media(max-width:760px){.agenda-section{padding:40px 0 50px}.agenda-heading>p{margin-top:16px}.agenda-summary{padding:24px 22px}.agenda-session{grid-template-columns:minmax(0,1fr);gap:8px;padding:20px 22px}.agenda-skeleton>span{grid-template-columns:65px 1fr;gap:18px}.agenda-hours{font-size:.9rem}}
+
+/* Speaker details transcribed from the supplied event posters. */
+.agenda-session-content{min-width:0}
+.session-type{display:block;margin-bottom:6px;color:#496277;font-size:.875rem}
+.session-people{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 24px;list-style:none;margin:20px 0 0;padding:0}
+.session-person{display:flex;align-items:center;gap:13px;min-width:0;font-family:'Google Sans',Arial,sans-serif}
+.session-person>span:last-child{min-width:0}
+.session-person strong{display:block;font-size:1rem;line-height:1.35;overflow-wrap:anywhere}
+.speaker-position{display:block;margin-top:4px;color:var(--muted);font-size:.875rem;line-height:1.45;overflow-wrap:anywhere}
+.speaker-function{display:block;color:#174ea6;font-size:.875rem;margin-top:3px;font-weight:700}
+/* A circle clips only the portrait region; original poster pixels are preserved. */
+.speaker-portrait{display:block;position:relative;overflow:hidden;flex:none;width:72px;height:72px;border-radius:50%;background:#53c5f4;isolation:isolate}
+.speaker-portrait img{position:absolute;width:var(--portrait-width);max-width:none;height:auto;left:var(--portrait-left);top:var(--portrait-top)}
+@media(max-width:1050px){.session-people{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:760px){.session-people{gap:16px;margin-top:16px}.speaker-portrait{width:64px;height:64px}.session-person{gap:12px}}

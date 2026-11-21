@@ -1,0 +1,437 @@
+{
+  "people": {
+    "ammar-mohanna": {
+      "name": "Dr. Ammar Mohanna",
+      "position": "Lecturer",
+      "organization": "American University of Beirut",
+      "photo": "assets/images/speakers-2026/panel-building-ai-in-lebanon.png",
+      "crop": [
+        578,
+        860,
+        550
+      ],
+      "source": "[PANEL] Building AI in Lebanon/Panel-Building-AI-in-Lebanon-Screen-1920x1080.png",
+      "participation": "panelist"
+    },
+    "alexi-akl": {
+      "name": "Alexi Akl",
+      "position": "SVP, Solution Delivery",
+      "organization": "Aboard",
+      "photo": "assets/images/speakers-2026/panel-building-ai-in-lebanon.png",
+      "crop": [
+        1286,
+        860,
+        550
+      ],
+      "source": "[PANEL] Building AI in Lebanon/Panel-Building-AI-in-Lebanon-Screen-1920x1080.png",
+      "participation": "panelist"
+    },
+    "tarek-ayna": {
+      "name": "Tarek Ayna",
+      "position": "Founder & CEO",
+      "organization": "Edgebot",
+      "photo": "assets/images/speakers-2026/panel-building-ai-in-lebanon.png",
+      "crop": [
+        1992,
+        860,
+        550
+      ],
+      "source": "[PANEL] Building AI in Lebanon/Panel-Building-AI-in-Lebanon-Screen-1920x1080.png",
+      "participation": "panelist"
+    },
+    "hekmat-kassir": {
+      "name": "Hekmat Kassir",
+      "position": "Co-Founder & CEO",
+      "organization": "Chimera Cybersecurity",
+      "photo": "assets/images/speakers-2026/panel-building-ai-in-lebanon.png",
+      "crop": [
+        2700,
+        860,
+        550
+      ],
+      "source": "[PANEL] Building AI in Lebanon/Panel-Building-AI-in-Lebanon-Screen-1920x1080.png",
+      "participation": "panelist"
+    },
+    "mohamad-darsa": {
+      "name": "Mohamad Darsa",
+      "position": "Senior Data and Software Engineer",
+      "organization": "Aspire",
+      "photo": "assets/images/speakers-2026/panel-seniority-in-software-engineering.png",
+      "crop": [
+        578,
+        860,
+        550
+      ],
+      "source": "[PANEL] Seniority in Software Engineering/Panel-Seniority-in-Software-Engineering-Screen-1920x1080.png",
+      "participation": "panelist"
+    },
+    "fadi-boulos": {
+      "name": "Fadi Boulos",
+      "position": "Founder",
+      "organization": "Supportful",
+      "photo": "assets/images/speakers-2026/panel-seniority-in-software-engineering.png",
+      "crop": [
+        1286,
+        860,
+        550
+      ],
+      "source": "[PANEL] Seniority in Software Engineering/Panel-Seniority-in-Software-Engineering-Screen-1920x1080.png",
+      "participation": "panelist"
+    },
+    "elie-rached": {
+      "name": "Elie Rached",
+      "position": "Independent Management & Leadership Advisor",
+      "organization": "",
+      "photo": "assets/images/speakers-2026/panel-seniority-in-software-engineering.png",
+      "crop": [
+        1992,
+        860,
+        550
+      ],
+      "source": "[PANEL] Seniority in Software Engineering/Panel-Seniority-in-Software-Engineering-Screen-1920x1080.png",
+      "participation": "panelist"
+    },
+    "ghadi-al-ghosh": {
+      "name": "Ghadi Al Ghosh",
+      "position": "Engineering Manager",
+      "organization": "Logisoft",
+      "photo": "assets/images/speakers-2026/panel-seniority-in-software-engineering.png",
+      "crop": [
+        2700,
+        860,
+        550
+      ],
+      "source": "[PANEL] Seniority in Software Engineering/Panel-Seniority-in-Software-Engineering-Screen-1920x1080.png",
+      "participation": "panelist"
+    },
+    "ali-kalout": {
+      "name": "Ali Kalout",
+      "position": "Software Engineer",
+      "organization": "Aboard",
+      "photo": "assets/images/speakers-2026/talk-ali-kalout.png",
+      "crop": [
+        640,
+        900,
+        840
+      ],
+      "source": "[TALK] Ali Kalout/Speaker-Ali-Kalout-Screen-1920x1080.png",
+      "participation": "speaker"
+    },
+    "freddy-demiane": {
+      "name": "Freddy Demiane",
+      "position": "Software Engineer",
+      "organization": "Google",
+      "photo": "assets/images/speakers-2026/talk-freddy-demiane.png",
+      "crop": [
+        640,
+        950,
+        840
+      ],
+      "source": "[TALK] Freddy Demiane/Speaker-Freddy-Demiane-Screen-1920x1080.png",
+      "participation": "speaker"
+    },
+    "jana-kabrit": {
+      "name": "Jana Kabrit",
+      "position": "Machine Learning Engineer",
+      "organization": "Toters",
+      "photo": "assets/images/speakers-2026/talk-jana-kabrit.png",
+      "crop": [
+        640,
+        900,
+        840
+      ],
+      "source": "[TALK] Jana Kabrit/Speaker-Jana-Kabrit-Screen-1920x1080.png",
+      "participation": "speaker"
+    },
+    "mhamad-el-itawi": {
+      "name": "Mhamad El Itawi",
+      "position": "Backend Tech Lead",
+      "organization": "Lyxa",
+      "photo": "assets/images/speakers-2026/talk-mhamad-el-itawi.png",
+      "crop": [
+        640,
+        920,
+        840
+      ],
+      "source": "[TALK] Mhamad El Itawi/Speaker-Mhamad-El-Itawi-Screen-1920x1080.png",
+      "participation": "speaker"
+    },
+    "mohamad-mansouri": {
+      "name": "PhD. Mohamad Mansouri",
+      "position": "Security Researcher at Dedaub; Tech Lead at Semicolon Security",
+      "organization": "Dedaub; Semicolon Security",
+      "photo": "assets/images/speakers-2026/talk-mohamad-mansouri.png",
+      "crop": [
+        640,
+        930,
+        840
+      ],
+      "source": "[TALK] Mohamad Mansouri/Speaker-Mohamad-Mansouri-Screen-1920x1080.png",
+      "participation": "speaker"
+    },
+    "mohammad-omar": {
+      "name": "Mohammad Omar",
+      "position": "CTO",
+      "organization": "Drive Terra",
+      "photo": "assets/images/speakers-2026/talk-mohammad-omar.png",
+      "crop": [
+        820,
+        930,
+        500
+      ],
+      "source": "[TALK] Mohammad Omar/Speaker-Mohammad-Omar-Screen-1920x1080.png",
+      "participation": "moderator"
+    }
+  },
+  "sessions": {
+    "09:45": {
+      "title": "Building AI in Lebanon: What Works and What's Next",
+      "type": "Panel discussion",
+      "people": [
+        "ammar-mohanna",
+        "alexi-akl",
+        "tarek-ayna",
+        "hekmat-kassir"
+      ]
+    },
+    "10:25": {
+      "title": "AI-Powered Security: Hunting Vulnerabilities Before Attackers Do",
+      "type": "Talk",
+      "people": [
+        "ali-kalout"
+      ]
+    },
+    "10:50": {
+      "title": "Panel",
+      "type": "Panel discussion",
+      "people": [
+        "mohammad-omar"
+      ]
+    },
+    "12:00": {
+      "title": "From Driverless Trains to Coding Agents",
+      "type": "Talk",
+      "people": [
+        "freddy-demiane"
+      ]
+    },
+    "13:15": {
+      "title": "Seniority in the Software Engineering Career in Lebanon",
+      "type": "Panel discussion",
+      "people": [
+        "mohamad-darsa",
+        "fadi-boulos",
+        "elie-rached",
+        "ghadi-al-ghosh"
+      ]
+    },
+    "13:50": {
+      "title": "Inside Lyxa’s Engine: How We Built a Safe AI Analyst for Humans and Agents",
+      "type": "Talk",
+      "people": [
+        "mhamad-el-itawi"
+      ]
+    },
+    "14:20": {
+      "title": "Code Is Law, Until It Isn’t: A Developer’s Guide to Web3 Security",
+      "type": "Talk",
+      "people": [
+        "mohamad-mansouri"
+      ]
+    },
+    "14:50": {
+      "title": "Is Your Agent Worth Its Tokens? Measuring Quality and Cost with ADK and Gemini",
+      "type": "Talk",
+      "people": [
+        "jana-kabrit"
+      ]
+    }
+  },
+  "excluded_session": {
+    "speaker": "Mohammad Omar",
+    "title": "Build a Multi Tool Agent on Google Cloud",
+    "reason": "Removed by organizer"
+  },
+  "file_inventory": [
+    {
+      "path": "[PANEL] Building AI in Lebanon/Panel-Building-AI-in-Lebanon-1080x1350.png",
+      "category": "panel",
+      "bytes": 1597384
+    },
+    {
+      "path": "[PANEL] Building AI in Lebanon/Panel-Building-AI-in-Lebanon-Screen-1920x1080.png",
+      "category": "panel",
+      "bytes": 1714909
+    },
+    {
+      "path": "[PANEL] Building AI in Lebanon/Panel-Building-AI-in-Lebanon-Story-1080x1920.png",
+      "category": "panel",
+      "bytes": 2224072
+    },
+    {
+      "path": "[PANEL] Seniority in Software Engineering/Panel-Seniority-in-Software-Engineering-1080x1350.png",
+      "category": "panel",
+      "bytes": 1809405
+    },
+    {
+      "path": "[PANEL] Seniority in Software Engineering/Panel-Seniority-in-Software-Engineering-Screen-1920x1080.png",
+      "category": "panel",
+      "bytes": 1965531
+    },
+    {
+      "path": "[PANEL] Seniority in Software Engineering/Panel-Seniority-in-Software-Engineering-Story-1080x1920.png",
+      "category": "panel",
+      "bytes": 2562725
+    },
+    {
+      "path": "[SPONSOR] Aboard/Sponsor-Aboard-1080x1350.png",
+      "category": "sponsor_or_partner",
+      "bytes": 339027
+    },
+    {
+      "path": "[SPONSOR] Aboard/Sponsor-Aboard-Story-1080x1920.png",
+      "category": "sponsor_or_partner",
+      "bytes": 454355
+    },
+    {
+      "path": "[SPONSOR] Google for Developers/Sponsor-Google-for-Developers-1080x1350.png",
+      "category": "sponsor_or_partner",
+      "bytes": 362049
+    },
+    {
+      "path": "[SPONSOR] Google for Developers/Sponsor-Google-for-Developers-Story-1080x1920.png",
+      "category": "sponsor_or_partner",
+      "bytes": 482127
+    },
+    {
+      "path": "[SPONSOR] Lyxa/Sponsor-Lyxa-1080x1350.png",
+      "category": "sponsor_or_partner",
+      "bytes": 352562
+    },
+    {
+      "path": "[SPONSOR] Lyxa/Sponsor-Lyxa-Story-1080x1920.png",
+      "category": "sponsor_or_partner",
+      "bytes": 469918
+    },
+    {
+      "path": "[SPONSOR] Murex/Sponsor-Murex-1080x1350.png",
+      "category": "sponsor_or_partner",
+      "bytes": 337334
+    },
+    {
+      "path": "[SPONSOR] Murex/Sponsor-Murex-Story-1080x1920.png",
+      "category": "sponsor_or_partner",
+      "bytes": 453163
+    },
+    {
+      "path": "[SPONSOR] Semicolon/Sponsor-Semicolon-1080x1350.png",
+      "category": "sponsor_or_partner",
+      "bytes": 346291
+    },
+    {
+      "path": "[SPONSOR] Semicolon/Sponsor-Semicolon-Story-1080x1920.png",
+      "category": "sponsor_or_partner",
+      "bytes": 468998
+    },
+    {
+      "path": "[TALK] Ali Kalout/Speaker-Ali-Kalout-1080x1350.png",
+      "category": "speaker",
+      "bytes": 1143446
+    },
+    {
+      "path": "[TALK] Ali Kalout/Speaker-Ali-Kalout-Screen-1920x1080.png",
+      "category": "speaker",
+      "bytes": 1067471
+    },
+    {
+      "path": "[TALK] Ali Kalout/Speaker-Ali-Kalout-Story-1080x1920.png",
+      "category": "speaker",
+      "bytes": 1026331
+    },
+    {
+      "path": "[TALK] Freddy Demiane/Speaker-Freddy-Demiane-1080x1350.png",
+      "category": "speaker",
+      "bytes": 1042002
+    },
+    {
+      "path": "[TALK] Freddy Demiane/Speaker-Freddy-Demiane-Screen-1920x1080.png",
+      "category": "speaker",
+      "bytes": 993797
+    },
+    {
+      "path": "[TALK] Freddy Demiane/Speaker-Freddy-Demiane-Story-1080x1920.png",
+      "category": "speaker",
+      "bytes": 961932
+    },
+    {
+      "path": "[TALK] Jana Kabrit/Speaker-Jana-Kabrit-1080x1350.png",
+      "category": "speaker",
+      "bytes": 1364710
+    },
+    {
+      "path": "[TALK] Jana Kabrit/Speaker-Jana-Kabrit-Screen-1920x1080.png",
+      "category": "speaker",
+      "bytes": 1260483
+    },
+    {
+      "path": "[TALK] Jana Kabrit/Speaker-Jana-Kabrit-Story-1080x1920.png",
+      "category": "speaker",
+      "bytes": 1170994
+    },
+    {
+      "path": "[TALK] Mhamad El Itawi/Speaker-Mhamad-El-Itawi-1080x1350.png",
+      "category": "speaker",
+      "bytes": 960581
+    },
+    {
+      "path": "[TALK] Mhamad El Itawi/Speaker-Mhamad-El-Itawi-Screen-1920x1080.png",
+      "category": "speaker",
+      "bytes": 904659
+    },
+    {
+      "path": "[TALK] Mhamad El Itawi/Speaker-Mhamad-El-Itawi-Story-1080x1920.png",
+      "category": "speaker",
+      "bytes": 910045
+    },
+    {
+      "path": "[TALK] Mohamad Mansouri/Speaker-Mohamad-Mansouri-1080x1350.png",
+      "category": "speaker",
+      "bytes": 1144229
+    },
+    {
+      "path": "[TALK] Mohamad Mansouri/Speaker-Mohamad-Mansouri-Screen-1920x1080.png",
+      "category": "speaker",
+      "bytes": 1080635
+    },
+    {
+      "path": "[TALK] Mohamad Mansouri/Speaker-Mohamad-Mansouri-Story-1080x1920.png",
+      "category": "speaker",
+      "bytes": 985493
+    },
+    {
+      "path": "[TALK] Mohammad Omar/Speaker-Mohammad-Omar-1080x1350.png",
+      "category": "speaker",
+      "bytes": 1158253
+    },
+    {
+      "path": "[TALK] Mohammad Omar/Speaker-Mohammad-Omar-Screen-1920x1080.png",
+      "category": "speaker",
+      "bytes": 1114377
+    },
+    {
+      "path": "[TALK] Mohammad Omar/Speaker-Mohammad-Omar-Story-1080x1920.png",
+      "category": "speaker",
+      "bytes": 1085653
+    },
+    {
+      "path": "[THANK YOU] Partners/Partners-ThankYou-1080x1350.png",
+      "category": "sponsor_or_partner",
+      "bytes": 477098
+    },
+    {
+      "path": "[THANK YOU] Partners/Partners-ThankYou-Story-1080x1920.png",
+      "category": "sponsor_or_partner",
+      "bytes": 600251
+    }
+  ]
+}
