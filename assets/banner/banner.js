@@ -127,10 +127,13 @@
     ctx.fillStyle = '#f0f0f0';
     ctx.fillRect(0, 0, 1080, 1350);
 
-    // Original vector artwork from the supplied poster, drawn at export resolution.
-    ctx.drawImage(assets.gdg, 160, 55, 535, 64.2);
-    ctx.drawImage(assets.lockup, 160, 140, 760, 256.94);
-    ctx.drawImage(assets.flag, 761.2, 314.6, 139.84, 78.36);
+    // Give DevFest the full header width; the GDG wordmark appears once in the footer.
+    const lockupX = 64, lockupY = 68, lockupWidth = 952;
+    const lockupHeight = lockupWidth * 285 / 843;
+    const flagWidth = lockupWidth * .184;
+    const flagHeight = flagWidth * 269 / 480;
+    ctx.drawImage(assets.lockup, lockupX, lockupY, lockupWidth, lockupHeight);
+    ctx.drawImage(assets.flag, lockupX + lockupWidth * .791, lockupY + lockupHeight - flagHeight - 5, flagWidth, flagHeight);
 
     let headlineSize = 94;
     const heading = role.prefix + role.headline;
@@ -147,9 +150,10 @@
     let nextY = textBlock(name || (role.organization ? 'Your organization' : 'Your name'), 64, 631, 490, 56, 700, 2, 28);
     if (job) nextY = textBlock(job, 64, nextY + 16, 490, 30, 400, 2, 20);
     if (company) textBlock(company, 64, nextY + 18, 490, 34, 700, 2, 22);
-    ctx.drawImage(assets.coast, 40, 870, 540, 270);
-
     const x = 604, y = 559, width = 390, height = 520;
+    // Align the illustration's baseline with the photo card's offset backing.
+    ctx.drawImage(assets.coast, 40, y + height + 22 - 270, 540, 270);
+
     rounded(x + 22, y + 22, width, height, 44, isMulti ? multicolor(x + 22, y + 22, width) : accent, ink, 4);
     rounded(x, y, width, height, 44, '#fff');
     ctx.save();
