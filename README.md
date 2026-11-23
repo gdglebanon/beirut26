@@ -25,6 +25,16 @@ The GDG Lebanon impact figures on the page (5,000+ members, 200+ on-site events,
 
 Edit `index.html` for content and `style.css` for presentation. There is no build step or JavaScript dependency.
 
+## Personal banner generator
+
+The homepage includes a clickable badge callout and shortcuts for the agenda, sponsorship packages and badge generator. The whole badge section starts collapsed; any Create badge link or a direct `#my-banner` URL opens it automatically. The top navigation also links to Create badge. Agenda and sponsorship shortcuts expand their respective sections.
+
+The `#my-banner` section lets visitors create a 1080 × 1350 PNG with their name, optional job title, company and photo. It defaults to “I’m Attending”; the selector also offers Speaker, Proud Sponsor, Proud Partner, Organizer and Volunteer. Colors automatically follow the selected role using the supplied poster palette (blue, yellow, green, green, red and rose respectively). A single Multicolor checkbox overrides the role color with a smooth gradient of Google’s four colors, matching the Community Sponsor card; unchecking it restores the current role’s palette. Sponsors and partners default to fitting the entire uploaded logo. The optional “Adjust your image” controls start collapsed after an upload. All images support zoom and position sliders, dragging in the preview, scrolling over the image to zoom, and a framing reset. Without an image, the export uses initials.
+
+`assets/banner/banner.js` draws both the live preview and the downloaded PNG on the same canvas. `assets/banner/banner.css` styles the section. The SVG artwork and local Google Sans fonts in that directory were extracted from the organizer’s supplied “DevFest 2026 Coast Lebanon — Main Poster (1).html”; its bundled scripts are not used. Images and form details remain in the browser and are not uploaded or saved. Creating a banner does not register someone for the invitation-only event.
+
+The separately expandable “Copy or share your social media post” panel below the generator starts collapsed and provides editable, role-aware sharing text, a Copy text action, and LinkedIn, WhatsApp and email links. Native sharing is available on supported browsers. LinkedIn opens the event URL; the visitor pastes the message and attaches their downloaded PNG before posting. Custom edits are preserved when changing roles until Reset message is selected. `assets/banner/share.js` manages this panel. No social post or message is sent automatically.
+
 ## Search visibility
 
 The production URL is `https://devfest26.gdglebanon.com/`. `index.html` uses it for the canonical URL and social previews; `sitemap.xml` lists the single indexable page, and `robots.txt` points crawlers to that sitemap. Update all three if the domain changes.
