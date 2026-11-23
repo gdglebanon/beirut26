@@ -13,6 +13,7 @@
     blue: '#306ea6', green: '#54a863', yellow: '#edbe4b', red: '#ca4b3e', rose: '#db9ab6',
   };
   const googleColors = ['#4285f4', '#ea4335', '#fbbc04', '#34a853'];
+  const googleGradientColors = [googleColors[0], googleColors[3], googleColors[2], googleColors[1]];
   const roles = {
     attendee: { label: 'Attendee', prefix: 'I’m ', headline: 'Attending!', color: 'blue' },
     speaker: { label: 'Speaker', prefix: 'I’m ', headline: 'Speaking!', color: 'yellow' },
@@ -105,11 +106,11 @@
     const scale = baseScale * Number(field('zoom').value);
     return { width: photo.naturalWidth * scale, height: photo.naturalHeight * scale };
   };
-  // Match the Community Sponsor card's continuous blue → red → yellow → green blend.
+  // Match the Community Sponsor accent: blue → green → yellow → red avoids a purple transition.
   const multicolor = (x, y, width) => {
     const gradient = ctx.createLinearGradient(x, y, x + width, y);
-    googleColors.forEach((color, index) => {
-      gradient.addColorStop(index / (googleColors.length - 1), color);
+    googleGradientColors.forEach((color, index) => {
+      gradient.addColorStop(index / (googleGradientColors.length - 1), color);
     });
     return gradient;
   };
@@ -190,13 +191,20 @@
 
     ctx.drawImage(assets.gdg, 64, 1189, 382, 45.85);
     rounded(478, 1169, 538, 86, 0, isMulti ? '#fff' : {blue:'#c3ecf6',green:'#ccf6c5',yellow:'#ffe7a5',red:'#f8d8d8',rose:'#f8d8e8'}[colorName]);
-    text('devfest26.gdglebanon.com', 504, 1225, 34, 700);
+    ctx.save();
+    font(34, 700);
+    const websiteText = 'devfest26.gdglebanon.com';
+    const websiteMetrics = ctx.measureText(websiteText);
+    ctx.textAlign = 'center';
+    const websiteBaseline = 1169 + 86 / 2 + (websiteMetrics.actualBoundingBoxAscent - websiteMetrics.actualBoundingBoxDescent) / 2;
+    text(websiteText, 478 + 538 / 2, websiteBaseline, 34, 700);
+    ctx.restore();
     if (isMulti) { ctx.fillStyle = multicolor(478, 1249, 538); ctx.fillRect(478, 1249, 538, 6); }
     ctx.strokeStyle = '#bdc7cb'; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(64, 1280); ctx.lineTo(1016, 1280); ctx.stroke();
     text('MEA Conference Center, Beirut', 64, 1320, 25, 500);
     ctx.textAlign = 'right'; text('Saturday, November 28, 2026', 1016, 1320, 25, 500); ctx.textAlign = 'left';
-    canvas.setAttribute('aria-label', `${heading} DevFest Beirut 2026 banner for ${name || 'your name'}, ${isMulti ? 'multicolor' : colorName}. November 28 at MEA Conference Center.`);
-    field('color-note').textContent = `${role.label} · ${isMulti ? 'Multicolor' : colorName[0].toUpperCase() + colorName.slice(1)}`;
+    canvas.setAttribute('aria-label', `${heading} DevFest Beirut 2026 banner for ${name || 'your name'}, ${isMulti ? 'Google multicolor' : colorName}. November 28 at MEA Conference Center.`);
+    field('color-note').textContent = `${role.label} · ${isMulti ? 'Google multicolor' : colorName[0].toUpperCase() + colorName.slice(1)}`;
   }
 
   const scheduleDraw = () => {

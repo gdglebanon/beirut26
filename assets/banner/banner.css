@@ -44,7 +44,7 @@
 .banner-canvas-wrap{position:relative}
 .banner-field>.banner-multicolor{display:flex;align-items:center;gap:10px;min-height:44px;cursor:pointer;margin:0}
 .banner-multicolor input{width:20px;height:20px;accent-color:#306ea6;margin:0;cursor:pointer}
-.banner-multicolor-icon{width:20px;height:20px;border-radius:50%;background:linear-gradient(90deg,#4285f4 0%,#ea4335 33.333%,#fbbc04 66.666%,#34a853 100%)}
+.banner-multicolor-icon{width:20px;height:20px;border-radius:50%;background:var(--google-gradient)}
 #banner-drag-zone{position:absolute;left:55.9259%;top:41.4074%;width:36.1111%;height:38.5185%;border-radius:11%;touch-action:none;cursor:grab}
 #banner-drag-zone.is-dragging{cursor:grabbing}
 #banner-drag-zone[hidden]{display:none}
