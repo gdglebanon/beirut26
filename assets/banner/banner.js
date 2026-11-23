@@ -107,8 +107,13 @@
     return { width: photo.naturalWidth * scale, height: photo.naturalHeight * scale };
   };
   // Match the Community Sponsor accent: blue → green → yellow → red avoids a purple transition.
-  const multicolor = (x, y, width) => {
-    const gradient = ctx.createLinearGradient(x, y, x + width, y);
+  const multicolor = (x, y, width, height) => {
+    // 30° down from horizontal, matching the CSS gradient's 120° direction.
+    const angle = Math.PI / 6;
+    const centerX = x + width / 2, centerY = y + height / 2;
+    const halfLength = (width * Math.cos(angle) + height * Math.sin(angle)) / 2;
+    const dx = Math.cos(angle) * halfLength, dy = Math.sin(angle) * halfLength;
+    const gradient = ctx.createLinearGradient(centerX - dx, centerY - dy, centerX + dx, centerY + dy);
     googleGradientColors.forEach((color, index) => {
       gradient.addColorStop(index / (googleGradientColors.length - 1), color);
     });
@@ -143,7 +148,7 @@
     let headlineX = (1080 - ctx.measureText(heading).width) / 2;
     text(role.prefix, headlineX, 504, headlineSize, 700);
     headlineX += ctx.measureText(role.prefix).width;
-    text(role.headline, headlineX, 504, headlineSize, 700, isMulti ? multicolor(headlineX, 504, ctx.measureText(role.headline).width) : accent);
+    text(role.headline, headlineX, 504, headlineSize, 700, isMulti ? multicolor(headlineX, 504 - headlineSize, ctx.measureText(role.headline).width, headlineSize) : accent);
 
     googleColors.forEach((color, index) => {
       ctx.beginPath(); ctx.arc(71 + index * 20, 565, 7, 0, Math.PI * 2); ctx.fillStyle = color; ctx.fill();
@@ -155,7 +160,7 @@
     // Align the illustration's baseline with the photo card's offset backing.
     ctx.drawImage(assets.coast, 40, y + height + 22 - 270, 540, 270);
 
-    rounded(x + 22, y + 22, width, height, 44, isMulti ? multicolor(x + 22, y + 22, width) : accent, ink, 4);
+    rounded(x + 22, y + 22, width, height, 44, isMulti ? multicolor(x + 22, y + 22, width, height) : accent, ink, 4);
     rounded(x, y, width, height, 44, '#fff');
     ctx.save();
     ctx.beginPath(); ctx.roundRect(x + 2, y + 2, width - 4, height - 4, 42); ctx.clip();
@@ -184,7 +189,7 @@
     font(28, 700);
     const badgeWidth = ctx.measureText(role.label).width + 60;
     const badgeX = x + (width - badgeWidth) / 2;
-    rounded(badgeX, y + 484, badgeWidth, 56, 28, isMulti ? multicolor(badgeX, y + 484, badgeWidth) : accent, ink, 3);
+    rounded(badgeX, y + 484, badgeWidth, 56, 28, isMulti ? multicolor(badgeX, y + 484, badgeWidth, 56) : accent, ink, 3);
     ctx.textAlign = 'center';
     text(role.label, x + width / 2, y + 522, 28, 700, !isMulti && ['blue', 'red'].includes(colorName) ? '#fff' : ink);
     ctx.textAlign = 'left';
@@ -199,7 +204,7 @@
     const websiteBaseline = 1169 + 86 / 2 + (websiteMetrics.actualBoundingBoxAscent - websiteMetrics.actualBoundingBoxDescent) / 2;
     text(websiteText, 478 + 538 / 2, websiteBaseline, 34, 700);
     ctx.restore();
-    if (isMulti) { ctx.fillStyle = multicolor(478, 1249, 538); ctx.fillRect(478, 1249, 538, 6); }
+    if (isMulti) { ctx.fillStyle = multicolor(478, 1249, 538, 6); ctx.fillRect(478, 1249, 538, 6); }
     ctx.strokeStyle = '#bdc7cb'; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(64, 1280); ctx.lineTo(1016, 1280); ctx.stroke();
     text('MEA Conference Center, Beirut', 64, 1320, 25, 500);
     ctx.textAlign = 'right'; text('Saturday, November 28, 2026', 1016, 1320, 25, 500); ctx.textAlign = 'left';
