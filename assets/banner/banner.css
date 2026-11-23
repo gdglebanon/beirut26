@@ -1,14 +1,14 @@
 .banner-section{background:#f1f5f9;padding:56px 0}
-.badge-disclosure{border:2px solid var(--ink);border-radius:24px;background:#fff;overflow:hidden}
-.badge-section-summary,.badge-share-summary{display:flex;align-items:center;justify-content:space-between;gap:24px;cursor:pointer;list-style:none;padding:28px 32px}
-.badge-section-summary::-webkit-details-marker,.badge-share-summary::-webkit-details-marker{display:none}
+.badge-disclosure{border:0;border-radius:24px;background:#fff;overflow:hidden}
+.badge-section-summary{display:flex;align-items:center;justify-content:space-between;gap:24px;cursor:pointer;list-style:none;padding:28px 32px}
+.badge-section-summary::-webkit-details-marker{display:none}
 .badge-section-summary strong{display:block;font:700 clamp(1.4rem,2.8vw,2.2rem)/1.2 var(--font-head);letter-spacing:-.04em;margin-top:10px}
 .badge-section-description{display:block;font-size:.94rem;color:var(--muted);margin-top:12px}
 .badge-disclosure-toggle{display:grid;place-items:center;flex:none;width:38px;height:38px;border:1px solid #a9bdd3;border-radius:50%;font-size:1.5rem;line-height:1;background:#edf4ff}
-.badge-disclosure[open]>.badge-section-summary,.badge-sharing[open]>.badge-share-summary{border-bottom:1px solid var(--line)}
-.badge-disclosure[open]>.badge-section-summary>.badge-disclosure-toggle,.badge-sharing[open]>.badge-share-summary>.badge-disclosure-toggle{transform:rotate(45deg)}
+.badge-disclosure[open]>.badge-section-summary{border-bottom:1px solid var(--line)}
+.badge-disclosure[open]>.badge-section-summary>.badge-disclosure-toggle{transform:rotate(45deg)}
 .badge-section-content{padding:24px;background:#f1f5f9}
-.banner-builder{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);border:2px solid var(--ink);border-radius:28px;overflow:hidden;background:#fff}
+.banner-builder{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);border:0;border-radius:28px;overflow:hidden;background:#fff}
 .banner-form{padding:34px;min-width:0}
 .banner-field{margin-bottom:22px}
 .banner-field>label{display:block;font-size:.94rem;font-weight:700;margin-bottom:9px}
@@ -59,10 +59,10 @@
 .hero-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 .hero-actions .button{justify-content:center;text-align:center;font-size:.875rem;gap:8px;padding:14px 18px;min-height:54px}
 .button-badge{background:#def1e5;border-color:#9dc9ac;color:#1e5e37}
-.badge-sharing{margin-top:24px;border:2px solid var(--ink);border-radius:20px;background:#fff;overflow:hidden}
-.badge-share-summary{padding:22px 26px}
-.badge-share-summary strong{display:block;font:700 clamp(1.1rem,2vw,1.4rem)/1.3 var(--font-head);letter-spacing:-.025em}
-.badge-share-summary>span>span{display:block;font-size:.94rem;color:var(--muted);margin-top:8px}
+.badge-sharing{margin-top:24px;border:0;border-radius:20px;background:#fff;overflow:hidden}
+.badge-share-heading{padding:22px 26px;border-bottom:1px solid var(--line)}
+.badge-share-heading h3{margin:0;font:700 clamp(1.1rem,2vw,1.4rem)/1.3 var(--font-head);letter-spacing:-.025em}
+.badge-share-heading p{font-size:.94rem;color:var(--muted);margin:8px 0 0}
 .badge-share-content{padding:24px 26px}
 .badge-share-content>label{display:block;font-size:.94rem;font-weight:700;margin-bottom:10px}
 .badge-share-content>label span{font-weight:400;color:var(--muted);font-size:.875rem}
@@ -70,8 +70,10 @@
 .badge-share-actions{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin-top:20px}
 .badge-share-actions .button{justify-content:center;min-height:48px;padding:12px 20px;font-size:.94rem;cursor:pointer}
 .button-linkedin{background:#0a66c2;color:#fff}
+.badge-share-icon{display:block;flex:none}
+#badge-share-whatsapp{gap:8px}
 .badge-share-reset{padding:10px 0;margin-left:auto;border:0;background:none;color:var(--muted);font-size:.875rem;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
 #badge-share-native[hidden]{display:none}
 @media(max-width:1050px){.badge-callout{flex-wrap:wrap;gap:10px 14px;border-radius:22px}.badge-callout>span{flex-basis:100%;margin-left:44px}}
-@media(max-width:760px){.badge-callout{padding:17px 18px;margin-bottom:30px;display:grid;grid-template-columns:26px minmax(0,1fr);gap:8px 12px}.badge-callout svg{width:26px;height:26px}.badge-callout strong{font-size:.94rem}.badge-callout>span{grid-column:2;margin:0;font-size:.875rem}.banner-section{padding:36px 0}.badge-section-summary,.badge-share-summary{padding:20px;gap:14px}.badge-section-content{padding:14px}.badge-disclosure-toggle{width:30px;height:30px;font-size:1.2rem}.badge-section-content .banner-form,.badge-section-content .banner-preview-panel{padding:18px}.badge-share-content{padding:20px}.badge-sharing{margin-top:16px;border-radius:16px}#badge-share-text{min-height:300px}.badge-share-reset{margin-left:0}.hero-actions{grid-template-columns:1fr 1fr;align-items:stretch}.hero-actions .button{font-size:.875rem;padding:13px 12px}}
+@media(max-width:760px){.badge-callout{padding:17px 18px;margin-bottom:30px;display:grid;grid-template-columns:26px minmax(0,1fr);gap:8px 12px}.badge-callout svg{width:26px;height:26px}.badge-callout strong{font-size:.94rem}.badge-callout>span{grid-column:2;margin:0;font-size:.875rem}.banner-section{padding:36px 0}.badge-section-summary,.badge-share-heading{padding:20px;gap:14px}.badge-section-content{padding:14px}.badge-disclosure-toggle{width:30px;height:30px;font-size:1.2rem}.badge-section-content .banner-form,.badge-section-content .banner-preview-panel{padding:18px}.badge-share-content{padding:20px}.badge-sharing{margin-top:16px;border-radius:16px}#badge-share-text{min-height:300px}.badge-share-reset{margin-left:0}.hero-actions{grid-template-columns:1fr 1fr;align-items:stretch}.hero-actions .button{font-size:.875rem;padding:13px 12px}}
 @media(max-width:460px){.hero-actions{grid-template-columns:minmax(0,1fr)}.badge-share-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.badge-share-actions .button{font-size:.875rem;padding:12px 10px}.badge-share-actions .button-dark{grid-column:1/-1}.badge-share-reset{grid-column:1/-1;justify-self:start}}

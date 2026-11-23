@@ -11,6 +11,7 @@
 
   const updateLinks = () => {
     const encoded = encodeURIComponent(message.value.trim());
+    document.getElementById('badge-share-linkedin').href = `https://www.linkedin.com/feed/?shareActive=true&text=${encoded}`;
     document.getElementById('badge-share-whatsapp').href = `https://wa.me/?text=${encoded}`;
     document.getElementById('badge-share-email').href = `mailto:?subject=DevFest%20Beirut%202026&body=${encoded}`;
   };
@@ -23,7 +24,7 @@
       organizer: 'I’m helping organize',
       volunteer: 'I’m volunteering at',
     };
-    message.value = `${introductions[role.value] || introductions.attendee} DevFest Beirut 2026 on Saturday, November 28 at MEA Conference Center, Beirut! Looking forward to talks, panels and connecting with Lebanon’s developer community.\n\nInterested in joining? Attendance is free with a confirmed invitation. Find the agenda and invitation details: ${eventUrl}\n\n#DevFest #DevFestBeirut #GDGCoastLebanon`;
+    message.value = `${introductions[role.value] || introductions.attendee} DevFest Beirut 2026 on Saturday, November 28 at MEA Conference Center, Beirut! Looking forward to talks, panels and connecting with Lebanon’s developer community.\n\nMore details: ${eventUrl}\n\n#DevFest #DevFestBeirut #GDGCoastLebanon`;
     edited = false;
     updateLinks();
   };
@@ -55,9 +56,17 @@
     status.textContent = 'Message reset to match your selected role.';
   });
   document.getElementById('badge-share-copy').addEventListener('click', copyMessage);
-  // LinkedIn accepts the page URL; the visitor adds the message and badge in its composer.
-  document.getElementById('badge-share-linkedin').addEventListener('click', () => {
-    status.textContent = 'Paste your copied message into LinkedIn and attach your downloaded badge before posting.';
+  // LinkedIn's undocumented composer URL carries the current message directly.
+  // Keep Copy text available if a LinkedIn client ignores the text parameter.
+  document.getElementById('badge-share-linkedin').addEventListener('click', (event) => {
+    if (!message.value.trim()) {
+      event.preventDefault();
+      message.focus();
+      status.textContent = 'Write a message to share first.';
+      return;
+    }
+    updateLinks();
+    status.textContent = 'Attach your downloaded badge in LinkedIn before posting. If your message is missing, use Copy text and paste it into your post.';
   });
   if (navigator.share) {
     nativeShare.hidden = false;
