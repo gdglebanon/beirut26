@@ -1,0 +1,347 @@
+{
+  "sessions": {
+    "check-in": {
+      "id": "check-in",
+      "title": "Check-in & Coffee",
+      "speakers": [],
+      "tags": [
+        "Break"
+      ],
+      "startTime": "2026-11-28T08:30:00+02:00",
+      "endTime": "2026-11-28T09:30:00+02:00",
+      "trackTitle": "MEA Training & Conference Center",
+      "hideInFeedback": true
+    },
+    "opening": {
+      "id": "opening",
+      "title": "Welcoming & Keynote",
+      "speakers": [],
+      "tags": [
+        "Opening"
+      ],
+      "startTime": "2026-11-28T09:30:00+02:00",
+      "endTime": "2026-11-28T09:50:00+02:00",
+      "trackTitle": "Riad Salamé Auditorium",
+      "hideInFeedback": true
+    },
+    "panel1": {
+      "id": "panel1",
+      "title": "Building AI in Lebanon: What Works and What's Next",
+      "speakers": [
+        "dr-ammar-mohanna",
+        "alexi-akl",
+        "tarek-ayna",
+        "hekmat-kassir"
+      ],
+      "tags": [
+        "Panel discussion"
+      ],
+      "startTime": "2026-11-28T09:50:00+02:00",
+      "endTime": "2026-11-28T10:25:00+02:00",
+      "trackTitle": "Riad Salamé Auditorium",
+      "hideInFeedback": false
+    },
+    "talk1": {
+      "id": "talk1",
+      "title": "AI-Powered Security: Hunting Vulnerabilities Before Attackers Do",
+      "speakers": [
+        "ali-kalout"
+      ],
+      "tags": [
+        "Talk"
+      ],
+      "startTime": "2026-11-28T10:25:00+02:00",
+      "endTime": "2026-11-28T10:55:00+02:00",
+      "trackTitle": "Riad Salamé Auditorium",
+      "hideInFeedback": false
+    },
+    "panel2": {
+      "id": "panel2",
+      "title": "AI Hype vs. Ground Reality: Where Does the Time (and Money) Actually Go?",
+      "speakers": [
+        "mohammad-omar",
+        "zahi-lahham",
+        "adel-yammout",
+        "huda-omais",
+        "christelle-al-jerdy"
+      ],
+      "tags": [
+        "Panel discussion"
+      ],
+      "startTime": "2026-11-28T10:55:00+02:00",
+      "endTime": "2026-11-28T11:30:00+02:00",
+      "trackTitle": "Riad Salamé Auditorium",
+      "hideInFeedback": false
+    },
+    "panel3": {
+      "id": "panel3",
+      "title": "Tech Startups in Lebanon: Investments and Entrepreneurship",
+      "speakers": [
+        "rudy-shoushany",
+        "ramzi-farah",
+        "maha-zouwayhed",
+        "mohamad-abbas"
+      ],
+      "tags": [
+        "Panel discussion"
+      ],
+      "startTime": "2026-11-28T11:30:00+02:00",
+      "endTime": "2026-11-28T12:05:00+02:00",
+      "trackTitle": "Riad Salamé Auditorium",
+      "hideInFeedback": false
+    },
+    "talk2": {
+      "id": "talk2",
+      "title": "From Driverless Trains to Coding Agents",
+      "speakers": [
+        "freddy-demiane"
+      ],
+      "tags": [
+        "Talk"
+      ],
+      "startTime": "2026-11-28T12:05:00+02:00",
+      "endTime": "2026-11-28T12:35:00+02:00",
+      "trackTitle": "Riad Salamé Auditorium",
+      "hideInFeedback": false
+    },
+    "lunch": {
+      "id": "lunch",
+      "title": "Lunch Break",
+      "speakers": [],
+      "tags": [
+        "Break"
+      ],
+      "startTime": "2026-11-28T12:35:00+02:00",
+      "endTime": "2026-11-28T13:15:00+02:00",
+      "trackTitle": "MEA Training & Conference Center",
+      "hideInFeedback": true
+    },
+    "panel4": {
+      "id": "panel4",
+      "title": "Seniority in the Software Engineering Career in Lebanon",
+      "speakers": [
+        "mohamad-darsa",
+        "fadi-boulos",
+        "elie-rached",
+        "ghadi-al-ghosh"
+      ],
+      "tags": [
+        "Panel discussion"
+      ],
+      "startTime": "2026-11-28T13:15:00+02:00",
+      "endTime": "2026-11-28T13:50:00+02:00",
+      "trackTitle": "Riad Salamé Auditorium",
+      "hideInFeedback": false
+    },
+    "talk3": {
+      "id": "talk3",
+      "title": "Inside Lyxa’s Engine: How We Built a Safe AI Analyst for Humans and Agents",
+      "speakers": [
+        "mhamad-itawi"
+      ],
+      "tags": [
+        "Talk"
+      ],
+      "startTime": "2026-11-28T13:50:00+02:00",
+      "endTime": "2026-11-28T14:20:00+02:00",
+      "trackTitle": "Riad Salamé Auditorium",
+      "hideInFeedback": false
+    },
+    "talk4": {
+      "id": "talk4",
+      "title": "Code Is Law, Until It Isn’t: A Developer’s Guide to Web3 Security",
+      "speakers": [
+        "mohamad-mansouri"
+      ],
+      "tags": [
+        "Talk"
+      ],
+      "startTime": "2026-11-28T14:20:00+02:00",
+      "endTime": "2026-11-28T14:50:00+02:00",
+      "trackTitle": "Riad Salamé Auditorium",
+      "hideInFeedback": false
+    },
+    "talk5": {
+      "id": "talk5",
+      "title": "Is Your Agent Worth Its Tokens? Measuring Quality and Cost with ADK and Gemini",
+      "speakers": [
+        "jana-kabrit"
+      ],
+      "tags": [
+        "Talk"
+      ],
+      "startTime": "2026-11-28T14:50:00+02:00",
+      "endTime": "2026-11-28T15:20:00+02:00",
+      "trackTitle": "Riad Salamé Auditorium",
+      "hideInFeedback": false
+    },
+    "closing": {
+      "id": "closing",
+      "title": "CNCF Winners Announcement & Closing",
+      "speakers": [],
+      "tags": [
+        "Closing"
+      ],
+      "startTime": "2026-11-28T15:20:00+02:00",
+      "endTime": "2026-11-28T15:35:00+02:00",
+      "trackTitle": "Riad Salamé Auditorium",
+      "hideInFeedback": true
+    }
+  },
+  "speakers": {
+    "dr-ammar-mohanna": {
+      "id": "dr-ammar-mohanna",
+      "name": "Dr. Ammar Mohanna",
+      "photoUrl": "https://devfest26.gdglebanon.com/assets/feedback/speakers/dr-ammar-mohanna.svg",
+      "company": "Lecturer · AUB",
+      "socials": []
+    },
+    "alexi-akl": {
+      "id": "alexi-akl",
+      "name": "Alexi Akl",
+      "photoUrl": "https://devfest26.gdglebanon.com/assets/feedback/speakers/alexi-akl.svg",
+      "company": "VP of Solution Delivery · Aboard",
+      "socials": []
+    },
+    "tarek-ayna": {
+      "id": "tarek-ayna",
+      "name": "Tarek Ayna",
+      "photoUrl": "https://devfest26.gdglebanon.com/assets/feedback/speakers/tarek-ayna.svg",
+      "company": "Founder & CEO · Edgebot",
+      "socials": []
+    },
+    "hekmat-kassir": {
+      "id": "hekmat-kassir",
+      "name": "Hekmat Kassir",
+      "photoUrl": "https://devfest26.gdglebanon.com/assets/feedback/speakers/hekmat-kassir.svg",
+      "company": "Co-Founder & CEO · Chimera Cybersecurity",
+      "socials": []
+    },
+    "ali-kalout": {
+      "id": "ali-kalout",
+      "name": "Ali Kalout",
+      "photoUrl": "https://devfest26.gdglebanon.com/assets/feedback/speakers/ali-kalout.svg",
+      "company": "Software Engineer · Aboard",
+      "socials": []
+    },
+    "mohammad-omar": {
+      "id": "mohammad-omar",
+      "name": "Mohammad Omar",
+      "photoUrl": "https://devfest26.gdglebanon.com/assets/feedback/speakers/mohammad-omar.svg",
+      "company": "CTO · Drive Terra",
+      "socials": []
+    },
+    "zahi-lahham": {
+      "id": "zahi-lahham",
+      "name": "Zahi Lahham",
+      "photoUrl": "https://devfest26.gdglebanon.com/assets/feedback/speakers/zahi-lahham.svg",
+      "company": "Senior Data Engineer · CME",
+      "socials": []
+    },
+    "adel-yammout": {
+      "id": "adel-yammout",
+      "name": "Adel Yammout",
+      "photoUrl": "https://devfest26.gdglebanon.com/assets/feedback/speakers/adel-yammout.svg",
+      "company": "Principle Software Engineer · Murex",
+      "socials": []
+    },
+    "huda-omais": {
+      "id": "huda-omais",
+      "name": "Huda Omais",
+      "photoUrl": "https://devfest26.gdglebanon.com/assets/feedback/speakers/huda-omais.svg",
+      "company": "Director of Data and AI · Artifcat",
+      "socials": []
+    },
+    "christelle-al-jerdy": {
+      "id": "christelle-al-jerdy",
+      "name": "Christelle Al Jerdy",
+      "photoUrl": "https://devfest26.gdglebanon.com/assets/feedback/speakers/christelle-al-jerdy.svg",
+      "company": "Business Intelligence · CMA CGM",
+      "socials": []
+    },
+    "rudy-shoushany": {
+      "id": "rudy-shoushany",
+      "name": "Rudy Shoushany",
+      "photoUrl": "https://devfest26.gdglebanon.com/assets/feedback/speakers/rudy-shoushany.svg",
+      "company": "Founder · BCCManagement & DxTalks",
+      "socials": []
+    },
+    "ramzi-farah": {
+      "id": "ramzi-farah",
+      "name": "Ramzi Farah",
+      "photoUrl": "https://devfest26.gdglebanon.com/assets/feedback/speakers/ramzi-farah.svg",
+      "company": "Co-Founder & Managing Partner · Razor Capital",
+      "socials": []
+    },
+    "maha-zouwayhed": {
+      "id": "maha-zouwayhed",
+      "name": "Maha Zouwayhed",
+      "photoUrl": "https://devfest26.gdglebanon.com/assets/feedback/speakers/maha-zouwayhed.svg",
+      "company": "Director · AUB Innovation Park",
+      "socials": []
+    },
+    "mohamad-abbas": {
+      "id": "mohamad-abbas",
+      "name": "Mohamad Abbas",
+      "photoUrl": "https://devfest26.gdglebanon.com/assets/feedback/speakers/mohamad-abbas.svg",
+      "company": "Co-Founder · uPaint",
+      "socials": []
+    },
+    "freddy-demiane": {
+      "id": "freddy-demiane",
+      "name": "Freddy Demiane",
+      "photoUrl": "https://devfest26.gdglebanon.com/assets/feedback/speakers/freddy-demiane.svg",
+      "company": "Software Engineer · Google",
+      "socials": []
+    },
+    "mohamad-darsa": {
+      "id": "mohamad-darsa",
+      "name": "Mohamad Darsa",
+      "photoUrl": "https://devfest26.gdglebanon.com/assets/feedback/speakers/mohamad-darsa.svg",
+      "company": "Data Engineer",
+      "socials": []
+    },
+    "fadi-boulos": {
+      "id": "fadi-boulos",
+      "name": "Fadi Boulos",
+      "photoUrl": "https://devfest26.gdglebanon.com/assets/feedback/speakers/fadi-boulos.svg",
+      "company": "Founder · Supportful",
+      "socials": []
+    },
+    "elie-rached": {
+      "id": "elie-rached",
+      "name": "Elie Rached",
+      "photoUrl": "https://devfest26.gdglebanon.com/assets/feedback/speakers/elie-rached.svg",
+      "company": "Independent Management & Leadership Advisor",
+      "socials": []
+    },
+    "ghadi-al-ghosh": {
+      "id": "ghadi-al-ghosh",
+      "name": "Ghadi Al Ghosh",
+      "photoUrl": "https://devfest26.gdglebanon.com/assets/feedback/speakers/ghadi-al-ghosh.svg",
+      "company": "Engineering Manager · Logisoft",
+      "socials": []
+    },
+    "mhamad-itawi": {
+      "id": "mhamad-itawi",
+      "name": "Mhamad Itawi",
+      "photoUrl": "https://devfest26.gdglebanon.com/assets/feedback/speakers/mhamad-itawi.svg",
+      "company": "Tech Lead · Lyxa",
+      "socials": []
+    },
+    "mohamad-mansouri": {
+      "id": "mohamad-mansouri",
+      "name": "Mohamad Mansouri",
+      "photoUrl": "https://devfest26.gdglebanon.com/assets/feedback/speakers/mohamad-mansouri.svg",
+      "company": "CTO · Semicolon Security",
+      "socials": []
+    },
+    "jana-kabrit": {
+      "id": "jana-kabrit",
+      "name": "Jana Kabrit",
+      "photoUrl": "https://devfest26.gdglebanon.com/assets/feedback/speakers/jana-kabrit.svg",
+      "company": "Machine Learning Engineer · Toters",
+      "socials": []
+    }
+  }
+}

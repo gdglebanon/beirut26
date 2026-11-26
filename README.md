@@ -23,7 +23,7 @@ On phones, a compact bottom navigation provides shortcuts to the main sections. 
 
 The GDG Lebanon impact figures on the page (5,000+ members, 200+ on-site events, 5,000+ past DevFest attendees, active since 2017) were supplied by the organizers.
 
-Edit `index.html` for content and `style.css` for presentation. There is no build step or JavaScript dependency.
+Edit `index.html` for content and `style.css` for presentation. The homepage has no build step or JavaScript dependency. After agenda changes, regenerate the session pages and feedback feed with `python3 scripts/build_sessions.py`.
 
 ## Personal banner generator
 
@@ -37,7 +37,7 @@ The “Copy or share your social media post” panel below the generator is alwa
 
 ## Search visibility
 
-The production URL is `https://devfest26.gdglebanon.com/`. `index.html` uses it for the canonical URL and social previews; `sitemap.xml` lists the single indexable page, and `robots.txt` points crawlers to that sitemap. Update all three if the domain changes.
+The production URL is `https://devfest26.gdglebanon.com/`. `index.html` uses it for the canonical URL and social previews; `sitemap.xml` lists the homepage, session directory and individual session pages, and `robots.txt` points crawlers to that sitemap. Update the origin in `scripts/build_sessions.py` as well if the domain changes.
 
 After deploying these files, verify the URL-prefix property in [Google Search Console](https://search.google.com/search-console/), submit `https://devfest26.gdglebanon.com/sitemap.xml`, and use URL Inspection to request indexing of the home page. Search indexing is not guaranteed. This invitation-only edition is not eligible for Google's [event rich result experience](https://developers.google.com/search/docs/appearance/structured-data/event), so the page does not declare Event rich-result markup.
 
@@ -46,3 +46,43 @@ After deploying these files, verify the URL-prefix property in [Google Search Co
 The original speaker portraits came from the organizer’s supplied “DevFest Lebanon 2026 Posters” folder. The latest organizer agenda supplies the displayed names, roles, session titles, moderators and times where they differ from the posters. Aboard, Google, Lyxa, Semicolon and Jana Kabrit use their matching individual poster portraits. The AI and software engineering panels use portraits from their panel posters. Mohammad Omar uses his poster portrait in the AI Hype panel. Speakers without supplied portraits are shown with initials.
 
 `assets/speakers-2026.json` records the original poster metadata and source paths; the current agenda in `index.html` follows the newer organizer schedule. Circular portraits use a CSS window onto a selected region of the original supplied PNG, preserving the photographs without AI generation or retouching. To substitute standalone headshots later, replace the portrait images and remove their per-image window offsets.
+
+## Session feedback with Open Feedback
+
+`openfeedback.json` is the public schedule source for the Open Feedback JSON URL setup. It contains all 13 agenda entries and 22 speakers; only the five talks and four panels accept feedback. Check-in, opening, lunch and closing have `hideInFeedback: true`. Dates use November 28, 2026 and the Beirut UTC+02:00 offset. Speaker avatars in the feed use neutral initials because the source portraits are full session posters; the website keeps its existing photographic portrait crops.
+
+To finish setup:
+
+1. Publish the repository, then enter `https://devfest26.gdglebanon.com/openfeedback.json` in Open Feedback's **JSON API URL** field. The file needs to be publicly accessible and allow cross-origin requests. `vercel.json` declares the CORS and caching headers for the existing Vercel deployment. A host-independent alternative after pushing to GitHub is `https://raw.githubusercontent.com/gdglebanon/beirut26/main/openfeedback.json`, which serves the same feed with CORS enabled.
+2. Create the event and configure its voting form in the Open Feedback admin, including a text/comment item. The feedback choices and result visibility are controlled there; the JSON supplies the schedule, not the voting form. Open Feedback uses feedback votes rather than a built-in five-star rating.
+3. Copy the event ID from its public URL (`https://openfeedback.io/EVENT_ID`) into `eventId` in `assets/sessions/feedback-config.js`. This is a public ID; no secret or admin API key belongs in the website. Publish the config change.
+4. Verify a session on the website and directly in Open Feedback. Session pages embed the public feedback page and retain an **Open in Open Feedback** link if the embedded form cannot load. Until an event ID is configured, the page shows that feedback is not open yet and does not load an iframe.
+
+The custom URLs are real static directories, so they need no SPA catch-all or backend. Static hosts normally redirect `/sessions/talk1` to `/sessions/talk1/`. `sessions/index.html` lists all nine sessions, and the homepage agenda links to each page.
+
+| URL | Session |
+| --- | --- |
+| `/sessions/panel1/` | Building AI in Lebanon |
+| `/sessions/talk1/` | AI-Powered Security — Ali Kalout |
+| `/sessions/panel2/` | AI Hype vs. Ground Reality |
+| `/sessions/panel3/` | Tech Startups in Lebanon |
+| `/sessions/talk2/` | From Driverless Trains to Coding Agents — Freddy Demiane |
+| `/sessions/panel4/` | Seniority in the Software Engineering Career in Lebanon |
+| `/sessions/talk3/` | Inside Lyxa’s Engine — Mhamad Itawi |
+| `/sessions/talk4/` | A Developer’s Guide to Web3 Security — Mohamad Mansouri |
+| `/sessions/talk5/` | Measuring Quality and Cost with ADK and Gemini — Jana Kabrit |
+
+The integration uses Open Feedback's public `/{eventId}/{date}/{talkId}` route with `forceColorScheme=light`, verified against its [feedback router](https://github.com/HugoGresse/open-feedback/blob/main/src/feedback/FeedbackApp.tsx). Feedback is stored and moderated by Open Feedback. The website does not maintain a second comments database. Browser privacy settings can affect the embedded third-party form, so the direct link stays available.
+
+### Maintaining the schedule
+
+The homepage agenda is the content source. Keep each `data-session-id` unchanged after feedback starts, even if you change a session title or time. Do not repurpose a session ID for a different talk. Regenerate the feed, speaker initials and static pages after any agenda change:
+
+```sh
+python3 scripts/build_sessions.py
+python3 scripts/build_sessions.py --check
+python3 -m unittest discover -s tests -p 'test_*.py'
+node --test tests/feedback.test.cjs
+```
+
+Commit the generated files together with agenda changes; the deployed site needs no build command. The generator also refreshes `sitemap.xml`. The event ID is configured separately and does not require regeneration.

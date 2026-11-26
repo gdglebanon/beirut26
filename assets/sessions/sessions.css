@@ -1,0 +1,26 @@
+.session-page{background:#f1f5f9}
+.session-header{background:#fff;border-bottom:1px solid var(--line)}
+.session-header .container{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-block:18px}
+.session-brand{max-width:240px}
+.session-brand img{width:100%;height:64px;object-fit:contain}
+.session-header a{font-weight:700;text-decoration:none}
+.session-header nav{display:flex;gap:24px;flex-wrap:wrap}
+.session-main{padding-block:48px 72px}
+.session-main h1{max-width:1000px;font:700 clamp(1.8rem,4.5vw,3.4rem)/1.16 var(--font-head);letter-spacing:-.04em;margin:18px 0 24px;overflow-wrap:anywhere}
+.session-eyebrow{color:#174ea6;font-size:.9rem;font-weight:700}
+.session-meta{display:flex;flex-wrap:wrap;gap:12px 24px;color:var(--muted);margin-bottom:32px}
+.session-content,.session-feedback{padding:32px;border-radius:24px;background:#fff;margin-top:24px}
+.session-main h2{font-size:1.35rem;margin:0 0 14px}
+.session-main .session-people{margin-top:0}
+.session-feedback>p{color:var(--muted)}
+.session-feedback [role=status]{font-size:.9rem}
+.session-feedback [hidden]{display:none}
+.feedback-frame{display:block;width:100%;min-height:850px;border:0;margin-top:24px;border-radius:12px;background:#fff}
+.session-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;list-style:none;padding:0;margin:32px 0 0}
+.session-list a{display:block;height:100%;padding:28px;border-radius:20px;background:#fff;text-decoration:none;transition:box-shadow .2s}
+.session-list a:hover{box-shadow:0 8px 24px #1725361a}
+.session-list h2{font-size:1.25rem;line-height:1.4;margin:14px 0}
+.session-list p{margin:12px 0;color:var(--muted);font-size:.95rem}
+.session-list .session-list-action{display:block;margin-top:20px;color:#174ea6;font-weight:700}
+.session-footer{padding:24px 0;background:#fff;color:var(--muted);font-size:.9rem}
+@media(max-width:760px){.session-header .container{align-items:flex-start;gap:18px;flex-direction:column}.session-header nav{gap:18px}.session-main{padding-block:30px 48px}.session-content,.session-feedback{padding:22px 18px;border-radius:18px}.session-list{grid-template-columns:minmax(0,1fr)}.session-list a{padding:22px}.feedback-frame{min-height:900px}}

@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://devfest26.gdglebanon.com/</loc>
-  </url>
+  <url><loc>https://devfest26.gdglebanon.com/</loc></url>
+  <url><loc>https://devfest26.gdglebanon.com/sessions/</loc></url>
+  <url><loc>https://devfest26.gdglebanon.com/sessions/panel1/</loc></url>
+  <url><loc>https://devfest26.gdglebanon.com/sessions/talk1/</loc></url>
+  <url><loc>https://devfest26.gdglebanon.com/sessions/panel2/</loc></url>
+  <url><loc>https://devfest26.gdglebanon.com/sessions/panel3/</loc></url>
+  <url><loc>https://devfest26.gdglebanon.com/sessions/talk2/</loc></url>
+  <url><loc>https://devfest26.gdglebanon.com/sessions/panel4/</loc></url>
+  <url><loc>https://devfest26.gdglebanon.com/sessions/talk3/</loc></url>
+  <url><loc>https://devfest26.gdglebanon.com/sessions/talk4/</loc></url>
+  <url><loc>https://devfest26.gdglebanon.com/sessions/talk5/</loc></url>
 </urlset>
