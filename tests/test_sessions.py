@@ -16,10 +16,16 @@ class References(HTMLParser):
         super().__init__()
         self.references = []
         self.ids = set()
+        self.feedback_sessions = []
+        self.frames = 0
         self.feed(source)
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
+        if tag == 'iframe':
+            self.frames += 1
+        if 'data-session-feedback' in attrs:
+            self.feedback_sessions.append(attrs['data-session-id'])
         if 'id' in attrs:
             if attrs['id'] in self.ids:
                 raise ValueError(f'Duplicate HTML ID: {attrs["id"]}')
@@ -81,6 +87,20 @@ class SessionsTest(unittest.TestCase):
                 if url.fragment and target.suffix == '.html':
                     self.assertIn(unquote(url.fragment), References(target.read_text()).ids,
                                   f'{page.relative_to(ROOT)}: {reference}')
+
+    def test_homepage_has_one_feedback_form_per_talk_and_panel(self):
+        parsed = References((ROOT / 'index.html').read_text())
+        visible = {key for key, session in self.feed['sessions'].items() if not session['hideInFeedback']}
+        self.assertEqual(len(parsed.feedback_sessions), len(visible))
+        self.assertEqual(set(parsed.feedback_sessions), visible)
+
+    def test_feedback_is_native_on_homepage_and_session_pages(self):
+        for page in [ROOT / 'index.html', *sorted((ROOT / 'sessions').rglob('*.html'))]:
+            self.assertEqual(References(page.read_text()).frames, 0, str(page))
+        source = (ROOT / 'index.html').read_text()
+        agenda = source.index('<details class="agenda-disclosure"')
+        self.assertLess(source.index('>View agenda as PDF</a>'), agenda)
+        self.assertLess(source.index('>View here &amp; rate sessions</a>'), agenda)
 
 
 if __name__ == '__main__':

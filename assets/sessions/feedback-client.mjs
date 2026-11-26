@@ -1,0 +1,22 @@
+import {initializeApp} from 'https://www.gstatic.com/firebasejs/13.4.0/firebase-app.js';
+import {getAuth, setPersistence, browserLocalPersistence, inMemoryPersistence, signInAnonymously}
+  from 'https://www.gstatic.com/firebasejs/13.4.0/firebase-auth.js';
+import {getFirestore, doc, collection, getDoc, getDocs, query, where, setDoc, serverTimestamp, onSnapshot}
+  from 'https://www.gstatic.com/firebasejs/13.4.0/firebase-firestore.js';
+import {createFeedbackService} from './feedback-service.mjs';
+
+let connection;
+export function connectFeedback(config) {
+  if (!connection) {
+    connection = createFeedbackService({initializeApp, getAuth, setPersistence, browserLocalPersistence,
+      inMemoryPersistence, signInAnonymously, getFirestore, doc, collection, getDoc, getDocs,
+      query, where, setDoc, serverTimestamp, onSnapshot}, {
+        ...config,
+        sessionIds: [...document.querySelectorAll('[data-session-feedback]')].map(panel => panel.dataset.sessionId),
+      }).catch(error => {
+      connection = null;
+      throw error;
+    });
+  }
+  return connection;
+}

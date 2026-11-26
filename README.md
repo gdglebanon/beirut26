@@ -51,14 +51,20 @@ The original speaker portraits came from the organizer’s supplied “DevFest L
 
 `openfeedback.json` is the public schedule source for the Open Feedback JSON URL setup. It contains all 13 agenda entries and 22 speakers; only the five talks and four panels accept feedback. Check-in, opening, lunch and closing have `hideInFeedback: true`. Dates use November 28, 2026 and the Beirut UTC+02:00 offset. Speaker avatars in the feed use neutral initials because the source portraits are full session posters; the website keeps its existing photographic portrait crops.
 
-To finish setup:
+The event is connected to `gEQjsPtq6m2n4iTrwxe6`: [DevFest Beirut 2026 feedback](https://openfeedback.io/gEQjsPtq6m2n4iTrwxe6/2026-11-28). Native feedback buttons and an explicit Save comment form appear directly under each talk and panel once the homepage agenda is expanded, and on the dedicated session pages. There are no feedback frames or required external navigation. The collapsed agenda offers **View agenda as PDF** (the organizer’s supplied Google Drive document) and **View here & rate sessions**. The latter expands the on-page agenda.
+
+`assets/sessions/feedback.js` renders the event’s current vote items as native controls. It loads the Firebase modules when a feedback panel approaches the viewport, shares one anonymous voter across all forms on the site, and provides in-place retries after loading errors. `feedback-client.mjs` pins Firebase’s official CDN modules at version 13.4.0; `feedback-service.mjs` uses the existing Open Feedback Firebase project through its public web configuration. This is client access under the existing security rules, not administrative access. No service account or private API key is used. The browser keeps its anonymous identity in local storage where permitted; blocking persistent storage limits identity retention to the current visit.
+
+Votes write to `projects/{eventId}/userVotes` using the same field names and `active` / `deleted` / `hidden` transitions as Open Feedback. Boolean votes toggle in one document; comments can be saved, edited and removed. Hidden comments remain hidden on edit. Deterministic IDs prevent duplicate new boolean votes across tabs; existing vote IDs are reused. The UI waits for server acceptance before confirming a write and keeps unsaved comments after an error. Public counts and comments are read from the service-maintained `sessionVotes` aggregates. Voting windows and hide-until-voted result visibility are respected. Native anonymous identities are scoped to this website; they do not reuse an Open Feedback tab’s cross-origin identity.
+
+For a replacement event or a fresh deployment:
 
 1. Publish the repository, then enter `https://devfest26.gdglebanon.com/openfeedback.json` in Open Feedback's **JSON API URL** field. The file needs to be publicly accessible and allow cross-origin requests. `vercel.json` declares the CORS and caching headers for the existing Vercel deployment. A host-independent alternative after pushing to GitHub is `https://raw.githubusercontent.com/gdglebanon/beirut26/main/openfeedback.json`, which serves the same feed with CORS enabled.
 2. Create the event and configure its voting form in the Open Feedback admin, including a text/comment item. The feedback choices and result visibility are controlled there; the JSON supplies the schedule, not the voting form. Open Feedback uses feedback votes rather than a built-in five-star rating.
 3. Copy the event ID from its public URL (`https://openfeedback.io/EVENT_ID`) into `eventId` in `assets/sessions/feedback-config.js`. This is a public ID; no secret or admin API key belongs in the website. Publish the config change.
-4. Verify a session on the website and directly in Open Feedback. Session pages embed the public feedback page and retain an **Open in Open Feedback** link if the embedded form cannot load. Until an event ID is configured, the page shows that feedback is not open yet and does not load an iframe.
+4. Verify the native voting buttons and comment form on the homepage and a session page. The options come from the event configuration, so voting-form edits in the Open Feedback admin do not require hard-coding new item IDs in this repository. Until the public event ID and Firebase web configuration are set, the client cannot connect.
 
-The custom URLs are real static directories, so they need no SPA catch-all or backend. Static hosts normally redirect `/sessions/talk1` to `/sessions/talk1/`. `sessions/index.html` lists all nine sessions, and the homepage agenda links to each page.
+The custom URLs are real static directories, so they need no SPA catch-all or backend. Static hosts normally redirect `/sessions/talk1` to `/sessions/talk1/`. `sessions/index.html` lists all nine sessions, and the homepage agenda provides both session-page links and in-place feedback forms.
 
 | URL | Session |
 | --- | --- |
@@ -72,7 +78,7 @@ The custom URLs are real static directories, so they need no SPA catch-all or ba
 | `/sessions/talk4/` | A Developer’s Guide to Web3 Security — Mohamad Mansouri |
 | `/sessions/talk5/` | Measuring Quality and Cost with ADK and Gemini — Jana Kabrit |
 
-The integration uses Open Feedback's public `/{eventId}/{date}/{talkId}` route with `forceColorScheme=light`, verified against its [feedback router](https://github.com/HugoGresse/open-feedback/blob/main/src/feedback/FeedbackApp.tsx). Feedback is stored and moderated by Open Feedback. The website does not maintain a second comments database. Browser privacy settings can affect the embedded third-party form, so the direct link stays available.
+The integration follows the public [vote actions](https://github.com/HugoGresse/open-feedback/blob/main/src/feedback/vote/voteActions.ts), [anonymous sign-in flow](https://github.com/HugoGresse/open-feedback/blob/main/src/feedback/auth/authActions.ts), and [result visibility rules](https://github.com/HugoGresse/open-feedback/blob/main/src/feedback/talk/core/voteResultsVisibility.ts). Feedback is still stored and moderated by Open Feedback. The website does not maintain a second comments database. Remote labels and comments are rendered as text, never HTML.
 
 ### Maintaining the schedule
 
