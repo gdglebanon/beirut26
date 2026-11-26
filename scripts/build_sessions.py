@@ -113,8 +113,8 @@ def shell(title, path, content, *, session=False):
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;700&amp;family=Google+Sans+Code:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{prefix}style.css?v=21">
-  <link rel="stylesheet" href="{prefix}assets/sessions/sessions.css?v=4">
+  <link rel="stylesheet" href="{prefix}style.css?v=22">
+  <link rel="stylesheet" href="{prefix}assets/sessions/sessions.css?v=5">
 {scripts}
 </head>
 <body class="session-page">

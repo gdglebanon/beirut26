@@ -214,7 +214,9 @@
 
 /* Speaker details transcribed from the supplied event posters. */
 .agenda-session-content{min-width:0}
-.session-feedback-link{display:inline-block;margin:10px 0 4px;font-size:.9rem;font-weight:700;color:#174ea6;text-underline-offset:3px}
+.session-title-row{display:flex;align-items:baseline;gap:10px}
+.session-title-row h3{flex:1;min-width:0}
+.session-details-arrow{display:inline-flex;align-items:center;justify-content:center;flex:none;width:24px;height:24px;color:inherit;text-decoration:none;align-self:flex-start}
 .session-type{display:block;margin-bottom:6px;color:#496277;font-size:.875rem}
 .session-people{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 24px;list-style:none;margin:20px 0 0;padding:0}
 .session-person{display:flex;align-items:center;gap:13px;min-width:0;font-family:'Google Sans',Arial,sans-serif}
