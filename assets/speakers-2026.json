@@ -173,14 +173,94 @@
       "name": "Mohammad Omar",
       "position": "CTO",
       "organization": "Drive Terra",
-      "photo": "assets/images/speakers-2026/talk-mohammad-omar.png",
+      "photo": "assets/images/speakers-2026/panel-ai-hype-vs-ground-reality.jpg",
       "crop": [
-        820,
-        930,
-        500
+        276,
+        460,
+        224
       ],
-      "source": "[TALK] Mohammad Omar/Speaker-Mohammad-Omar-Screen-1920x1080.png",
+      "source": "1795728188928.jpeg",
       "participation": "moderator"
+    },
+    "zahi-lahham": {
+      "name": "Zahi Lahham",
+      "photo": "assets/images/speakers-2026/panel-ai-hype-vs-ground-reality.jpg",
+      "crop": [
+        912,
+        466,
+        224
+      ],
+      "source": "1795728188928.jpeg"
+    },
+    "adel-yammout": {
+      "name": "Adel Yammout",
+      "photo": "assets/images/speakers-2026/panel-ai-hype-vs-ground-reality.jpg",
+      "crop": [
+        590,
+        458,
+        224
+      ],
+      "source": "1795728188928.jpeg"
+    },
+    "huda-omais": {
+      "name": "Huda Omais",
+      "photo": "assets/images/speakers-2026/panel-ai-hype-vs-ground-reality.jpg",
+      "crop": [
+        1232,
+        462,
+        224
+      ],
+      "source": "1795728188928.jpeg"
+    },
+    "christelle-al-jerdy": {
+      "name": "Christelle Al Jerdy",
+      "photo": "assets/images/speakers-2026/panel-ai-hype-vs-ground-reality.jpg",
+      "crop": [
+        1548,
+        463,
+        240
+      ],
+      "source": "1795728188928.jpeg"
+    },
+    "rudy-shoushany": {
+      "name": "Rudy Shoushany",
+      "photo": "assets/images/speakers-2026/panel-tech-startups-in-lebanon.jpg",
+      "crop": [
+        346,
+        471,
+        224
+      ],
+      "source": "1795465268126.jpeg"
+    },
+    "ramzi-farah": {
+      "name": "Ramzi Farah",
+      "photo": "assets/images/speakers-2026/panel-tech-startups-in-lebanon.jpg",
+      "crop": [
+        729,
+        469,
+        224
+      ],
+      "source": "1795465268126.jpeg"
+    },
+    "maha-zouwayhed": {
+      "name": "Maha Zouwayhed",
+      "photo": "assets/images/speakers-2026/panel-tech-startups-in-lebanon.jpg",
+      "crop": [
+        1086,
+        453,
+        248
+      ],
+      "source": "1795465268126.jpeg"
+    },
+    "mohamad-abbas": {
+      "name": "Mohamad Abbas",
+      "photo": "assets/images/speakers-2026/panel-tech-startups-in-lebanon.jpg",
+      "crop": [
+        1474,
+        470,
+        224
+      ],
+      "source": "1795465268126.jpeg"
     }
   },
   "sessions": {
