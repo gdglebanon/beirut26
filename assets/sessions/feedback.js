@@ -167,7 +167,7 @@
       try {
         if (!/^[A-Za-z0-9_-]+$/.test(config.eventId)) throw new Error('Invalid event ID.');
         const [client, model] = await Promise.all([
-          import(new URL('feedback-client.mjs', assetBase).href),
+          import(new URL('feedback-client.mjs?v=2', assetBase).href),
           import(new URL('feedback-model.mjs', assetBase).href),
         ]);
         const service = await client.connectFeedback(config);
