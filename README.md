@@ -49,7 +49,7 @@ The original speaker portraits came from the organizer’s supplied “DevFest L
 
 ## Session feedback with Open Feedback
 
-`openfeedback.json` is the public schedule source for the Open Feedback JSON URL setup. It contains all 13 agenda entries and 22 speakers; only the five talks and four panels accept feedback. Check-in, opening, lunch and closing have `hideInFeedback: true`. Dates use November 28, 2026 and the Beirut UTC+02:00 offset. Speaker avatars in the feed use neutral initials because the source portraits are full session posters; the website keeps its existing photographic portrait crops.
+`openfeedback.json` is the public schedule source for the Open Feedback JSON URL setup. It contains all 13 agenda entries and 22 speakers; the keynote, five talks and four panels accept feedback. Check-in, lunch and closing have `hideInFeedback: true`. Dates use November 28, 2026 and the Beirut UTC+02:00 offset. Speaker avatars in the feed use neutral initials because the source portraits are full session posters; the website keeps its existing photographic portrait crops.
 
 The event is connected to `gEQjsPtq6m2n4iTrwxe6`: [DevFest Beirut 2026 feedback](https://openfeedback.io/gEQjsPtq6m2n4iTrwxe6/2026-11-28). Each talk and panel in the homepage agenda has a closed-by-default **Rate this session** disclosure. Opening it loads native feedback buttons and an explicit Save comment form. The dedicated session pages show their feedback forms directly. There are no feedback frames or required external navigation. The collapsed agenda offers **View agenda as PDF** (the organizer’s supplied Google Drive document) and **View here & rate sessions**. The latter expands the on-page agenda.
 
@@ -64,10 +64,11 @@ For a replacement event or a fresh deployment:
 3. Copy the event ID from its public URL (`https://openfeedback.io/EVENT_ID`) into `eventId` in `assets/sessions/feedback-config.js`. This is a public ID; no secret or admin API key belongs in the website. Publish the config change.
 4. Verify the native voting buttons and comment form on the homepage and a session page. The options come from the event configuration, so voting-form edits in the Open Feedback admin do not require hard-coding new item IDs in this repository. The public event ID, expected Firebase project ID and public configuration URL are set in `assets/sessions/feedback-config.js`; no browser API-key literal belongs there. The client fetches that configuration from the provider at runtime.
 
-The custom URLs are real static directories, so they need no SPA catch-all or backend. Static hosts normally redirect `/sessions/talk1` to `/sessions/talk1/`. `sessions/index.html` lists all nine sessions, and the homepage agenda provides both session-page links and in-place feedback forms.
+The custom URLs are real static directories, so they need no SPA catch-all or backend. Static hosts normally redirect `/sessions/talk1` to `/sessions/talk1/`. `sessions/index.html` lists all ten sessions, and the homepage agenda provides both session-page links and in-place feedback forms.
 
 | URL | Session |
 | --- | --- |
+| `/sessions/opening/` | Welcoming & Keynote |
 | `/sessions/panel1/` | Building AI in Lebanon |
 | `/sessions/talk1/` | AI-Powered Security — Ali Kalout |
 | `/sessions/panel2/` | AI Hype vs. Ground Reality |

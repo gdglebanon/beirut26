@@ -168,7 +168,7 @@ def generate():
                 f'<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160" role="img" aria-label="{escape(name, quote=True)}">'
                 f'<rect width="160" height="160" rx="80" fill="#e8f0fe"/>'
                 f'<text x="80" y="80" dy=".35em" text-anchor="middle" font-family="Arial,sans-serif" font-size="50" font-weight="700" fill="#174ea6">{escape(initials)}</text></svg>\n')
-        hidden = kind not in ('Talk', 'Panel discussion')
+        hidden = kind not in ('Talk', 'Panel discussion', 'Keynote')
         sessions[session_id] = {
             'id': session_id, 'title': title, 'speakers': speaker_ids, 'tags': [kind],
             'startTime': timestamp(start), 'endTime': timestamp(end),
@@ -177,11 +177,19 @@ def generate():
         if hidden:
             continue
         path = f'/sessions/{session_id}/'
-        participant_list = item.find_all(css_class='session-people')[0].html('../../')
+        participant_lists = item.find_all(css_class='session-people')
+        notes = item.find_all(css_class='session-note')
+        note = notes[0].text() if notes else ''
+        if participant_lists:
+            participant_heading = 'Speaker' if len(people) == 1 else 'Speakers &amp; moderator'
+            participant_list = participant_lists[0].html('../../')
+        else:
+            participant_heading = 'About this session'
+            participant_list = f'<p>{escape(note)}</p>'
         content = f'''    <span class="session-eyebrow">{escape(kind)} · {escape(session_id.upper())}</span>
     <h1>{escape(title)}</h1>
     <div class="session-meta"><span>Saturday, November 28, 2026</span><span><time datetime="{timestamp(start)}">{time_label(start)}</time> – <time datetime="{timestamp(end)}">{time_label(end)}</time> · Beirut time</span><span>{escape(location)}</span></div>
-    <section class="session-content" aria-labelledby="participants-title"><h2 id="participants-title">{'Speaker' if len(people) == 1 else 'Speakers &amp; moderator'}</h2>{participant_list}</section>
+    <section class="session-content" aria-labelledby="participants-title"><h2 id="participants-title">{participant_heading}</h2>{participant_list}</section>
     <section class="session-feedback" data-session-feedback data-session-id="{session_id}" data-session-date="{DATE}" aria-labelledby="feedback-title">
       <h2 id="feedback-title">Share your feedback</h2>
       <p>Let the speakers know what worked and what could be even better.</p>
@@ -190,7 +198,7 @@ def generate():
       <noscript><p>Enable JavaScript to load the feedback form.</p></noscript>
     </section>'''
         output[f'sessions/{session_id}/index.html'] = shell(title, path, content, session=True)
-        names = ', '.join(speakers[key]['name'] for key in speaker_ids)
+        names = ', '.join(speakers[key]['name'] for key in speaker_ids) or note
         cards.append(f'<li><a href="{session_id}/"><span class="session-eyebrow">{escape(kind)} · {time_label(start)}</span><h2>{escape(title)}</h2><p>{escape(names)}</p><span class="session-list-action">Session details &amp; feedback</span></a></li>')
     assert sessions and speakers
     output['openfeedback.json'] = json.dumps({'sessions': sessions, 'speakers': speakers}, ensure_ascii=False, indent=2) + '\n'

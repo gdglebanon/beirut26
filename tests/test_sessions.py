@@ -49,7 +49,7 @@ class SessionsTest(unittest.TestCase):
     def test_feed_references_and_schedule(self):
         sessions, speakers = self.feed['sessions'], self.feed['speakers']
         visible = {key for key, session in sessions.items() if not session['hideInFeedback']}
-        self.assertEqual(visible, {f'talk{i}' for i in range(1, 6)} | {f'panel{i}' for i in range(1, 5)})
+        self.assertEqual(visible, {'opening'} | {f'talk{i}' for i in range(1, 6)} | {f'panel{i}' for i in range(1, 5)})
         self.assertEqual(len(sessions), 13)
         for key, session in sessions.items():
             self.assertEqual(key, session['id'])
@@ -64,7 +64,8 @@ class SessionsTest(unittest.TestCase):
             for speaker_id in session['speakers']:
                 self.assertIn(speaker_id, speakers)
             if key in visible:
-                self.assertTrue(session['speakers'])
+                if key != 'opening':
+                    self.assertTrue(session['speakers'])
                 page = ROOT / f'sessions/{key}/index.html'
                 self.assertTrue(page.exists())
                 self.assertIn(f'data-session-id="{key}"', page.read_text())

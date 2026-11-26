@@ -17,12 +17,12 @@
       "title": "Welcoming & Keynote",
       "speakers": [],
       "tags": [
-        "Opening"
+        "Keynote"
       ],
       "startTime": "2026-11-28T09:30:00+02:00",
       "endTime": "2026-11-28T09:50:00+02:00",
       "trackTitle": "Riad Salamé Auditorium",
-      "hideInFeedback": true
+      "hideInFeedback": false
     },
     "panel1": {
       "id": "panel1",
