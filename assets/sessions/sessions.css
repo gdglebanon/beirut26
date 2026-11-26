@@ -29,7 +29,10 @@
 
 .agenda-entry-actions{display:flex;flex-wrap:wrap;gap:14px;margin:0 0 24px}
 .agenda-entry-actions .button{font-size:.95rem;justify-content:center;text-align:center}
-.session-inline-feedback>h4{margin:0;padding:20px 20px 0;font-size:1rem}
+.session-inline-feedback>summary{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;font-size:1rem;font-weight:700;cursor:pointer;list-style:none}
+.session-inline-feedback>summary::-webkit-details-marker{display:none}
+.feedback-disclosure-icon{flex:none;color:#174ea6;font-size:1.4rem;line-height:1}
+.session-inline-feedback[open] .feedback-disclosure-icon{transform:rotate(45deg)}
 .session-feedback [hidden]{display:none!important}
 .session-feedback .is-error{color:#a12622}
 .feedback-options{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:20px 0}

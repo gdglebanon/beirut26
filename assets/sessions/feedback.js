@@ -180,8 +180,12 @@
       } finally { loading = false; }
     };
     retry.addEventListener('click', mount);
-    // A hidden agenda never loads nine feedback clients in the background.
-    if ('IntersectionObserver' in window) {
+    // Agenda feedback stays closed and unloaded until the visitor opens it.
+    const disclosure = panel.closest('.session-inline-feedback');
+    if (disclosure) {
+      disclosure.addEventListener('toggle', () => { if (disclosure.open) mount(); });
+      if (disclosure.open) mount();
+    } else if ('IntersectionObserver' in window) {
       const observer = new IntersectionObserver(entries => {
         if (entries.some(entry => entry.isIntersecting)) {
           observer.disconnect();
