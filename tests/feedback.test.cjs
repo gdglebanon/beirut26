@@ -10,7 +10,7 @@ before(async () => {
 
 const reaction = {id: 'zl9HWOiVqgqUDVi3Rvvs', type: 'boolean', name: 'Fun 😃', position: 0};
 const comment = {id: 'GXpiqVbJ1mCytDOk9V1o', type: 'text', name: 'Comment', position: 8};
-const config = {eventId: 'gEQjsPtq6m2n4iTrwxe6', firebase: {}, sessionIds: ['talk1', 'talk2', 'panel1']};
+const config = {eventId: 'gEQjsPtq6m2n4iTrwxe6', firebase: {}, sessionIds: ['opening', 'talk1', 'talk2', 'panel1']};
 
 async function fixture(options = {}) {
   const writes = [], queries = [], stored = new Map();
@@ -50,6 +50,13 @@ test('reads only the current anonymous voter documents', async () => {
   const {queries} = await fixture();
   assert.equal(queries[0][0].path, `projects/${config.eventId}/userVotes`);
   assert.deepEqual(queries[0][1], ['userId', '==', 'anonymous-voter']);
+});
+
+test('keynote votes target the opening session in the connected Open Feedback event', async () => {
+  const {service, writes} = await fixture();
+  await service.save('opening', reaction);
+  assert.equal(writes[0].data.talkId, 'opening');
+  assert.equal(writes[0].data.projectId, config.eventId);
 });
 
 test('repeated boolean toggles reuse one vote record and remove via deleted status', async () => {

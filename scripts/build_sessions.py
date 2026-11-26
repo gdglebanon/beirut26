@@ -191,7 +191,7 @@ def generate():
     <div class="session-meta"><span>Saturday, November 28, 2026</span><span><time datetime="{timestamp(start)}">{time_label(start)}</time> – <time datetime="{timestamp(end)}">{time_label(end)}</time> · Beirut time</span><span>{escape(location)}</span></div>
     <section class="session-content" aria-labelledby="participants-title"><h2 id="participants-title">{participant_heading}</h2>{participant_list}</section>
     <section class="session-feedback" data-session-feedback data-session-id="{session_id}" data-session-date="{DATE}" aria-labelledby="feedback-title">
-      <h2 id="feedback-title">Share your feedback</h2>
+      <h2 id="feedback-title">{'Rate keynote' if kind == 'Keynote' else 'Share your feedback'}</h2>
       <p>Let the speakers know what worked and what could be even better.</p>
       <p role="status">Loading session feedback…</p>
       <div data-feedback-form></div>
@@ -199,7 +199,8 @@ def generate():
     </section>'''
         output[f'sessions/{session_id}/index.html'] = shell(title, path, content, session=True)
         names = ', '.join(speakers[key]['name'] for key in speaker_ids) or note
-        cards.append(f'<li><a href="{session_id}/"><span class="session-eyebrow">{escape(kind)} · {time_label(start)}</span><h2>{escape(title)}</h2><p>{escape(names)}</p><span class="session-list-action">Session details &amp; feedback</span></a></li>')
+        action = 'Rate keynote' if kind == 'Keynote' else 'Session details &amp; feedback'
+        cards.append(f'<li><a href="{session_id}/"><span class="session-eyebrow">{escape(kind)} · {time_label(start)}</span><h2>{escape(title)}</h2><p>{escape(names)}</p><span class="session-list-action">{action}</span></a></li>')
     assert sessions and speakers
     output['openfeedback.json'] = json.dumps({'sessions': sessions, 'speakers': speakers}, ensure_ascii=False, indent=2) + '\n'
     output['sessions/index.html'] = shell('Sessions & feedback', '/sessions/', f'''    <span class="session-eyebrow">DEVFEST BEIRUT 2026</span>
