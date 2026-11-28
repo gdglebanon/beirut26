@@ -8,6 +8,15 @@
 .badge-disclosure[open]>.badge-section-summary{border-bottom:1px solid var(--line)}
 .badge-disclosure[open]>.badge-section-summary>.badge-disclosure-toggle{transform:rotate(45deg)}
 .badge-section-content{padding:24px;background:#f1f5f9}
+.badge-mode-switch{border:0;padding:0;margin:0 0 24px;min-width:0}
+.badge-mode-switch legend{font-size:.875rem;font-weight:700;margin-bottom:10px}
+.badge-mode-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;border-radius:16px;padding:6px;background:#e1e9f2}
+.badge-mode-options label{position:relative;min-width:0;cursor:pointer}
+.badge-mode-options input{position:absolute;opacity:0;width:1px;height:1px}
+.badge-mode-options span{display:flex;align-items:center;justify-content:center;min-height:52px;padding:12px 16px;border-radius:11px;font-size:.94rem;font-weight:700;text-align:center;color:#40556a}
+.badge-mode-options input:checked+span{background:#fff;color:#172536;box-shadow:0 2px 6px #17253614}
+.badge-mode-options input:focus-visible+span{outline:3px solid #4285f4;outline-offset:2px}
+[data-badge-mode-panel][hidden]{display:none}
 .banner-builder{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);border:0;border-radius:28px;overflow:hidden;background:#fff}
 .banner-form{padding:34px;min-width:0}
 .banner-field{margin-bottom:22px}
@@ -60,7 +69,7 @@
 .hero-actions .button{justify-content:center;text-align:center;font-size:.875rem;gap:8px;padding:14px 18px;min-height:54px}
 .button-badge{background:#def1e5;border-color:#9dc9ac;color:#1e5e37}
 .badge-sharing{margin-top:24px;border:0;border-radius:20px;background:#fff;overflow:hidden}
-.social-frame-section{margin-top:24px;border-radius:20px;background:#fff;overflow:hidden}
+.social-frame-section{border-radius:20px;background:#fff;overflow:hidden}
 .social-frame-section .banner-builder{border-radius:0}
 .social-frame-fit{margin-top:20px}
 #social-frame-controls[hidden],#social-frame-drag-zone[hidden]{display:none}

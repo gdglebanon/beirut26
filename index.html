@@ -47,9 +47,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;700&amp;display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css?v=22">
-  <link rel="stylesheet" href="assets/banner/banner.css?v=6">
+  <link rel="stylesheet" href="assets/banner/banner.css?v=7">
   <script src="assets/banner/banner.js?v=5" defer></script>
   <script src="assets/banner/social-frame.js?v=1" defer></script>
+  <script src="assets/banner/mode.js?v=1" defer></script>
   <script src="assets/banner/share.js?v=2" defer></script>
   <link rel="stylesheet" href="assets/sessions/sessions.css?v=5">
   <script src="assets/sessions/feedback-config.js" defer></script>
@@ -107,7 +108,7 @@
           <h1 id="hero-title" class="hero-wordmark" aria-label="DevFest Beirut 2026"><img src="assets/images/hero-devfest.svg?v=4" alt="DevFest"><span class="beirut-lockup"><span class="beirut-name">Beirut</span><span class="beirut-year">2026</span></span></h1>
           <p class="hero-lede">The tech community meets in Beirut for an exclusive gathering of developers, tech leads, CTOs and industry professionals to connect, learn and grow.</p>
           <div class="hero-actions">
-            <a class="button button-blue" href="#agenda">View agenda</a>
+            <a class="button button-blue" href="#agenda">View Agenda &amp; Review</a>
             <a class="button button-outline" href="#my-banner">Create your social media badge</a>
           </div>
           <p class="invitation-note">Free to attend · A confirmed invitation is required</p>
@@ -205,7 +206,50 @@
         <details class="badge-disclosure" id="badge-disclosure">
           <summary class="badge-section-summary"><span><span class="section-index">MAKE IT YOURS</span><strong>Create your social media badge</strong><span class="badge-section-description">Personalize your badge and prepare a post to share with your community.</span></span><span class="badge-disclosure-toggle" aria-hidden="true">＋</span></summary>
           <div class="badge-section-content">
-        <div class="banner-builder">
+        <fieldset class="badge-mode-switch" id="badge-mode-switch">
+          <legend>Choose your frame</legend>
+          <div class="badge-mode-options">
+            <label><input type="radio" name="badge-mode" value="social" aria-controls="social-post-frame" checked><span>Social post frame</span></label>
+            <label><input type="radio" name="badge-mode" value="joining" aria-controls="joining-frame"><span>I’m joining as</span></label>
+          </div>
+        </fieldset>
+        <section class="social-frame-section" id="social-post-frame" data-badge-mode-panel="social" aria-labelledby="social-frame-title">
+          <header class="badge-share-heading"><h3 id="social-frame-title">Social post frame</h3><p>Frame a photo from your DevFest day and share it with your community.</p></header>
+          <div class="banner-builder">
+            <form id="social-frame-form" class="banner-form">
+              <div class="banner-field banner-upload">
+                <label for="social-frame-photo">Your photo</label>
+                <input id="social-frame-photo" type="file" accept="image/jpeg,image/png,image/webp" aria-describedby="social-frame-help social-frame-photo-status">
+                <p class="banner-hint" id="social-frame-help">Choose a landscape photo for the best fit. JPG, PNG or WebP, up to 15 MB. Your photo stays on this device.</p>
+                <p class="banner-message" id="social-frame-photo-status" role="status" aria-live="polite"></p>
+              </div>
+              <div id="social-frame-controls" hidden>
+                <p class="banner-hint">Drag your photo in the preview to reposition it, or use the sliders below. Scroll over the photo to zoom.</p>
+                <div class="banner-field social-frame-fit">
+                  <label for="social-frame-fit">Image fit</label>
+                  <select id="social-frame-fit"><option value="cover">Fill the frame</option><option value="contain">Show the whole photo</option></select>
+                </div>
+                <div class="banner-crop-controls">
+                  <label for="social-frame-zoom">Zoom</label><input id="social-frame-zoom" type="range" min="0.5" max="3" step="0.05" value="1">
+                  <label for="social-frame-x">Horizontal position</label><input id="social-frame-x" type="range" min="0" max="100" value="50">
+                  <label for="social-frame-y">Vertical position</label><input id="social-frame-y" type="range" min="0" max="100" value="50">
+                </div>
+                <button type="button" id="social-frame-reset" class="banner-remove">Reset framing</button>
+                <button type="button" id="social-frame-remove" class="banner-remove">Remove photo</button>
+              </div>
+            </form>
+            <div class="banner-preview-panel">
+              <div class="banner-preview-heading"><span>YOUR SOCIAL POST</span><span>1920 × 1080 · PNG</span></div>
+              <div class="banner-canvas-wrap">
+                <canvas id="social-frame-canvas" width="1920" height="1080" role="img" aria-label="Preview of the DevFest Beirut 2026 social post frame">Enable JavaScript to add your photo and download your social post.</canvas>
+                <div id="social-frame-drag-zone" aria-hidden="true" title="Drag to reposition your photo; scroll to zoom" hidden></div>
+              </div>
+              <button class="button button-dark banner-download" id="social-frame-download" type="submit" form="social-frame-form" disabled>Add a photo to download</button>
+              <p class="banner-message" id="social-frame-status" role="status" aria-live="polite">Loading the social post frame…</p>
+            </div>
+          </div>
+        </section>
+        <div class="banner-builder" id="joining-frame" data-badge-mode-panel="joining" hidden>
           <form id="banner-form" class="banner-form">
             <div class="banner-field">
               <label for="banner-role">I’m joining as</label>
@@ -268,42 +312,6 @@
             <noscript><p>Enable JavaScript to customize and download your banner.</p></noscript>
           </div>
         </div>
-        <section class="social-frame-section" id="social-post-frame" aria-labelledby="social-frame-title">
-          <header class="badge-share-heading"><h3 id="social-frame-title">Social post frame</h3><p>Frame a photo from your DevFest day and share it with your community.</p></header>
-          <div class="banner-builder">
-            <form id="social-frame-form" class="banner-form">
-              <div class="banner-field banner-upload">
-                <label for="social-frame-photo">Your photo</label>
-                <input id="social-frame-photo" type="file" accept="image/jpeg,image/png,image/webp" aria-describedby="social-frame-help social-frame-photo-status">
-                <p class="banner-hint" id="social-frame-help">Choose a landscape photo for the best fit. JPG, PNG or WebP, up to 15 MB. Your photo stays on this device.</p>
-                <p class="banner-message" id="social-frame-photo-status" role="status" aria-live="polite"></p>
-              </div>
-              <div id="social-frame-controls" hidden>
-                <p class="banner-hint">Drag your photo in the preview to reposition it, or use the sliders below. Scroll over the photo to zoom.</p>
-                <div class="banner-field social-frame-fit">
-                  <label for="social-frame-fit">Image fit</label>
-                  <select id="social-frame-fit"><option value="cover">Fill the frame</option><option value="contain">Show the whole photo</option></select>
-                </div>
-                <div class="banner-crop-controls">
-                  <label for="social-frame-zoom">Zoom</label><input id="social-frame-zoom" type="range" min="0.5" max="3" step="0.05" value="1">
-                  <label for="social-frame-x">Horizontal position</label><input id="social-frame-x" type="range" min="0" max="100" value="50">
-                  <label for="social-frame-y">Vertical position</label><input id="social-frame-y" type="range" min="0" max="100" value="50">
-                </div>
-                <button type="button" id="social-frame-reset" class="banner-remove">Reset framing</button>
-                <button type="button" id="social-frame-remove" class="banner-remove">Remove photo</button>
-              </div>
-            </form>
-            <div class="banner-preview-panel">
-              <div class="banner-preview-heading"><span>YOUR SOCIAL POST</span><span>1920 × 1080 · PNG</span></div>
-              <div class="banner-canvas-wrap">
-                <canvas id="social-frame-canvas" width="1920" height="1080" role="img" aria-label="Preview of the DevFest Beirut 2026 social post frame">Enable JavaScript to add your photo and download your social post.</canvas>
-                <div id="social-frame-drag-zone" aria-hidden="true" title="Drag to reposition your photo; scroll to zoom" hidden></div>
-              </div>
-              <button class="button button-dark banner-download" id="social-frame-download" type="submit" form="social-frame-form" disabled>Add a photo to download</button>
-              <p class="banner-message" id="social-frame-status" role="status" aria-live="polite">Loading the social post frame…</p>
-            </div>
-          </div>
-        </section>
         <section class="badge-sharing" id="badge-sharing" aria-labelledby="badge-share-title">
           <header class="badge-share-heading"><h3 id="badge-share-title">Copy or share your social media post</h3><p>Invite friends and colleagues on LinkedIn and beyond.</p></header>
           <div class="badge-share-content">
