@@ -61,7 +61,7 @@
         size.width, size.height);
       ctx.restore();
     }
-    canvas.setAttribute('aria-label', photo ? 'Your photo inside the DevFest Beirut 2026 social post frame. November 28, 2026.' : 'Preview of the DevFest Beirut 2026 social post frame. Add your photo to personalize it.');
+    canvas.setAttribute('aria-label', photo ? 'Your photo inside the DevFest Beirut 2026 social frame. November 28, 2026.' : 'Preview of the DevFest Beirut 2026 social frame. Add your photo to personalize it.');
   };
   const scheduleDraw = () => {
     cancelAnimationFrame(animation);
