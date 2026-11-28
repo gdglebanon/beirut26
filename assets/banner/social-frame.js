@@ -8,7 +8,7 @@
   const ctx = canvas.getContext('2d');
   const download = field('download');
   const dragZone = field('drag-zone');
-  const viewport = { x: 128, y: 88, width: 1688, height: 870 };
+  const viewport = { x: 0, y: 0, width: 1920, height: 1080 };
   // A rectangle fully inside the irregular opening keeps contain mode uncropped.
   const safeArea = { x: 130, y: 258, width: 1684, height: 638 };
   let artwork;
@@ -40,27 +40,19 @@
     const scale = fit(area.width / photo.naturalWidth, area.height / photo.naturalHeight) * Number(field('zoom').value);
     return { area, width: photo.naturalWidth * scale, height: photo.naturalHeight * scale };
   };
-  // Trace the supplied artwork's inner opening, preserving its border and lower wave.
-  const opening = new Path2D('M128 223 L206 146 H1267 L1327 88 H1541 L1691 242 H1800 Q1816 242 1816 257 V798 L1721 898 H1213 L1153 958 H447 C391 936 346 919 300 919 C240 919 184 939 128 958 Z');
-  // Keep the three blue slashes in the upper tab visible over the uploaded photo.
-  opening.moveTo(1342, 127); opening.lineTo(1364, 94); opening.lineTo(1373, 100); opening.lineTo(1351, 133); opening.closePath();
-  opening.moveTo(1372, 127); opening.lineTo(1394, 94); opening.lineTo(1403, 100); opening.lineTo(1381, 133); opening.closePath();
-  opening.moveTo(1402, 127); opening.lineTo(1424, 94); opening.lineTo(1433, 100); opening.lineTo(1411, 133); opening.closePath();
-
   const draw = () => {
     if (!artwork || !ctx) return;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.drawImage(artwork, 0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = '#f0f0f0';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
     if (photo) {
       const size = photoSize();
-      ctx.save();
-      ctx.clip(opening, 'evenodd');
       ctx.drawImage(photo,
         size.area.x + (size.area.width - size.width) * Number(field('x').value) / 100,
         size.area.y + (size.area.height - size.height) * Number(field('y').value) / 100,
         size.width, size.height);
-      ctx.restore();
     }
+    ctx.drawImage(artwork, 0, 0, canvas.width, canvas.height);
     canvas.setAttribute('aria-label', photo ? 'Your photo inside the DevFest Beirut 2026 social frame. November 28, 2026.' : 'Preview of the DevFest Beirut 2026 social frame. Add your photo to personalize it.');
   };
   const scheduleDraw = () => {
@@ -166,7 +158,7 @@
     scheduleDraw();
   }, { passive: false });
 
-  loadImage('assets/banner/social-post-frame.png').then(image => {
+  loadImage('assets/banner/social-frame-overlay.webp').then(image => {
     if (!ctx) throw new Error('Canvas is unavailable');
     artwork = image;
     draw(); syncDownload();
